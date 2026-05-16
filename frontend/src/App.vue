@@ -8,6 +8,5 @@ export default {
 </script>
 
 <template>
-  NAV
   <RouterView />
 </template>
