@@ -51,11 +51,11 @@ VALUES (22, now(), 'Mari Maasikas');
 -- Testandmed (CRUD valideerimiseks)
 -- ----------------------------------------------------------------
 
--- app_user — parool: '123' (BCrypt hash, tugevus 10)
+-- app_user — parool: '123' (lihttekst — BCrypt puudub selles projektis)
 -- user_role: 'A'=Admin, 'U'=User | user_status: 'A'=aktiivne, 'D'=deaktiveeritud
 INSERT INTO app_user (first_name, middle_name, last_name, email, password, user_status, user_role) VALUES
-    ('Mari', NULL, 'Maasikas', 'mari@agent.ee', '$2b$10$JYgHB6gvRPOxmIjPKrlXvO7Twy8xoXCoTIDVFQsck2EGjj3VR94wy', 'A', 'A'),
-    ('Jaan', NULL, 'Tamm',     'jt@agent.ee',   '$2b$10$JYgHB6gvRPOxmIjPKrlXvO7Twy8xoXCoTIDVFQsck2EGjj3VR94wy', 'A', 'U');
+    ('Mari', NULL, 'Maasikas', 'mari@agent.ee', '123', 'A', 'A'),
+    ('Jaan', NULL, 'Tamm',     'jt@agent.ee',   '123', 'A', 'U');
 
 -- seller
 -- org_id 10406134 vastab näidis-Exceli seller_org_id-le

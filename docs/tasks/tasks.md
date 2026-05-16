@@ -22,7 +22,7 @@ Kõik entiteedid luuakse korraga enne taske. Entiteedid on puhta andmestruktuuri
 
 | Kiht | Sisaldab | Raskus |
 |------|----------|--------|
-| Backend | `app_user` entity, repo, mapper; Spring Security sessioonipõhine konfig; BCrypt; `POST /api/login` | 2 |
+| Backend | `app_user` repo, mapper, service, controller; lihtne autentimine (email + parool + staatus JPQL päringuga); `POST /api/login` | 2 |
 | Frontend | `HomeView`, `LoginView`, `AuthService` (localStorage), `NavigationService` algseis | 2 |
 
 ---

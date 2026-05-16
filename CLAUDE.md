@@ -280,8 +280,8 @@ Backend otsib `product_type` tabelist rea, kus `name` kattub Exceli `tyyp` vää
 - **Modaalid, mitte inline** — SellerSettingsView avab kolm eraldi modali (kontakt, piirkond, teenustasu)
 - **Inline vormid, mitte modaalid** — kontaktide ja kasutajate lisamine inline, aruande detailid laiendatava reana
 - **KM määr seadistatav andmebaasist** — Admin saab muuta ilma arendajata; salvestatakse koos muutja ja kuupäevaga
-- **Parool BCryptiga krüpteeritud**
-- **Autentimine: Spring Security sessioonipõhine** — token puudub, sessioon hallatakse serveripoolselt
+- **Parool lihttekstina (task-01)** — BCrypt ja Spring Security lisatakse hiljem; praegu lihtne email+password+status päring
+- **Autentimine: lihtne (task-01)** — Spring Security puudub, sessioon puudub; frontend salvestab vastuse localStorage-i
 
 ---
 
@@ -290,7 +290,7 @@ Backend otsib `product_type` tabelist rea, kus `name` kattub Exceli `tyyp` vää
 **Põhimõte: backend enne frontend, teenused kordamööda (back → front)**
 
 **Backend järjekord:**
-1. User + login/autentimine (Spring Security, sessioonipõhine, BCrypt)
+1. User + login/autentimine (lihtne — email+password+status, ilma Spring Security ja BCrypt-ita)
 2. Seller CRUD (Entity, Repository, Service, Controller)
 3. Contact + contact_role CRUD (vahel tabel seller_contact_role)
 4. Region (seed-andmed) + Seller_region CRUD (region_id FK)
@@ -346,8 +346,11 @@ Kodeerimistavad on eraldi alamfailides:
 - [x] `Status.java` enum (`ACTIVE`, `SOFT_DELETED`) — DB-sse salvestatakse `"A"` / `"D"`
 - [x] p6spy seadistus (`build.gradle`, `application.properties`, `spy.properties`)
 
+### Pooleli (task-01)
+- [x] Backend: `User` entity, `UserRepository` (JPQL email+password+status), `UserMapper`, `LoginService`, `LoginController` — `POST /api/login` töötab
+- [ ] Frontend: `router/index.js`, `AuthService.js`, `NavigationService.js`, `LoginService.js`, `HomeView.vue`, `LoginView.vue`
+
 ### Järgmine (ootab õppejõu kinnitust)
-- [ ] Backend: User + login/autentimine (Spring Security, sessioonipõhine, BCrypt)
 - [ ] Backend: Seller CRUD
 - [ ] Backend: Contact + contact_role CRUD
 - [ ] Backend: Seller_region CRUD

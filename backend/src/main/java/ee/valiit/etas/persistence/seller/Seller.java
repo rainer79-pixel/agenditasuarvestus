@@ -1,6 +1,6 @@
 package ee.valiit.etas.persistence.seller;
 
-import ee.valiit.etas.persistence.appuser.AppUser;
+import ee.valiit.etas.persistence.user.User;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -52,6 +52,6 @@ public class Seller {
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "created_by", nullable = false)
-    private AppUser createdBy;
+    private User createdBy;
 
 }
