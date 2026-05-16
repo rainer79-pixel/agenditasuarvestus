@@ -346,9 +346,7 @@ Kodeerimistavad on eraldi alamfailides:
 - [x] `Status.java` enum (`ACTIVE`, `SOFT_DELETED`) — DB-sse salvestatakse `"A"` / `"D"`
 - [x] p6spy seadistus (`build.gradle`, `application.properties`, `spy.properties`)
 
-### Pooleli (task-01)
-- [x] Backend: `User` entity, `UserRepository` (JPQL email+password+status), `UserMapper`, `LoginService`, `LoginController` — `POST /api/login` töötab
-- [ ] Frontend: `router/index.js`, `AuthService.js`, `NavigationService.js`, `LoginService.js`, `HomeView.vue`, `LoginView.vue`
+- [x] task-01: Login ja autentimine — `POST /api/login`, `HomeView.vue`, `LoginView.vue`, `AuthService.js`, `NavigationService.js`, `LoginService.js`, `router/index.js`
 
 ### Järgmine (ootab õppejõu kinnitust)
 - [ ] Backend: Seller CRUD
@@ -361,8 +359,8 @@ Kodeerimistavad on eraldi alamfailides:
 - [ ] Backend: Aruannete endpoint-id
 - [ ] Backend: Invoice CRUD
 - [ ] Backend: Dashboard endpoint
-- [ ] Frontend: HomeView.vue
-- [ ] Frontend: LoginView.vue
+- [ ] Frontend: DashboardView.vue
+- [ ] Frontend: SellersView.vue
 - [ ] Frontend: DashboardView.vue
 - [ ] Frontend: SellersView.vue
 - [ ] Frontend: SellerView.vue

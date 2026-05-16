@@ -132,6 +132,8 @@ public class FooController {
     // Kõigil endpoint-idel @Operation + @ApiResponses
     // Error response alati ApiError.class schemaga
     // URL: /api/{resource} (ilma versiooninumbrita)
+    // Sisend DTO valideerimisel: @Valid @RequestBody FooDto fooDto
+    // DTO väljadel: @NotBlank — ainult väljal, mitte klassi peal!
 }
 ```
 

@@ -9,6 +9,7 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
+
 public class LoginController {
 
     private final LoginService loginService;
@@ -32,7 +34,7 @@ public class LoginController {
             @ApiResponse(responseCode = "403",
                     description = "Sisselogimine ebaõnnestus, võtke ühendust administraatoriga",
                     content = @Content(schema = @Schema(implementation = ApiError.class)))})
-    public LoginResponseDto login(@RequestBody LoginDto loginDto) {
+    public LoginResponseDto login(@Valid @RequestBody LoginDto loginDto) {
         return loginService.getLoginResponse(loginDto.getEmail(), loginDto.getPassword());
     }
 }

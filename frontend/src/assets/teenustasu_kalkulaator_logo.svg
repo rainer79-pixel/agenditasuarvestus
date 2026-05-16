@@ -26,12 +26,12 @@
 <!-- Nool -->
 <path d="M 76,106 C 84,116 104,88 142,52" fill="none" stroke="#5db88a" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowhead)"/>
 
-<!-- Main text -->
-<text x="162" y="95" font-family="Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="0.5">
+<!-- Main text - tsentreeritud x=360 ümber -->
+<text x="360" y="90" font-family="Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="0.5" text-anchor="middle">
   <tspan fill="#1a3a6b">Teenustasu</tspan><tspan fill="#4caf8a"> Kalkulaator</tspan>
 </text>
 
-<!-- Subtitle -->
-<text x="163" y="116" font-family="Arial, sans-serif" font-size="13" fill="#555" letter-spacing="3" font-weight="400">TEENUSTASU ARVUTAMISE SÜSTEEM</text>
+<!-- Subtitle - sama x=360 -->
+<text x="360" y="114" font-family="Arial, sans-serif" font-size="13" fill="#555" letter-spacing="3" font-weight="400" text-anchor="middle">TEENUSTASU ARVUTAMISE SÜSTEEM</text>
 
 </svg>

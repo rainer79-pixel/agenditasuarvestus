@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex flex-column min-vh-100">
     <header class="text-start py-3" style="background-color: #e8eef4">
-      <h1>Edasimüüja Teenustasu Arvutussüsteem (ETAS)</h1>
+      <h2>Edasimüüja Teenustasu Arvutussüsteem (ETAS)</h2>
     </header>
     <main
       class="flex-grow-1 d-flex flex-column align-items-center justify-content-start pt-4"
@@ -11,7 +11,7 @@
         src="@/assets/teenustasu_kalkulaator_logo.svg"
         alt="ETAS logo"
         class="mb-5"
-        style="width: 1200px; margin-left: 200px"
+        style="width: 1300px; margin-left: 200px"
       />
       <p class="fs-5">
         Sisekasutuseks mõeldud tööriist edasimüüjate teenustasude arvutamiseks ja arvete
