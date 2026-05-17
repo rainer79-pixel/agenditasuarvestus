@@ -115,7 +115,7 @@ Swagger UI: http://localhost:8080/swagger-ui/index.html
 
 ## Andmemudel
 
-<img src="docs/datamodel/edasimüüjatasuarvestus data modeler.png" alt="Andmemudel">
+<img src="docs/datamodel/etas.dbmodel.png" alt="Andmemudel">
 
 ## Testandmed
 
