@@ -157,9 +157,9 @@ Paremal: Kasutajanimi | `Logi välja`
 
 **seller_contact** — id, seller_id (FK), first_name, middle_name, last_name, phone, email
 
-**seller_role** (vahel tabel) — id, seller_contact_id (FK), seller_role_id (FK)
+**seller_role** (vahel tabel) — id, seller_contact_id (FK), seller_role_id (FK) → Java: `SellerContactRole`
 
-**role** — id, code (L/A/R/T), seller_role_name
+**role** — id, code (L/A/R/T), seller_role_name → Java: `ContactRole`
 
 **region** — id, region_name, sequence_number
 
@@ -348,6 +348,7 @@ Kodeerimistavad on eraldi alamfailides:
 - [x] p6spy seadistus (`build.gradle`, `application.properties`, `spy.properties`)
 
 - [x] task-01: Login ja autentimine — `POST /api/login`, `HomeView.vue`, `LoginView.vue`, `AuthService.js`, `NavigationService.js`, `LoginService.js`, `router/index.js`
+- [x] task-02: Dashboard ja navbar — `GET /api/dashboard`, `DashboardView.vue`, `DashboardService.js`, `App.vue` navbar, `NavigationService.js` täiendused, `router/index.js` placeholder route'id
 
 ### Järgmine (ootab õppejõu kinnitust)
 - [ ] Backend: Seller CRUD
@@ -359,10 +360,6 @@ Kodeerimistavad on eraldi alamfailides:
 - [ ] Backend: Teenustasu arvutus + KM
 - [ ] Backend: Aruannete endpoint-id
 - [ ] Backend: Invoice CRUD
-- [ ] Backend: Dashboard endpoint
-- [ ] Frontend: DashboardView.vue
-- [ ] Frontend: SellersView.vue
-- [ ] Frontend: DashboardView.vue
 - [ ] Frontend: SellersView.vue
 - [ ] Frontend: SellerView.vue
 - [ ] Frontend: SellerFormView.vue

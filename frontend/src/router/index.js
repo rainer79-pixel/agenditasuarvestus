@@ -21,7 +21,10 @@ const router = createRouter({
       name: 'dashboardRoute',
       component: DashboardView,
     },
-
+    { path: '/sellers', name: 'sellersRoute', component: DashboardView },
+    { path: '/reports', name: 'reportsRoute', component: DashboardView },
+    { path: '/invoice-control', name: 'invoiceControlRoute', component: DashboardView },
+    { path: '/settings', name: 'settingsRoute', component: DashboardView },
   ],
 })
 

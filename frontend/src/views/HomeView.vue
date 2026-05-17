@@ -3,10 +3,7 @@
     <header class="text-start py-3" style="background-color: #e8eef4">
       <h2>Edasimüüja Teenustasu Arvutussüsteem (ETAS)</h2>
     </header>
-    <main
-      class="flex-grow-1 d-flex flex-column align-items-center justify-content-start pt-4"
-      style="background-color: #f4f7fa"
-    >
+    <main class="flex-grow-1 d-flex flex-column align-items-center justify-content-start pt-4">
       <img
         src="@/assets/teenustasu_kalkulaator_logo.svg"
         alt="ETAS logo"

@@ -1,6 +1,6 @@
-package ee.valiit.etas.persistence.sellerrole;
+package ee.valiit.etas.persistence.sellercontactrole;
 
-import ee.valiit.etas.persistence.role.Role;
+import ee.valiit.etas.persistence.contactrole.ContactRole;
 import ee.valiit.etas.persistence.sellercontact.SellerContact;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "seller_role", schema = "etas")
-public class SellerRole {
+public class SellerContactRole {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,6 +26,6 @@ public class SellerRole {
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "seller_role_id", nullable = false)
-    private Role role;
+    private ContactRole contactRole;
 
 }

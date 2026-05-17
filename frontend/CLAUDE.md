@@ -107,7 +107,7 @@ export default {
   saveUserInfo(data) {
     localStorage.setItem('userId', data.userId)
     localStorage.setItem('firstName', data.firstName)
-    localStorage.setItem('middleName', data.middleName)
+    localStorage.setItem('middleName', data.middleName || '') // null → '' et v-if töötaks
     localStorage.setItem('lastName', data.lastName)
     localStorage.setItem('role', data.role)
   },
@@ -121,12 +121,37 @@ export default {
 import router from '@/router/index.js'
 
 export default {
-  navigateToDashboardView() { router.push({ name: 'dashboardRoute' }) },
-  navigateToSellersView(successMessage) {
-    router.push({ name: 'sellerRoute', query: successMessage ? { successMessage } : undefined })
-  },
+  navigateToHomeView() { router.push({ name: 'homeRoute' }) },
   navigateToLoginView() { router.push({ name: 'loginRoute' }) },
-  navigateToErrorView() { router.push({ name: 'errorRoute' }) },
+  // ERAND: window.location.href — laadib App.vue uuesti et isLoggedIn true-ks saada
+  navigateToDashboardView() { window.location.href = '/dashboard' },
+  navigateToSellersView() { router.push({ name: 'sellersRoute' }) },
+  navigateToReportsView() { router.push({ name: 'reportsRoute' }) },
+  navigateToInvoiceControlView() { router.push({ name: 'invoiceControlRoute' }) },
+  navigateToSettingsView() { router.push({ name: 'settingsRoute' }) },
+}
+```
+
+### App.vue navbar muster
+- Navbar on `App.vue`-s, kuvatakse kõigil sisselogitud vaadetel
+- `v-if="showNavbar"` — `computed` property, peidab navbar `homeRoute` ja `loginRoute`-il
+- `router-link` asemel `<a>` — Vue Router lisab `router-link-exact-active` klassi aktiivsele lingile automaatselt
+- `isLoggedIn` on `data()`-s, uuendatakse `logOut()`-is käsitsi (`localStorage` ei ole Vue-s reaktiivne)
+
+```javascript
+computed: {
+  showNavbar() {
+    return this.isLoggedIn &&
+      this.$route.name !== 'loginRoute' &&
+      this.$route.name !== 'homeRoute'
+  },
+},
+```
+
+CSS aktiivse lingi jaoks:
+```css
+.router-link-exact-active {
+  border-bottom: 2px solid white;
 }
 ```
 

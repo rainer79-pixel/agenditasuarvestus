@@ -111,7 +111,7 @@ Swagger UI: http://localhost:8080/swagger-ui/index.html
 - Excel import on fikseeritud formaadiga — näidisfail: `docs/0.6_Issuer_sales_report.xlsx`
 - Ühel perioodil saab olla ainult üks aruanne
 - KM määr (22%) on seadistatav andmebaasist — Admin saab muuta ilma arendajata
-- Parool krüpteeritakse BCryptiga
+- Parool on praegu lihttekstina (BCrypt ja Spring Security lisatakse hiljem)
 
 ## Andmemudel
 

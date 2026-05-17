@@ -1,4 +1,4 @@
-package ee.valiit.etas.persistence.role;
+package ee.valiit.etas.persistence.contactrole;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -10,7 +10,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "role", schema = "etas")
-public class Role {
+public class ContactRole {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

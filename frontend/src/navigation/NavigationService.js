@@ -8,6 +8,18 @@ export default {
     router.push({ name: 'loginRoute' })
   },
   navigateToDashboardView() {
-    router.push({ name: 'dashboardRoute' })
+    window.location.href = '/dashboard'
+  },
+  navigateToSellersView() {
+    router.push({ name: 'sellersRoute' })
+  },
+  navigateToReportsView() {
+    router.push({ name: 'reportsRoute' })
+  },
+  navigateToInvoiceControlView() {
+    router.push({ name: 'invoiceControlRoute' })
+  },
+  navigateToSettingsView() {
+    router.push({ name: 'settingsRoute' })
   },
 }

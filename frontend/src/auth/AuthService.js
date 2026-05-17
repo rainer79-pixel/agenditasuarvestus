@@ -21,7 +21,7 @@ export default {
   saveUserInfo(data) {
     localStorage.setItem('userId', data.userId)
     localStorage.setItem('firstName', data.firstName)
-    localStorage.setItem('middleName', data.middleName)
+    localStorage.setItem('middleName', data.middleName || '')
     localStorage.setItem('lastName', data.lastName)
     localStorage.setItem('role', data.role)
   },
