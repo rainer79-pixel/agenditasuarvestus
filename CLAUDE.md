@@ -9,6 +9,7 @@
 - **Kõik kolm CLAUDE.md-d käivad kaasas** — muudatus ühes tähendab, et vaatad üle ka teised kaks (`CLAUDE.md`, `backend/CLAUDE.md`, `frontend/CLAUDE.md`) ja uuendad kõik, mis vajab muutmist
 - **README.md käib kaasas** — kui CLAUDE.md muutub, kontrolli kas README vajab sama muudatust
 - **Arendusjärjekord ja seis** sektsiooni uuenda kohe kui samm on tehtud — mitte hiljem
+- **Õppematerjal taski lõpus** — kui task on valmis, paku alati võimalust luua õppematerjal `docs/theory-materials` kausta (`skill-loo-uus-oppematerjal`)
 
 ---
 
