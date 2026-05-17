@@ -55,7 +55,7 @@ VALUES (22, now(), 'Mari Maasikas');
 -- user_role: 'A'=Admin, 'U'=User | user_status: 'A'=aktiivne, 'D'=deaktiveeritud
 INSERT INTO app_user (first_name, middle_name, last_name, email, password, user_status, user_role) VALUES
     ('Mari', NULL, 'Maasikas', 'mari@agent.ee', '123', 'A', 'A'),
-    ('Jaan', NULL, 'Tamm',     'jt@agent.ee',   '123', 'A', 'U');
+    ('Jaan', 'Arvo', 'Tamm',   'jt@agent.ee',   '123', 'A', 'U');
 
 -- seller
 -- org_id 10406134 vastab näidis-Exceli seller_org_id-le
@@ -67,15 +67,15 @@ INSERT INTO seller (company_name, org_id, contract_start, contract_end, notes, s
 
 -- seller_contact (seller_id: ETAS AS=1, Ühistu OÜ=2)
 INSERT INTO seller_contact (seller_id, first_name, middle_name, last_name, phone, email) VALUES
-    (1, 'Mari', NULL, 'Maasikas', '55555555',       'mari@agent.ee'),
-    (2, 'Mari', NULL, 'Kask',     '+372 5234 5678', 'mari.kask@agentb.ee');
+    (1, 'Toomas', NULL,    'Rebane',  '55112233',       'toomas.rebane@etasas.ee'),
+    (2, 'Mari',   'Liis', 'Kask',    '+372 5234 5678', 'mari.kask@agentb.ee');
 
--- seller_role (seller_contact_id: Mari Maasikas=1, Mari Kask=2 | seller_role_id: L=1, A=2, R=3, T=4)
+-- seller_role (seller_contact_id: Toomas Rebane=1, Mari Liis Kask=2 | seller_role_id: L=1, A=2, R=3, T=4)
 INSERT INTO seller_role (seller_contact_id, seller_role_id) VALUES
-    (1, 1),  -- Mari Maasikas: Lepinguline kontakt
-    (1, 2),  -- Mari Maasikas: Aruannete kontakt
-    (2, 1),  -- Mari Kask: Lepinguline kontakt
-    (2, 4);  -- Mari Kask: Tehniline kontakt
+    (1, 1),  -- Toomas Rebane: Lepinguline kontakt
+    (1, 2),  -- Toomas Rebane: Aruannete kontakt
+    (2, 1),  -- Mari Liis Kask: Lepinguline kontakt
+    (2, 4);  -- Mari Liis Kask: Tehniline kontakt
 
 -- seller_region (region_id: Tallinn=1, Harjumaa=2, Tartumaa=3, Pärnumaa=5)
 INSERT INTO seller_region (seller_id, region_id, sales_point_count) VALUES

@@ -1,4 +1,4 @@
-# Task-02: Dashboard ja navigatsioonibaar — algajatele
+# Task-02: Dashboard ja navigatsioonibaar
 
 ## Mis see on ja miks oluline?
 

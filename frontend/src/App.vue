@@ -16,7 +16,9 @@
       >
     </div>
     <div class="d-flex align-items-center gap-5">
-      <span class="text-white">{{ firstName }} {{ lastName }}</span>
+      <span class="text-white"
+        >{{ firstName }} <span v-if="middleName">{{ middleName }}&nbsp;</span>{{ lastName }}</span
+      >
       <button class="btn btn-danger" @click="logOut">Logi välja</button>
     </div>
   </nav>
@@ -36,6 +38,7 @@ export default {
       isLoggedIn: AuthService.isLoggedIn(),
       isAdmin: AuthService.getRole() === 'A',
       firstName: AuthService.getFirstName(),
+      middleName: AuthService.getMiddleName(),
       lastName: AuthService.getLastName(),
     }
   },

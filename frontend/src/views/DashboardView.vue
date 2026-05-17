@@ -1,7 +1,8 @@
 <template>
   <div class="container pt-5 mt-5">
     <h1 class="mb-5">
-      Tere tulemast, {{ firstName }} <span v-if="middleName">{{ middleName }} </span>{{ lastName }}!
+      Tere tulemast, {{ firstName }} <span v-if="middleName">{{ middleName }}&nbsp;</span
+      >{{ lastName }}!
     </h1>
     <div class="row mt-3 align-items-stretch">
       <div class="col-6">
