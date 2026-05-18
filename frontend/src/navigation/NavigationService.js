@@ -10,8 +10,20 @@ export default {
   navigateToDashboardView() {
     window.location.href = '/dashboard'
   },
-  navigateToSellersView() {
-    router.push({ name: 'sellersRoute' })
+  navigateToSellersView(successMessage = null) {
+    router.push({
+      name: 'sellersRoute',
+      query: successMessage ? { successMessage } : undefined,
+    })
+  },
+  navigateToSellerView(sellerId) {
+    router.push({ name: 'sellerRoute', params: { sellerId } })
+  },
+  navigateToSellerFormView(sellerId = null) {
+    router.push({
+      name: 'sellerFormRoute',
+      query: sellerId ? { sellerId } : undefined,
+    })
   },
   navigateToReportsView() {
     router.push({ name: 'reportsRoute' })
@@ -23,3 +35,4 @@ export default {
     router.push({ name: 'settingsRoute' })
   },
 }
+

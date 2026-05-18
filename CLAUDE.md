@@ -349,20 +349,18 @@ Kodeerimistavad on eraldi alamfailides:
 
 - [x] task-01: Login ja autentimine — `POST /api/login`, `HomeView.vue`, `LoginView.vue`, `AuthService.js`, `NavigationService.js`, `LoginService.js`, `router/index.js`
 - [x] task-02: Dashboard ja navbar — `GET /api/dashboard`, `DashboardView.vue`, `DashboardService.js`, `App.vue` navbar, `NavigationService.js` täiendused, `router/index.js` placeholder route'id
+- [x] task-03 backend: Seller CRUD — `SellerController`, `SellerService`, `SellerRepository`, `SellerMapper`, `SellerDto`, `SellerStatusDto`, `SellerDetailResponseDto`; `SellerRegionRepository`, `SellerRegionMapper`, `SellerRegionResponseDto`; `CommissionRateRepository`, `CommissionRateMapper`, `CommissionRateResponseDto`; `SellerContactRepository`, `SellerContactRoleRepository`, `SellerContactMapper`, `SellerContactResponseDto`; `Status.java` täiendused (`apiValue`, `toApiValue`, `fromApiValue`); `ErrorResponse` täiendused (`ACCESS_DENIED`, `SELLER_ORG_ID_ALREADY_EXISTS`, `SELLER_ALREADY_ACTIVE`)
 
-### Järgmine (ootab õppejõu kinnitust)
-- [ ] Backend: Seller CRUD
-- [ ] Backend: Contact + contact_role CRUD
-- [ ] Backend: Seller_region CRUD
+### Järgmine
+- [ ] task-03 frontend: `SellerService.js` (valmis), `SellersView.vue`, `SellerView.vue`, `SellerFormView.vue`, `NavigationService.js` täiendused, `router/index.js` täiendused
+- [ ] Backend: Contact + contact_role CRUD (POST/DELETE — task-05)
+- [ ] Backend: Seller_region CRUD (POST/PUT/DELETE — task-05)
+- [ ] Backend: Commission_rate CRUD (POST/PUT/DELETE — task-05)
 - [ ] Backend: ProductType CRUD
-- [ ] Backend: Commission_rate CRUD
 - [ ] Backend: Excel import (Apache POI)
 - [ ] Backend: Teenustasu arvutus + KM
 - [ ] Backend: Aruannete endpoint-id
 - [ ] Backend: Invoice CRUD
-- [ ] Frontend: SellersView.vue
-- [ ] Frontend: SellerView.vue
-- [ ] Frontend: SellerFormView.vue
 - [ ] Frontend: SellerSettingsView.vue (+ 3 modali)
 - [ ] Frontend: ReportsView.vue
 - [ ] Frontend: InvoiceControlView.vue

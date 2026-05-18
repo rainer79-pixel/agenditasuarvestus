@@ -2,6 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import LoginView from '@/views/LoginView.vue'
 import DashboardView from '@/views/DashboardView.vue'
+import SellersView from '@/views/SellersView.vue'
+import SellerView from '@/views/SellerView.vue'
+import SellerFormView from '@/views/SellerFormView.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,7 +25,22 @@ const router = createRouter({
       name: 'dashboardRoute',
       component: DashboardView,
     },
-    { path: '/sellers', name: 'sellersRoute', component: DashboardView },
+    {
+      path: '/sellers',
+      name: 'sellersRoute',
+      component: SellersView,
+    },
+    {
+      path: '/seller/form',
+      name: 'sellerFormRoute',
+      component: SellerFormView,
+    },
+    {
+      path: '/seller/:sellerId',
+      name: 'sellerRoute',
+      component: SellerView,
+    },
+
     { path: '/reports', name: 'reportsRoute', component: DashboardView },
     { path: '/invoice-control', name: 'invoiceControlRoute', component: DashboardView },
     { path: '/settings', name: 'settingsRoute', component: DashboardView },

@@ -90,6 +90,7 @@ public interface FooRepository extends JpaRepository<Foo, Integer> {
 - Meetodite nimed: `find[Mis]By()`, `[entity]ExistsBy()`
 - Kirjutuspäringud: `@Modifying` + `@Transactional`
 - DTO projektsioon: `select new ee.valiit...Dto(t.id, t.name) from ...`
+- **`join fetch` seotud entity puhul** — kui mapper vajab seotud entity välju (nt `region.regionName`), lisa `join fetch` päringule, muidu `LazyInitializationException`: `select sr from SellerRegion sr join fetch sr.region where ...`
 
 ### Service tava
 ```java
