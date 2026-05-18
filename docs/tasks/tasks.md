@@ -6,6 +6,7 @@ Branchid võetakse masterist: `git checkout -b task-XX`
 
 ---
 
+
 ## 0. Kõik JPA entiteedid
 **Otse masterisse — branch pole vaja**
 
@@ -18,7 +19,7 @@ Kõik entiteedid luuakse korraga enne taske. Entiteedid on puhta andmestruktuuri
 ---
 
 ## 1. Login ja autentimine
-**Branch:** `task-01`
+**Branch:** `task-01` ✅ Valmis
 
 | Kiht | Sisaldab | Raskus |
 |------|----------|--------|
@@ -28,47 +29,67 @@ Kõik entiteedid luuakse korraga enne taske. Entiteedid on puhta andmestruktuuri
 ---
 
 ## 2. Dashboard
-**Branch:** `task-02`
+**Branch:** `task-02` ✅ Valmis
 
 | Kiht | Sisaldab | Raskus |
 |------|----------|--------|
 | Backend | `GET /api/dashboard` — edasimüüjate arv + viimane import | 1 |
-| Frontend | `DashboardView` — statistika kaardid | 1 |
+| Frontend | `DashboardView` — statistika kaardid, navbar (`App.vue`) | 1 |
 
 ---
 
 ## 3. Edasimüüjad
-**Branch:** `task-03`
+**Branch:** `task-03` 🔄 Backend valmis, frontend pooleli
 
 | Kiht | Sisaldab | Raskus |
 |------|----------|--------|
-| Backend | `seller` entity, repo, mapper, service, controller; `GET /api/seller/user/{userId}`, `GET /api/seller/{sellerId}`, `POST /api/seller/user/{userId}`, `PUT /api/seller/{sellerId}`, `PUT /api/seller/{sellerId}/status` | 3 |
+| Backend | `seller` repo, mapper, service, controller; `GET /api/seller/user/{userId}`, `GET /api/seller/{sellerId}`, `POST /api/seller/user/{userId}`, `PUT /api/seller/{sellerId}`, `PUT /api/seller/{sellerId}/status` | 3 |
 | Frontend | `SellersView` (nimekiri + otsing), `SellerView` (detailvaade, read-only), `SellerFormView` (lisamine + muutmine `?sellerId` parameetriga) | 3 |
 
 ---
 
-## 4. Tootegrupid
+## 4. Edasimüüja kontaktid
 **Branch:** `task-04`
+> Task-05 ja task-06 saavad alata alles pärast selle merge-i — loob `SellerSettingsView.vue` mida mõlemad vajavad.
+
+Esimene samm SellerSettingsView ehitamisel — loob lehe raamistiku ja kontaktide halduse.
 
 | Kiht | Sisaldab | Raskus |
 |------|----------|--------|
-| Backend | `product_type` entity, repo, mapper, service, controller; `GET /api/product-type`, `POST /api/product-type`, `DELETE /api/product-type/{productTypeId}` | 1 |
-| Frontend | *(tuleb koos Seadistustega — vt task-10-settings)* | — |
+| Backend | `POST /api/seller/{sellerId}/contacts`, `DELETE /api/seller/{sellerId}/contacts/{contactId}` | 2 |
+| Frontend | `SellerSettingsView` (lehe raamistik + kontaktide sektsioon), `SellerSettingsContactModal` | 3 |
 
 ---
 
-## 5. Edasimüüja seaded
+## 5. Edasimüüja piirkonnad
 **Branch:** `task-05`
+> Vajab task-04 merge-i. Saab korraga käia task-06-ga — väike merge konflikt `SellerSettingsView.vue`-s (erinevad read, lahendatav).
+
+Lisab SellerSettingsView-sse piirkondade halduse. Sisaldab ka `GET /api/region` — vajalik regionide dropdown-i jaoks modalis.
 
 | Kiht | Sisaldab | Raskus |
 |------|----------|--------|
-| Backend | `seller_contact` + `seller_role` CRUD; `region` seed + `seller_region` CRUD; `commission_rate` CRUD; kõik GET/POST/PUT/DELETE endpointid | 4 |
-| Frontend | `SellerSettingsView` + 3 modali: `SellerSettingsContactModal`, `SellerSettingsRegionModal`, `SellerSettingsProductModal` | 4 |
+| Backend | `GET /api/region` (seed-andmed), `POST /api/seller/{sellerId}/regions`, `PUT /api/seller/{sellerId}/regions/{regionId}`, `DELETE /api/seller/{sellerId}/regions/{regionId}` | 2 |
+| Frontend | `SellerSettingsRegionModal` | 2 |
 
 ---
 
-## 6. Excel import
+## 6. Edasimüüja teenustasud
 **Branch:** `task-06`
+> Vajab task-04 merge-i. Saab korraga käia task-05-ga. Task-11 saab alata alles pärast selle merge-i (vajab `GET /api/product-type`).
+
+Lisab SellerSettingsView-sse teenustasude halduse. Sisaldab `GET /api/product-type` — vajalik tootegruppide dropdown-i jaoks modalis. Täielik tootegruppide haldus (POST/DELETE) tuleb task-11-s.
+
+| Kiht | Sisaldab | Raskus |
+|------|----------|--------|
+| Backend | `GET /api/product-type` (seed-andmed), `POST /api/seller/{sellerId}/commission-rates`, `PUT /api/seller/{sellerId}/commission-rates/{commissionRateId}`, `DELETE /api/seller/{sellerId}/commission-rates/{commissionRateId}` | 2 |
+| Frontend | `SellerSettingsProductModal` | 2 |
+
+---
+
+## 7. Excel import
+**Branch:** `task-07`
+> Vajab task-06 merge-i. Task-08 saab alata alles pärast selle merge-i.
 
 | Kiht | Sisaldab | Raskus |
 |------|----------|--------|
@@ -77,8 +98,9 @@ Kõik entiteedid luuakse korraga enne taske. Entiteedid on puhta andmestruktuuri
 
 ---
 
-## 7. Teenustasu arvutus
-**Branch:** `task-07`
+## 8. Teenustasu arvutus ja aruanded
+**Branch:** `task-08`
+> Vajab task-07 merge-i. Task-09 saab alata alles pärast selle merge-i.
 
 | Kiht | Sisaldab | Raskus |
 |------|----------|--------|
@@ -87,30 +109,32 @@ Kõik entiteedid luuakse korraga enne taske. Entiteedid on puhta andmestruktuuri
 
 ---
 
-## 8. Aruannete eksport
-**Branch:** `task-08`
-
-| Kiht | Sisaldab | Raskus |
-|------|----------|--------|
-| Backend | `GET /api/report/{sellerId}/{period}/export` — `.xlsx` faili genereerimine Apache POIga | 3 |
-| Frontend | `ReportsView` — "Ekspordi" nupp, faili allalaadimine | 1 |
-
----
-
-## 9. Arvete kontroll
+## 9. Aruannete eksport
 **Branch:** `task-09`
 
 | Kiht | Sisaldab | Raskus |
 |------|----------|--------|
-| Backend | `invoice` entity, repo, mapper, service, controller; `GET /api/invoice/user/{userId}`, `POST /api/invoice/user/{userId}`, `DELETE /api/invoice/number/{invoiceNumber}` | 2 |
+| Backend | `GET /api/report/{sellerId}/{period}/export` — `.xlsx` faili genereerimine Apache POIga | 2 |
+| Frontend | `ReportsView` — "Ekspordi" nupp, faili allalaadimine | 1 |
+
+---
+
+## 10. Arvete kontroll
+**Branch:** `task-10`
+> Sõltumatu — ei sõltu ühelegi teisele taskile. Saab alustada igal hetkel paralleelselt.
+
+| Kiht | Sisaldab | Raskus |
+|------|----------|--------|
+| Backend | `invoice` repo, mapper, service, controller; `GET /api/invoice/user/{userId}`, `POST /api/invoice/user/{userId}`, `DELETE /api/invoice/number/{invoiceNumber}` | 2 |
 | Frontend | `InvoiceControlView` — arvete nimekiri + arve sisestamise vorm | 2 |
 
 ---
 
-## 10. Seadistused
-**Branch:** `task-10`
+## 11. Seadistused
+**Branch:** `task-11`
+> Vajab task-06 merge-i (`GET /api/product-type` peab olemas olema tootegruppide dropdown-i jaoks).
 
 | Kiht | Sisaldab | Raskus |
 |------|----------|--------|
-| Backend | `vat_setting` CRUD (`GET /api/settings/vat`, `PUT /api/settings/vat/user/{userId}`); kasutajate haldus (`GET /api/user`, `POST /api/user`, `PUT /api/user/{userId}`, `PUT /api/user/{userId}/status`) | 3 |
-| Frontend | `SettingsView` — kasutajate tabel + lisamine, KM määra muutmine, tootegruppide haldus; `SettingsUserModal` — kasutaja muutmine | 3 |
+| Backend | `product_type` POST + DELETE (täiendab task-06 GET-i); `GET /api/settings/vat`, `PUT /api/settings/vat/user/{userId}`; `GET /api/user`, `POST /api/user`, `PUT /api/user/{userId}`, `PUT /api/user/{userId}/status` | 3 |
+| Frontend | `SettingsView` — tootegruppide haldus, KM määra muutmine, kasutajate tabel + lisamine; `SettingsUserModal` | 3 |
