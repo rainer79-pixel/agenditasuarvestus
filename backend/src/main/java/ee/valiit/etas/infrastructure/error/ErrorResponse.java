@@ -7,10 +7,13 @@ public enum ErrorResponse {
 
     // Auth
     INCORRECT_CREDENTIALS("Vale e-mail või parool", 111),
+    ACCESS_DENIED("Teil pole selleks õigust", 115),
 
     // Seller
     SELLER_NOT_FOUND("Edasimüüjat ei leitud", 211),
     SELLER_ALREADY_INACTIVE("Edasimüüja on juba deaktiveeritud", 212),
+    SELLER_ORG_ID_ALREADY_EXISTS("Selle ettevõtte ID-ga edasimüüja on juba olemas", 213),
+    SELLER_ALREADY_ACTIVE("Edasimüüja on juba aktiivne", 214),
 
     // Contact
     CONTACT_NOT_FOUND("Kontakti ei leitud", 311),

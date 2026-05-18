@@ -6,15 +6,47 @@ Kasutaja annab task numbri argumendina (nt `01`, `02`, `03`). Kui argumenti ei a
 
 ---
 
+## Arendusstiil ja juhendamine
+
+**See projekt on õppeprojekt — arendame koos samm-sammult.**
+
+- **Õpilane teeb ise, Claude juhendab** — ära kirjuta koodi ette valmis. Ütle mida teha ja miks, oota et õpilane teeb, siis liigu edasi.
+- **Üks samm korraga** — anna üks konkreetne ülesanne, oota kinnitust, alles siis järgmine.
+- **Selgita "miks"** — iga sammu juures selgita lühidalt miks see nii tehakse. Õpilane peaks aru saama loogikast, mitte ainult kopeerima.
+- **Andmevoo suund** — liigu alati andmete liikumise suunas: **browser → frontend → backend → frontend → browser**. Näide: alusta sellest mida kasutaja näeb (UI), siis mis API kutse tehakse, siis backend loogika, siis vastus tagasi.
+- **Kontrolli enne järgmist sammu** — kui õpilane näitab koodi, kontrolli et on õige enne jätkamist.
+
+---
+
 ## Sammud enne kirjutamist
 
 1. **Loe** `docs/tasks/tasks.md` — leia vastav task numbri järgi (branch nimi, raskus, kirjeldus)
 2. **Loe** `CLAUDE.md` — API endpointid, rollid, vaadete struktuur, arhitektuuriotsused
-3. **Loe** `docs/specs/etas_projektikirjeldus.md` — täpsed DTO struktuurid, JSON näited, veakoodid
-4. **Loe** `backend/CLAUDE.md` — entity, mapper, service, controller, repository konventsioonid
-5. **Loe** `frontend/CLAUDE.md` — Vue Options API muster, api-services, AuthService, NavigationService
-6. **Vaata** kõiki vastavaid Balsamiq PNG faile kaustast `docs/balsamiq/views/` — identifitseeri vaated selle task-i põhjal
-7. **Loe** `database/2_create.sql` — vajadusel tabelite struktuur
+3. **Vaata** `docs/balsamiq/project/edasimüüjatasuarvestus.pdf` — kõik 14 lehte, et saada ülevaade tervikust: vaadete struktuur, DTO-d, JSON näited, veateated, seosed vaadete vahel. Balsamiq sildid on autoritatiivne spetsifikatsioon.
+4. **Loe** eelnevate taskide dokumendid `docs/tasks/task-XX/` — mõista mis on juba tehtud, mis mustrid on kasutusel, mida saab taaskasutada (nt `AuthService.js`, `NavigationService.js`, olemasolevad DTOd, entityd).
+5. **Loe** olemasolev kood — ära piirdu ainult CLAUDE.md dokumentatsiooniga. Loe tegelikud Java ja Vue failid (nt `LoginController.java`, `LoginService.java`, `DashboardView.vue`) et näha reaalseid mustreid — dokumentatsioon kirjeldab reeglit, kood näitab rakendust.
+6. **Vaata** referentsprojektid `bank40back` ja `bank40front` — need on ETAS-i kõrval `IdeaProjects/` kaustas. Kui ETAS-is pole sarnast lahendust veel olemas, vaata kuidas bank40 seda teeb. Ühesugused ülesanded → ühesugune mõttelaad ja struktuur.
+7. **Loe** `backend/CLAUDE.md` — entity, mapper, service, controller, repository konventsioonid
+8. **Loe** `frontend/CLAUDE.md` — Vue Options API muster, api-services, AuthService, NavigationService
+9. **Loe** `database/2_create.sql` — vajadusel tabelite struktuur
+
+## Valmiduse kontroll enne arendust
+
+Enne kui arendama hakkad, kontrolli kolm asja:
+
+**1. Sõltuvused on päriselt olemas — mitte ainult plaanitud:**
+- Kontrolli task dokumendis loetletud sõltuvused (nt task-03 vajab `AuthService.js` task-01-st)
+- Kontrolli et vajalikud failid on olemas: `find` või `ls` käsuga
+- Kui sõltuvus puudub, teavita kasutajat enne jätkamist
+
+**2. Infrastruktuur on valmis:**
+- Kontrolli et vajalikud `ErrorResponse` enum kirjed on olemas — kui puuduvad, lisa enne service kirjutamist
+- Kontrolli et vajalikud exception klassid on olemas `infrastructure/exception/` kaustas
+
+**3. API leping on selge enne esimese faili loomist:**
+- Iga DTO väli, tüüp ja andmeallikas (DB tabel.veerg) peab olema selge
+- Kui Balsamiqis või task dokumendis on ebaselgus (nt välja nimi erineb, tüüp pole selge), **küsi kasutajalt enne kui hakkad faile looma**
+- Näide mida kontrollida: `sellerId → Integer → seller.id`, `status → String → "ACTIVE"/"INACTIVE"`
 
 ## Branch loomine
 
@@ -215,6 +247,25 @@ data() {
 
 ---
 
+## Andmevoo ülevaade
+
+Kirjelda andmete liikumist selles taskis browser → frontend → backend → frontend → browser suunas:
+
+```
+Kasutaja tegevus (browser)
+  → Vue komponent kutsub SellerService.js meetodit (frontend)
+    → Axios saadab HTTP päringu backendi (frontend → backend)
+      → Controller võtab vastu, delegeerib Service-le
+        → Service valideerib, kutsub Repository
+          → Repository pärib andmebaasist
+        → Mapper teisendab Entity → DTO
+      → Controller tagastab JSON vastuse
+    → Axios saab vastuse, Vue komponent uuendab data() (backend → frontend)
+  → Kasutaja näeb uuendatud UI-d (browser)
+```
+
+[Täpsusta selle taski konkreetse andmevooga]
+
 ## Märkused
 
 [Erijuhud, arhitektuuriotsused, teadaolevad keerukused, sõltuvused teistest taskidest]
@@ -230,3 +281,14 @@ data() {
 4. Tuleta meelde: kogu arendus käib selles branch-is — masterisse läheb kõik koos alles siis kui task on täielikult valmis (backend + frontend + dokumentatsioon)
 
 **NB!** Kui `docs/tasks/task-XX-nimi/` kataloog või fail juba eksisteerib, küsi kasutajalt enne ülekirjutamist.
+
+---
+
+## Taski lõpetamine
+
+Kui task on valmis (backend + frontend + testitud), tee järgmist:
+
+1. **Uuenda task dokument** — muuda `Seisund: Planeeritud` → `Seisund: Valmis`
+2. **Uuenda CLAUDE.md** — lisa valmis taskis loodud endpointid, failid ja otsused "Arendusjärjekord ja seis" sektsiooni
+3. **Commit ja PR** — kasuta `skill-git-pr-full-merge` skilli: branch → commit → push → PR → squash merge → cleanup
+4. **Kontrolli** et master on ajakohane enne järgmise taski alustamist
