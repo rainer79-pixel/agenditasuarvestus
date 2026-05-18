@@ -6,6 +6,7 @@
 
 - **CLAUDE.md on jagatud teadmusbaas** — siin projektis töötab mitu kaasautorit. Kui keegi avab projekti, peaks tema suhtlus Claude Code-iga olema sama sujuv ilma eelmisi vestlusi lugemata. Seetõttu: iga sisuline muudatus kajastub CLAUDE.md-s kohe — paku seda aktiivselt, ilma et kasutaja peaks meelde tuletama
 - **Järjepidevus üle kõige** — enne uue koodi kirjutamist vaata, kuidas sarnane asi on juba lahendatud (bank40back/bank40front on referentsprojektid). Ühesugused tegevused → ühesugune mõttelaad ja struktuur
+- **Kasuta bank40 lahendusi kus võimalik** — kui ETAS-is on sarnane ülesanne, kasuta sama lähenemist mis bank40-s. Kui ETAS vajab midagi lisaks (nt Status enum kolme kihiga, ConflictException), kasuta võimalikult lihtsat lahendust — ära mine liialt tehniliseks. Kõik uued kontseptsioonid vs bank40 tuleb tuua välja taski õppematerjalides (`docs/theory-materials`) esiletõstetult alguses
 - **Kõik kolm CLAUDE.md-d käivad kaasas** — muudatus ühes tähendab, et vaatad üle ka teised kaks (`CLAUDE.md`, `backend/CLAUDE.md`, `frontend/CLAUDE.md`) ja uuendad kõik, mis vajab muutmist
 - **README.md käib kaasas** — kui CLAUDE.md muutub, kontrolli kas README vajab sama muudatust
 - **Arendusjärjekord ja seis** sektsiooni uuenda kohe kui samm on tehtud — mitte hiljem

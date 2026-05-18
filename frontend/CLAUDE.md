@@ -1,6 +1,7 @@
 # CLAUDE.md — Frontend kodeerimistavad
 
 > Kehtib koos juurkataloogis asuva `CLAUDE.md`-ga, kus on üldine projektiinfo.
+> **Referentsprojekt:** `bank40front` (branch Rainer) — kasuta sama lähenemist kus võimalik. Kui ETAS vajab midagi uut, kasuta võimalikult lihtsat lahendust.
 
 ## Kodeerimistavad — Frontend (Vue.js 3)
 

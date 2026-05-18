@@ -9,6 +9,19 @@ Task-01 ehitab täieliku sisselogimise ahela: kasutaja sisestab e-maili ja paroo
 
 ---
 
+## Mis on selles taskis uut võrreldes bank40 projektiga?
+
+Bank40-s ehitasime sama asja — login, AuthService, NavigationService, router. Struktuur on identne. Kaks asja on ETAS-is lisaks:
+
+| Uus asi | Kus näed | Mida tähendab |
+|---------|---------|---------------|
+| **`@Valid` + `@NotBlank`** | `LoginController`, `LoginDto` | Spring valideerib DTO väljad automaatselt enne service-ni jõudmist — tühi väli → 400 kohe |
+| **Swagger `@Operation` + `@ApiResponses`** | `LoginController` | Endpoint on dokumenteeritud Swagger UI-s — näed `/swagger-ui.html`-is mida API ootab ja tagastab |
+
+Kõik muu (Controller → Service → Repository → Mapper → DTO muster, AuthService, NavigationService, router) on täpselt sama mis bank40-s.
+
+---
+
 ## Andmevoog — suur pilt
 
 ```

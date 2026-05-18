@@ -1,6 +1,5 @@
 package ee.valiit.etas.controller.seller;
 
-
 import ee.valiit.etas.controller.seller.dto.*;
 import ee.valiit.etas.infrastructure.error.ApiError;
 import ee.valiit.etas.service.SellerService;
@@ -13,7 +12,6 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -53,7 +51,6 @@ public class SellerController {
     public List<SellerRegionResponseDto> getSellerRegions(@PathVariable Integer sellerId) {
         return sellerService.findSellerRegions(sellerId);
     }
-
     @GetMapping("/seller/{sellerId}/commission-rates")
     @Operation(summary = "Edasimüüja teenustasud")
     @ApiResponses(value = {
@@ -76,7 +73,6 @@ public class SellerController {
     public List<SellerContactResponseDto> getSellerContacts(@PathVariable Integer sellerId) {
         return sellerService.findSellerContacts(sellerId);
     }
-
     @PostMapping("/seller/user/{userId}")
     @Operation(summary = "Lisa edasimüüja")
     @ApiResponses(value = {
@@ -121,5 +117,4 @@ public class SellerController {
     public void updateSellerStatus(@PathVariable Integer sellerId, @Valid @RequestBody SellerStatusDto sellerStatusDto) {
         sellerService.updateSellerStatus(sellerId, sellerStatusDto);
     }
-
 }

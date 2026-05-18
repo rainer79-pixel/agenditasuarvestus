@@ -121,17 +121,10 @@ Süsteemil on kaks rolli. **User** on igapäevane tööriista kasutaja — teeb 
 | PUT | `/api/seller/{sellerId}/commission-rates/{commissionRateId}` | Muuda teenustasu |
 | DELETE | `/api/seller/{sellerId}/commission-rates/{commissionRateId}` | Kustuta teenustasu |
 
-**Nimekiri:** `SellerResponseDto.java`
+**Nimekiri ja detailvaade:** `SellerDetailResponseDto.java`
 ```json
-[{ "sellerId": 1, "companyName": "ETAS AS", "orgId": "10406134", "status": "ACTIVE" }]
-```
-
-**Detailvaade:** `SellerDetailResponseDto.java`
-```json
-{
-  "sellerId": 1, "companyName": "ETAS AS", "orgId": "10406134", "status": "ACTIVE",
-  "contractStart": "01.01.2024", "contractEnd": null, "notes": "Märkused"
-}
+[{ "sellerId": 1, "companyName": "ETAS AS", "orgId": 10406134, "status": "ACTIVE",
+   "contractStart": "01.01.2024", "contractEnd": null, "notes": "Märkused" }]
 ```
 
 **Piirkonnad:** `SellerRegionResponseDto.java`
@@ -153,8 +146,8 @@ Süsteemil on kaks rolli. **User** on igapäevane tööriista kasutaja — teeb 
 
 **Uus edasimüüja / muutmine:** `SellerDto.java`
 ```json
-{ "companyName": "ETAS AS", "orgId": "10406134",
-  "contractStart": "01.01.2024", "contractEnd": null, "notes": "Märkused" }
+{ "companyName": "ETAS AS", "orgId": 10406134,
+  "contractStart": "2024-01-01", "contractEnd": null, "notes": "Märkused" }
 ```
 
 **Staatus:** `SellerStatusDto.java`
@@ -304,7 +297,7 @@ file:   (binary .xlsx)
 ## 6. Olulised otsustused
 
 - **Login emailiga** — email on alati unikaalne, kasutaja mäletab seda alati
-- **Autentimine sessioonipõhine** — Spring Security sessioon, token puudub
+- **Autentimine lihtne (localStorage-põhine)** — Spring Security puudub, sessioon puudub; backend tagastab kasutajainfo JSON-ina, frontend salvestab `localStorage`-i. BCrypt ja Spring Security lisatakse hiljem.
 - **Edasimüüjat ei kustutata** — ainult deaktiveeritakse/aktiveeritakse (`PUT /api/seller/{sellerId}/status`)
 - **Kasutajat ei kustutata** — ainult deaktiveeritakse (`PUT /api/user/{userId}/status`)
 - **Kontakte saab kustutada** — need ei ole ajalooliselt kriitilised
@@ -314,7 +307,6 @@ file:   (binary .xlsx)
 - **Excel import fikseeritud formaadiga** — `docs/0.6_Issuer_sales_report.xlsx`
 - **Ühel perioodil saab olla ainult üks aruanne**
 - **KM määr seadistatav** — praegu 22%, Admin saab muuta ilma arendajata
-- **Parool krüpteeritakse BCryptiga**
 
 ## 7. Teenustasu arvutuse loogika
 
@@ -346,7 +338,7 @@ Tabelid: `app_user`, `vat_setting`, `region`, `role`, `product_type`, `seller`, 
 ## 9. Arenduse järjekord
 
 ### Backend (Spring Boot):
-1. User + login/autentimine (Spring Security, sessioonipõhine, BCrypt)
+1. User + login/autentimine (lihtne — email+password+status, ilma Spring Security ja BCrypt-ita)
 2. Seller CRUD
 3. Contact + contact_role CRUD
 4. Region (seed-andmed) + Seller_region CRUD

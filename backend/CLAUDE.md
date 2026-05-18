@@ -1,6 +1,7 @@
 # CLAUDE.md — Backend kodeerimistavad
 
 > Kehtib koos juurkataloogis asuva `CLAUDE.md`-ga, kus on üldine projektiinfo.
+> **Referentsprojekt:** `bank40back` (branch Rainer) — kasuta sama lähenemist kus võimalik. Kui ETAS vajab midagi uut, kasuta võimalikult lihtsat lahendust.
 
 ## Kodeerimistavad — Backend (Spring Boot)
 

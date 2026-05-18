@@ -12,6 +12,23 @@ ETAS on see nimekiri — digitaalne ja ligipääsetav kõigile töötajatele.
 
 ---
 
+## Mis on selles taskis uut võrreldes bank40 projektiga?
+
+Bank40-s õppisime sama Controller → Service → Repository → Mapper → DTO mustrit. Task-03 kordab täpselt sama mustrit — aga edasimüüjate maailm on keerulisem, seetõttu lisandus kuus uut kontseptsiooni:
+
+| Uus asi | Kus näed | Mida tähendab |
+|---------|---------|---------------|
+| **Status enum kolme kihiga** | `Status.java`, `SellerMapper`, `SellerService` | DB salvestab `"A"`/`"D"`, API tagastab `"ACTIVE"`/`"INACTIVE"`, UI näitab `"Aktiivne"`/`"Peatatud"` — üks enum teisendab kõik |
+| **`@ResponseStatus(HttpStatus.CREATED)`** | `SellerController` POST meetodil | POST tagastab `201 Created`, mitte vaikimisi `200 OK` — see on HTTP standard uue ressursi loomisel |
+| **`ConflictException` + HTTP 409** | `SellerService`, `RestExceptionHandler` | Uus veatüüp olukordadeks kus pole viga inputs, aga loogiline konflikt — nt orgId on juba olemas |
+| **`LocalDate`/`LocalDateTime` + Mapper kuupäevateisendus** | `Seller` entity, `SellerMapper` | Kuupäevad liiguvad sisse ISO formaadis (`2024-01-01`), välja eesti formaadis (`01.01.2024`) — Mapper teisendab |
+| **`@BeanMapping(NullValuePropertyMappingStrategy.IGNORE)`** | `SellerMapper` `updateSeller()` | PUT mapper — kui DTO väli on `null`, jätab entity olemasoleva väärtuse muutmata |
+| **`join fetch` JPQL-is** | `SellerRegionRepository` | Lazy suhte korral peab seotud entity koos laadima — muidu `LazyInitializationException` |
+
+Kõik muu (muster, `@Transactional`, `@Valid`, Swagger, `Optional`, `ForbiddenException`) on tuttav bank40-st või eelmistest taskidest.
+
+---
+
 ## Kuidas kõik osad omavahel seotud on?
 
 Enne kui detailidesse läheme, vaata suurt pilti. Üks HTTP päring läbib alati sama tee:

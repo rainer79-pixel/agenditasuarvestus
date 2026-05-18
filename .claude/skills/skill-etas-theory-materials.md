@@ -13,6 +13,7 @@ Kasutaja annab task numbri argumendina (nt `03`). Kui argumenti ei anta, küsi k
 3. **Loe** loodud frontend failid — View, Service, muudetud NavigationService/Router
 4. **Loe** olemasolevad materjalid `docs/theory-materials/` — mõista formaati ja taset, väldi kordamist
 5. **Vaata** Balsamiq wireframe selle taski vaadete kohta — mõista mida kasutaja näeb
+6. **Võrdle bank40-ga** — vaata `bank40back` ja `bank40front` (branch Rainer) koodi. Tuvasta mis annotatsioonid, mustrid või kontseptsioonid on selles taskis UUED võrreldes bank40-ga. Need lähevad "Uut vs bank40" sektsiooni materjali algusesse ja neid käsitletakse sisus põhjalikumalt.
 
 ---
 
@@ -38,6 +39,19 @@ Kasutaja annab task numbri argumendina (nt `03`). Kui argumenti ei anta, küsi k
 [2-3 lausega: mida see task ehitab ja miks see on vajalik süsteemis]
 
 **Päriselust analoogia:** [konkreetne analoogia]
+
+---
+
+## Mis on selles taskis uut võrreldes bank40 projektiga?
+
+[1 lause kontekstiks — mis on sama mis bank40-s ja mis lisandub]
+
+| Uus asi | Kus näed | Mida tähendab |
+|---------|---------|---------------|
+| **`@UusAnnotatsioon`** | `FooController`, `FooDto` | Lühike selgitus — mida see teeb ja miks lisati |
+| **Uus muster / kontseptsioon** | `FooService` | Lühike selgitus |
+
+Kõik muu ([loetelu tuttavatest mõistetest]) on sama mis bank40-s — kordame sama mustrit.
 
 ---
 

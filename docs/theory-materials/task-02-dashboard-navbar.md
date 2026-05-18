@@ -10,6 +10,20 @@ Lisaks ehitame navigatsiooniriba mis on nähtav kõigil sisselogitud lehtedel.
 
 ---
 
+## Mis on selles taskis uut võrreldes bank40 projektiga?
+
+Bank40-s oli samuti Dashboard ja navbar olemas. Kolm asja on ETAS-is teisiti:
+
+| Uus asi | Kus näed | Mida tähendab |
+|---------|---------|---------------|
+| **JPQL `max()` + `Optional.map().orElse()`** | `SalesReportRepository`, `DashboardService` | Aggregate funktsioon leiab hiliseima kuupäeva — `Optional` käsitleb turvaltselt olukorra kus andmed puuduvad |
+| **`computed` property (`showNavbar`)** | `App.vue` | Vue arvutab väärtuse automaatselt uuesti kui sõltuvused muutuvad — kasutame navbari peitmiseks home/login lehtedel |
+| **`window.location.href` dashboardi navigatsioonil** | `NavigationService.js` | Pärast sisselogimist laadime lehe täielikult uuesti, et `App.vue` loeks `localStorage` uuesti — `router.push()` selleks ei piisa |
+
+Kõik muu (DashboardService, API päring, DTO, Controller → Service → Repository muster) on sama mis bank40-s.
+
+---
+
 ## Andmevoog — suur pilt
 
 ```
