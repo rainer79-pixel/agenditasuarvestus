@@ -30,6 +30,7 @@ public class SellerContactController {
     public List<SellerContactResponseDto> getSellerContacts(@PathVariable Integer sellerId) {
         return sellerContactService.findSellerContacts(sellerId);
     }
+
     @DeleteMapping("/seller/{sellerId}/contacts/{contactId}")
     @Operation(summary = "Kustuta kontakt")
     @ApiResponses(value = {
@@ -45,5 +46,4 @@ public class SellerContactController {
                                     @PathVariable Integer contactId) {
         sellerContactService.deleteSellerContact(userId, sellerId, contactId);
     }
-
 }
