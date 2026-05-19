@@ -18,6 +18,9 @@ public enum ErrorResponse {
     // Contact
     CONTACT_NOT_FOUND("Kontakti ei leitud", 311),
 
+    // Region
+    SELLER_REGION_NOT_FOUND("Piirkonda ei leitud", 321),
+
     // Commission rate
     COMMISSION_RATE_NOT_FOUND("Teenustasu määra ei leitud", 411),
 

@@ -1,5 +1,6 @@
 package ee.valiit.etas.controller.seller;
 
+import ee.valiit.etas.controller.seller.dto.SellerRegionDto;
 import ee.valiit.etas.controller.seller.dto.SellerRegionResponseDto;
 import ee.valiit.etas.infrastructure.error.ApiError;
 import ee.valiit.etas.service.SellerRegionService;
@@ -8,6 +9,7 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,4 +32,23 @@ public class SellerRegionController {
     public List<SellerRegionResponseDto> getSellerRegions(@PathVariable Integer sellerId) {
         return sellerRegionService.findSellerRegions(sellerId);
     }
+    @PutMapping("/seller/{sellerId}/regions/{regionId}")
+    @Operation(summary = "Uuenda piirkonna müügipunktide arv")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "OK"),
+            @ApiResponse(responseCode = "400", description = "Vigased andmed",
+                    content = @Content(schema = @Schema(implementation = ApiError.class))),
+            @ApiResponse(responseCode = "403", description = "Pole õigust",
+                    content = @Content(schema = @Schema(implementation = ApiError.class))),
+            @ApiResponse(responseCode = "404", description = "Edasimüüjat või piirkonda ei leitud",
+                    content = @Content(schema = @Schema(implementation = ApiError.class))),
+            @ApiResponse(responseCode = "500", description = "Serveri viga",
+                    content = @Content(schema = @Schema(implementation = ApiError.class)))})
+    public void updateSellerRegion(@RequestParam Integer userId,
+                                   @PathVariable Integer sellerId,
+                                   @PathVariable Integer regionId,
+                                   @Valid @RequestBody SellerRegionDto sellerRegionDto) {
+        sellerRegionService.updateSellerRegion(userId, sellerId, regionId, sellerRegionDto);
+    }
+
 }
