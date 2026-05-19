@@ -5,19 +5,9 @@ import ee.valiit.etas.controller.seller.dto.*;
 import ee.valiit.etas.infrastructure.exception.ConflictException;
 import ee.valiit.etas.infrastructure.exception.DataNotFoundException;
 import ee.valiit.etas.infrastructure.exception.ForbiddenException;
-import ee.valiit.etas.persistence.commissionrate.CommissionRate;
-import ee.valiit.etas.persistence.commissionrate.CommissionRateMapper;
-import ee.valiit.etas.persistence.commissionrate.CommissionRateRepository;
 import ee.valiit.etas.persistence.seller.Seller;
 import ee.valiit.etas.persistence.seller.SellerMapper;
 import ee.valiit.etas.persistence.seller.SellerRepository;
-import ee.valiit.etas.persistence.sellercontact.SellerContact;
-import ee.valiit.etas.persistence.sellercontact.SellerContactMapper;
-import ee.valiit.etas.persistence.sellercontact.SellerContactRepository;
-import ee.valiit.etas.persistence.sellercontactrole.SellerContactRoleRepository;
-import ee.valiit.etas.persistence.sellerregion.SellerRegion;
-import ee.valiit.etas.persistence.sellerregion.SellerRegionMapper;
-import ee.valiit.etas.persistence.sellerregion.SellerRegionRepository;
 import ee.valiit.etas.persistence.user.User;
 import ee.valiit.etas.persistence.user.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -25,7 +15,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 import static ee.valiit.etas.infrastructure.error.ErrorResponse.*;
@@ -36,13 +25,6 @@ public class SellerService {
     private final SellerRepository sellerRepository;
     private final UserRepository userRepository;
     private final SellerMapper sellerMapper;
-    private final SellerRegionRepository sellerRegionRepository;
-    private final SellerRegionMapper sellerRegionMapper;
-    private final CommissionRateRepository commissionRateRepository;
-    private final CommissionRateMapper commissionRateMapper;
-    private final SellerContactRepository sellerContactRepository;
-    private final SellerContactRoleRepository sellerContactRoleRepository;
-    private final SellerContactMapper sellerContactMapper;
 
     public List<SellerDetailResponseDto> findSellers() {
         List<Seller> sellers = sellerRepository.findAllSellers();
@@ -52,27 +34,6 @@ public class SellerService {
     public SellerDetailResponseDto findSeller(Integer sellerId) {
         Seller seller = getSeller(sellerId);
         return sellerMapper.toSellerDetailResponseDto(seller);
-    }
-
-    public List<SellerRegionResponseDto> findSellerRegions(Integer sellerId) {
-        List<SellerRegion> sellerRegions = sellerRegionRepository.findSellerRegionsBy(sellerId);
-        return sellerRegionMapper.toSellerRegionResponseDtos(sellerRegions);
-    }
-
-    public List<CommissionRateResponseDto> findSellerCommissionRates(Integer sellerId) {
-        List<CommissionRate> commissionRates = commissionRateRepository.findCommissionRatesBy(sellerId);
-        return commissionRateMapper.toCommissionRateResponseDtos(commissionRates);
-    }
-
-    public List<SellerContactResponseDto> findSellerContacts(Integer sellerId) {
-        List<SellerContact> contacts = sellerContactRepository.findSellerContactsBy(sellerId);
-        List<SellerContactResponseDto> result = new ArrayList<>();
-        for (SellerContact contact : contacts) {
-            SellerContactResponseDto dto = sellerContactMapper.toSellerContactResponseDto(contact);
-            dto.setRoles(sellerContactRoleRepository.findRoleCodesBy(contact.getId()));
-            result.add(dto);
-        }
-        return result;
     }
 
     @Transactional

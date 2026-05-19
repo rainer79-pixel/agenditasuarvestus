@@ -40,39 +40,6 @@ public class SellerController {
     public SellerDetailResponseDto getSeller(@PathVariable Integer sellerId) {
         return sellerService.findSeller(sellerId);
     }
-    @GetMapping("/seller/{sellerId}/regions")
-    @Operation(summary = "Edasimüüja piirkonnad")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "OK"),
-            @ApiResponse(responseCode = "404", description = "Edasimüüjat ei leitud",
-                    content = @Content(schema = @Schema(implementation = ApiError.class))),
-            @ApiResponse(responseCode = "500", description = "Serveri viga",
-                    content = @Content(schema = @Schema(implementation = ApiError.class)))})
-    public List<SellerRegionResponseDto> getSellerRegions(@PathVariable Integer sellerId) {
-        return sellerService.findSellerRegions(sellerId);
-    }
-    @GetMapping("/seller/{sellerId}/commission-rates")
-    @Operation(summary = "Edasimüüja teenustasud")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "OK"),
-            @ApiResponse(responseCode = "404", description = "Edasimüüjat ei leitud",
-                    content = @Content(schema = @Schema(implementation = ApiError.class))),
-            @ApiResponse(responseCode = "500", description = "Serveri viga",
-                    content = @Content(schema = @Schema(implementation = ApiError.class)))})
-    public List<CommissionRateResponseDto> getSellerCommissionRates(@PathVariable Integer sellerId) {
-        return sellerService.findSellerCommissionRates(sellerId);
-    }
-    @GetMapping("/seller/{sellerId}/contacts")
-    @Operation(summary = "Edasimüüja kontaktid")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "OK"),
-            @ApiResponse(responseCode = "404", description = "Edasimüüjat ei leitud",
-                    content = @Content(schema = @Schema(implementation = ApiError.class))),
-            @ApiResponse(responseCode = "500", description = "Serveri viga",
-                    content = @Content(schema = @Schema(implementation = ApiError.class)))})
-    public List<SellerContactResponseDto> getSellerContacts(@PathVariable Integer sellerId) {
-        return sellerService.findSellerContacts(sellerId);
-    }
     @PostMapping("/seller/user/{userId}")
     @Operation(summary = "Lisa edasimüüja")
     @ApiResponses(value = {
