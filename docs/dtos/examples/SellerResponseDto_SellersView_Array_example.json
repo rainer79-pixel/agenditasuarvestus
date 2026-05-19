@@ -1,0 +1,14 @@
+[
+  {
+    "sellerId": 1,
+    "companyName": "ETAS AS",
+    "orgId": 10406134,
+    "status": "ACTIVE"
+  },
+  {
+    "sellerId": 2,
+    "companyName": "Ridango AS",
+    "orgId": 10234567,
+    "status": "INACTIVE"
+  }
+]

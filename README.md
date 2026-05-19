@@ -135,5 +135,9 @@ Pärast `database/3_import.sql` käivitamist on andmebaasis:
 
 - `projekt-struktuur.md` — Kaustade struktuur visuaalselt (kood + tabel)
 - `docs/specs/` — Projekti kirjeldus
-- `docs/balsamiq/` — Balsamiq wireframe'id (PDF, BMPR)
+- `docs/balsamiq/` — Balsamiq wireframe'id (PDF, BMPR, PNG)
 - `docs/datamodel/` — Andmemudel (PDF, HTML, SQL)
+- `docs/tasks/tasks.md` — Taskide ülevaade ja seis
+- `docs/tasks/backend/` — Üksikute backend endpointide taski kirjeldused
+- `docs/dtos/` — DTO schema ja näidisandmed (`schema/`, `examples/`)
+- `docs/theory-materials/` — Õppematerjalid taskide kaupa

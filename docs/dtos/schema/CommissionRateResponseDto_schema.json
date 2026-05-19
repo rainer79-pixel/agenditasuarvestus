@@ -1,0 +1,9 @@
+{
+  "commissionRateId": 0,
+  "productTypeName": "string",
+  "feePerTransaction": 0.0,
+  "feePercent": 0.0,
+  "includesVat": false,
+  "validFrom": "2000-01-01",
+  "validTo": "2000-01-01"
+}

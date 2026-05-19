@@ -1,0 +1,9 @@
+{
+  "contactId": 0,
+  "firstName": "string",
+  "middleName": "string",
+  "lastName": "string",
+  "phone": "string",
+  "email": "string",
+  "roles": []
+}

@@ -34,6 +34,14 @@ etas/
     balsamiq/                           — Balsamiq failid ja wireframe'id (PDF, PNG, BMPR)
     datamodel/                          — Andmemudel (PDF, PNG, SQL)
     instructions/                       — Õppejõu juhendmaterjalid (PDF)
+    tasks/
+      tasks.md                          — Taskide ülevaade ja seis
+      task-01/, task-02/, task-03/      — Vana süsteem: feature-põhised taski kirjeldused
+      backend/                          — Uus süsteem: üks fail per backend endpoint (nt PUT-api-seller-sellerId-status.md)
+    dtos/
+      schema/                           — DTO välja nimed ja tüübid (NimiDto_schema.json)
+      examples/                         — Realistlikud näidisandmed (NimiDto_VaateNimi_example.json)
+    theory-materials/                   — Õppematerjalid taskide kaupa
   projekt-struktuur.md      — Kaustade struktuur visuaalselt (kood + tabel)
 ```
 

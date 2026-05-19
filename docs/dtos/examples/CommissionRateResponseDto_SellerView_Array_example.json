@@ -1,0 +1,20 @@
+[
+  {
+    "commissionRateId": 1,
+    "productTypeName": "isikustamine",
+    "feePerTransaction": 0.01,
+    "feePercent": null,
+    "includesVat": false,
+    "validFrom": "01.01.2024",
+    "validTo": null
+  },
+  {
+    "commissionRateId": 2,
+    "productTypeName": "kaardimyyk",
+    "feePerTransaction": null,
+    "feePercent": 1.0,
+    "includesVat": true,
+    "validFrom": "01.01.2024",
+    "validTo": null
+  }
+]

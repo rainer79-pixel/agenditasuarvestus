@@ -1,0 +1,9 @@
+{
+  "sellerId": 0,
+  "companyName": "string",
+  "orgId": 0,
+  "status": "string",
+  "contractStart": "2000-01-01",
+  "contractEnd": "2000-01-01",
+  "notes": "string"
+}

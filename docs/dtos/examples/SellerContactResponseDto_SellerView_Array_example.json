@@ -1,0 +1,11 @@
+[
+  {
+    "contactId": 1,
+    "firstName": "Mari",
+    "middleName": null,
+    "lastName": "Maasikas",
+    "phone": "55555555",
+    "email": "mari@agent.ee",
+    "roles": ["L", "A"]
+  }
+]

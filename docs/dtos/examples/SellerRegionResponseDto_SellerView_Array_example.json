@@ -1,0 +1,12 @@
+[
+  {
+    "regionId": 1,
+    "regionName": "Tallinn",
+    "salesPointCount": 10
+  },
+  {
+    "regionId": 2,
+    "regionName": "Harjumaa",
+    "salesPointCount": 5
+  }
+]
