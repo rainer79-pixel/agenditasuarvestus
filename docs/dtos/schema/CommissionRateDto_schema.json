@@ -1,0 +1,8 @@
+{
+  "productTypeId": 0,
+  "feePerTransaction": 0.0,
+  "feePercent": 0.0,
+  "includesVat": false,
+  "validFrom": "pp.kk.aaaa",
+  "validTo": "pp.kk.aaaa"
+}
