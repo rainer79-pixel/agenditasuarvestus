@@ -30,4 +30,20 @@ public class SellerContactController {
     public List<SellerContactResponseDto> getSellerContacts(@PathVariable Integer sellerId) {
         return sellerContactService.findSellerContacts(sellerId);
     }
+    @DeleteMapping("/seller/{sellerId}/contacts/{contactId}")
+    @Operation(summary = "Kustuta kontakt")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "OK"),
+            @ApiResponse(responseCode = "403", description = "Pole õigust",
+                    content = @Content(schema = @Schema(implementation = ApiError.class))),
+            @ApiResponse(responseCode = "404", description = "Edasimüüjat või kontakti ei leitud",
+                    content = @Content(schema = @Schema(implementation = ApiError.class))),
+            @ApiResponse(responseCode = "500", description = "Serveri viga",
+                    content = @Content(schema = @Schema(implementation = ApiError.class)))})
+    public void deleteSellerContact(@RequestParam Integer userId,
+                                    @PathVariable Integer sellerId,
+                                    @PathVariable Integer contactId) {
+        sellerContactService.deleteSellerContact(userId, sellerId, contactId);
+    }
+
 }

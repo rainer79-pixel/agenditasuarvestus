@@ -1,5 +1,9 @@
 {
   "permissions": {
-    "allow": []
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\margaritta.erikson\\\\IdeaProjects\\\\etas\\\\backend\\\\src\\\\main\\\\java\\\\ee\\\\valiit\\\\etas\" -Recurse -Directory)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Sort-Object)"
+    ]
   }
 }
