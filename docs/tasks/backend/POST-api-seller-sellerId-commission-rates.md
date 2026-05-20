@@ -51,7 +51,7 @@ Puudub — HTTP 201 tühi vastus
 > **Märkus veahalduse kohta:**
 > `ForbiddenException`, `DataNotFoundException`, `ConflictException`, `ACCESS_DENIED`, `SELLER_NOT_FOUND`, `PRODUCT_TYPE_NOT_FOUND` on juba olemas.
 > **Puudub:** `COMMISSION_RATE_ALREADY_EXISTS` — lisa `ErrorResponse.java`-sse (Commission rate sektsiooni, soovituslik kood 413):
-> ```java
+> ```
 > COMMISSION_RATE_ALREADY_EXISTS("Sellel tootegrupil on juba kehtiv teenustasu", 413),
 > ```
 > **409 loogika:** Kontrollitakse, kas edasimüüjal on juba olemas teenustasu sama `product_type_id`-ga, mille `valid_to IS NULL` (lõputu kehtivus). Kui jah → 409.

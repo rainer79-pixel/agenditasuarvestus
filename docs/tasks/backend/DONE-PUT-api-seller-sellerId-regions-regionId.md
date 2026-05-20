@@ -48,7 +48,7 @@ Puudub — HTTP 200 tühi vastus
 > - `backend/src/main/java/ee/valiit/etas/infrastructure/exception/`
 >
 > **`SELLER_REGION_NOT_FOUND` puudub praegu `ErrorResponse` enumist — lisa see enne implementeerimist:**
-> ```java
+> ```
 > // Region
 > SELLER_REGION_NOT_FOUND("Piirkonda ei leitud", 321),
 > ```

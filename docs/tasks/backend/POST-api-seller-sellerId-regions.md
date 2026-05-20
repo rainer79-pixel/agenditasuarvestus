@@ -49,7 +49,7 @@ Puudub — HTTP 201 tühi vastus
 > Veahalduse infrastruktuur asub: `backend/src/main/java/ee/valiit/etas/infrastructure/`
 > `ForbiddenException`, `DataNotFoundException`, `ConflictException`, `ACCESS_DENIED`, `SELLER_NOT_FOUND` on juba olemas.
 > **Puudub:** `SELLER_REGION_ALREADY_EXISTS` — lisa `ErrorResponse.java`-sse (vt. Region sektsiooni, soovituslik kood 322):
-> ```java
+> ```
 > SELLER_REGION_ALREADY_EXISTS("See piirkond on juba lisatud", 322),
 > ```
 
