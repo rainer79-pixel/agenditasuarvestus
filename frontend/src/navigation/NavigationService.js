@@ -34,5 +34,8 @@ export default {
   navigateToSettingsView() {
     router.push({ name: 'settingsRoute' })
   },
+  navigateToSellerSettingsView(sellerId) {
+    router.push({ name: 'sellerSettingsRoute', params: { sellerId: sellerId } })
+  },
 }
 

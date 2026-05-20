@@ -5,6 +5,7 @@ import DashboardView from '@/views/DashboardView.vue'
 import SellersView from '@/views/SellersView.vue'
 import SellerView from '@/views/SellerView.vue'
 import SellerFormView from '@/views/SellerFormView.vue'
+import SellerSettingsView from '@/views/SellerSettingsView.vue'
 
 
 const router = createRouter({
@@ -39,6 +40,11 @@ const router = createRouter({
       path: '/seller/:sellerId',
       name: 'sellerRoute',
       component: SellerView,
+    },
+    {
+      path: '/seller/:sellerId/settings',
+      name: 'sellerSettingsRoute',
+      component: SellerSettingsView,
     },
 
     { path: '/reports', name: 'reportsRoute', component: DashboardView },
