@@ -1,4 +1,4 @@
-# DELETE /api/seller/{sellerId}/regions/{regionId}
+# PUT /api/seller/{sellerId}/regions/{regionId}
 
 **Kontroller:** `SellerRegionController.java`
 **Tüüp:** Backend
@@ -6,7 +6,7 @@
 
 ## Kontekst
 
-`SellerSettingsView` kuvab edasimüüja piirkondade nimekirja koos "Kustuta" nupuga iga piirkonna real. See endpoint kustutab edasimüüja piirkonna seose (`seller_region` rea) — mitte piirkonda ennast, mis on üleüldine viiteandmestik. Ainult Admin saab piirkondi kustutada. Seotud endpointid samal lehel: `GET /api/seller/{sellerId}/regions`, `POST /api/seller/{sellerId}/regions`, `PUT /api/seller/{sellerId}/regions/{regionId}`.
+`SellerSettingsView` kuvab edasimüüja piirkondade nimekirja kus iga real on muutmisnupp (pliiats). Nupp avab inline muutmisrežiimi kus saab uuendada piirkonna müügipunktide arvu (`sales_point_count`). Piirkond ise (`region_id`) ei muutu — ainult müügipunktide arv. Ainult Admin saab piirkonna andmeid muuta. Seotud endpointid samal lehel: `GET /api/seller/{sellerId}/regions`, `POST /api/seller/{sellerId}/regions`, `DELETE /api/seller/{sellerId}/regions/{regionId}`.
 
 ## Mocki vaade
 
@@ -16,13 +16,18 @@
 
 | Väli | Väärtus |
 |------|---------|
-| Meetod | `DELETE` |
+| Meetod | `PUT` |
 | Tee | `/api/seller/{sellerId}/regions/{regionId}` |
 | Auth | Ei (rollipõhine kontroll teenuse kihis) |
 
-### Request Body
+### Request Body — `SellerRegionDto.java`
 
-Puudub — DELETE päring
+> Schema: [`SellerRegionDto_schema.json`](../../dtos/schema/SellerRegionDto_schema.json)
+> Näidis: [`SellerRegionDto_SellerSettingsView_example.json`](../../dtos/examples/SellerRegionDto_SellerSettingsView_example.json)
+
+| Väli | Tüüp | Kirjeldus |
+|------|------|-----------|
+| `salesPointCount` | `Integer` | Müügipunktide arv — vähemalt 0 (`@Min(0)`) |
 
 ### Response Body
 
@@ -43,7 +48,7 @@ Puudub — HTTP 200 tühi vastus
 > - `backend/src/main/java/ee/valiit/etas/infrastructure/exception/`
 >
 > **`SELLER_REGION_NOT_FOUND` puudub praegu `ErrorResponse` enumist — lisa see enne implementeerimist:**
-> ```java
+> ```
 > // Region
 > SELLER_REGION_NOT_FOUND("Piirkonda ei leitud", 321),
 > ```
@@ -54,21 +59,25 @@ Puudub — HTTP 200 tühi vastus
 Seotud tabelid: `seller`, `seller_region`
 
 `regionId` URL-is on `seller_region.id` (vahel-tabeli primaarvõti, mitte `region.id`).
-Kustutamisel eemaldatakse üks `seller_region` rida — `region` tabel jääb puutumata (see on üleüldine viiteandmestik, mida kasutavad kõik edasimüüjad).
-
-`seller_region` tabelil pole alamtabeleid millele see viitaks, seega **FK constraint probleemi ei ole** — rida saab kustutada otse ilma eelneva puhastuseta. See erineb kontaktide kustutamisest kus tuli esmalt `seller_role` read kustutada.
+Uuendatakse ainult `seller_region.sales_point_count` väli — `region_id` ja `seller_id` jäävad muutmata.
 
 ```
-seller_region tabel:
+seller_region tabel enne:
 id  | seller_id | region_id | sales_point_count
 ----+-----------+-----------+------------------
- 5  |     3     |     1     |        2          ← see rida kustutatakse (regionId=5)
+ 5  |     3     |     1     |        2
+
+seller_region tabel pärast PUT (regionId=5, salesPointCount=5):
+id  | seller_id | region_id | sales_point_count
+----+-----------+-----------+------------------
+ 5  |     3     |     1     |        5          ← ainult see väli muutus
 ```
 
 ## Vastuvõtu kriteeriumid
 
-- [ ] `DELETE /api/seller/{sellerId}/regions/{regionId}` kustutab piirkonna seose ja tagastab 200 OK
+- [ ] `PUT /api/seller/{sellerId}/regions/{regionId}` uuendab müügipunktide arvu ja tagastab 200 OK
 - [ ] `SELLER_REGION_NOT_FOUND` on lisatud `ErrorResponse` enumisse koodiga `321`
+- [ ] `SellerRegionDto` on loodud Java klassina õigesse paketti (`salesPointCount` väli koos `@Min(0)` validatsiooniga)
 - [ ] Kasutajal pole Admin rolli: tagastab 403 koos `ACCESS_DENIED` veaga
 - [ ] Edasimüüjat ei leidu: tagastab 404 koos `SELLER_NOT_FOUND` veaga
 - [ ] Piirkonda ei leidu: tagastab 404 koos `SELLER_REGION_NOT_FOUND` veaga

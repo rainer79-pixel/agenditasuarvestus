@@ -1,0 +1,8 @@
+{
+  "productTypeId": 1,
+  "feePerTransaction": 0.01,
+  "feePercent": 0,
+  "includesVat": true,
+  "validFrom": "01.01.2024",
+  "validTo": null
+}

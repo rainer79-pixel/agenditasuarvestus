@@ -44,7 +44,7 @@ Puudub — HTTP 200 tühi vastus
 > - `backend/src/main/java/ee/valiit/etas/infrastructure/exception/`
 >
 > **`COMMISSION_RATE_IN_USE` puudub praegu `ErrorResponse` enumist — lisa see enne implementeerimist:**
-> ```java
+> ```
 > // Commission rate
 > COMMISSION_RATE_NOT_FOUND("Teenustasu määra ei leitud", 411),  // juba olemas
 > COMMISSION_RATE_IN_USE("Teenustasu on kasutuses ja seda ei saa kustutada", 412),  // lisa
