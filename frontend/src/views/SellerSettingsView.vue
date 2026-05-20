@@ -13,8 +13,34 @@
 
     <!-- Kontaktid -->
     <div class="mb-4">
-      <h5>Kontaktid</h5>
-      <!-- TODO: kontaktid -->
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <h5>Kontaktid</h5>
+        <button class="btn btn-success btn-sm">+ Lisa kontakt</button>
+      </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Nimi</th>
+            <th>Telefon</th>
+            <th>E-mail</th>
+            <th>Rollid</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="contact in contacts" :key="contact.contactId">
+            <td>{{ contact.firstName }} {{ contact.middleName }} {{ contact.lastName }}</td>
+            <td>{{ contact.phone }}</td>
+            <td>{{ contact.email }}</td>
+            <td>{{ contact.roles.join(', ') }}</td>
+            <td>
+              <button class="btn btn-danger btn-sm" @click="deleteContact(contact.contactId)">
+                Kustuta
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <!-- Piirkonnad -->
@@ -36,6 +62,7 @@
 <script>
 import SellerService from '@/api-services/SellerService.js'
 import NavigationService from '@/navigation/NavigationService.js'
+import AuthService from '@/auth/AuthService.js'
 
 export default {
   name: 'SellerSettingsView',
@@ -70,6 +97,14 @@ export default {
           this.regions = response.data
         })
         .catch(() => NavigationService.navigateToSellersView())
+    },
+    deleteContact(contactId) {
+      const userId = AuthService.getUserId()
+      SellerService.sendDeleteSellerContact(this.sellerId, contactId, userId)
+        .then(() => this.loadContacts())
+        .catch((error) => {
+          this.errorMessage = error.response.data.message
+        })
     },
   },
   beforeMount() {

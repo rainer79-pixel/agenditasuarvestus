@@ -25,4 +25,7 @@ export default {
   sendPutSellerStatus(sellerId, statusData) {
     return axios.put('/api/seller/' + sellerId + '/status', statusData)
   },
+  sendDeleteSellerContact(sellerId, contactId, userId) {
+    return axios.delete('/api/seller/' + sellerId + '/contacts/' + contactId + '?userId=' + userId)
+  },
 }
