@@ -1,0 +1,14 @@
+[
+  {
+    "regionId": 1,
+    "regionName": "Tallinn"
+  },
+  {
+    "regionId": 2,
+    "regionName": "Harju maakond"
+  },
+  {
+    "regionId": 3,
+    "regionName": "Tartu maakond"
+  }
+]

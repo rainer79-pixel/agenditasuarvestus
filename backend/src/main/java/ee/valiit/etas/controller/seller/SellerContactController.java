@@ -39,8 +39,6 @@ public class SellerContactController {
                     content = @Content(schema = @Schema(implementation = ApiError.class))),
             @ApiResponse(responseCode = "404", description = "Edasimüüjat või kontakti ei leitud",
                     content = @Content(schema = @Schema(implementation = ApiError.class))),
-            @ApiResponse(responseCode = "409", description = "Teenustasu on kasutuses",
-                    content = @Content(schema = @Schema(implementation = ApiError.class))),
             @ApiResponse(responseCode = "500", description = "Serveri viga",
                     content = @Content(schema = @Schema(implementation = ApiError.class)))})
     public void deleteSellerContact(@RequestParam Integer userId,

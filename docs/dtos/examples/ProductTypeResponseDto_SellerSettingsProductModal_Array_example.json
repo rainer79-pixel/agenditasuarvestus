@@ -1,0 +1,18 @@
+[
+  {
+    "productTypeId": 1,
+    "productTypeName": "isikustamine"
+  },
+  {
+    "productTypeId": 2,
+    "productTypeName": "kaardimyyk"
+  },
+  {
+    "productTypeId": 3,
+    "productTypeName": "pilet"
+  },
+  {
+    "productTypeId": 4,
+    "productTypeName": "rahalaadimine"
+  }
+]
