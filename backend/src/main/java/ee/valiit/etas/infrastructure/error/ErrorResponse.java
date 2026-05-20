@@ -23,6 +23,7 @@ public enum ErrorResponse {
 
     // Commission rate
     COMMISSION_RATE_NOT_FOUND("Teenustasu määra ei leitud", 411),
+    COMMISSION_RATE_IN_USE("Teenustasu on kasutuses ja seda ei saa kustutada", 412),
 
     // Excel import
     IMPORT_SELLER_NOT_FOUND("Impordifailis on tundmatu edasimüüja", 511),

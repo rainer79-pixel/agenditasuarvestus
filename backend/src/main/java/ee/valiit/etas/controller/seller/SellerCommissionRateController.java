@@ -30,4 +30,22 @@ public class SellerCommissionRateController {
     public List<CommissionRateResponseDto> getSellerCommissionRates(@PathVariable Integer sellerId) {
         return sellerCommissionRateService.findSellerCommissionRates(sellerId);
     }
+    @DeleteMapping("/seller/{sellerId}/commission-rates/{commissionRateId}")
+    @Operation(summary = "Kustuta teenustasu määr")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "OK"),
+            @ApiResponse(responseCode = "403", description = "Pole õigust",
+                    content = @Content(schema = @Schema(implementation = ApiError.class))),
+            @ApiResponse(responseCode = "404", description = "Teenustasu määra ei leidu",
+                    content = @Content(schema = @Schema(implementation = ApiError.class))),
+            @ApiResponse(responseCode = "409", description = "Teenustasu on kasutuses",
+                    content = @Content(schema = @Schema(implementation = ApiError.class))),
+            @ApiResponse(responseCode = "500", description = "Serveri viga",
+                    content = @Content(schema = @Schema(implementation = ApiError.class)))})
+    public void deleteSellerCommissionRate(@RequestParam Integer userId,
+                                           @PathVariable Integer sellerId,
+                                           @PathVariable Integer commissionRateId) {
+        sellerCommissionRateService.deleteSellerCommissionRate(userId, sellerId, commissionRateId);
+
+    }
 }
