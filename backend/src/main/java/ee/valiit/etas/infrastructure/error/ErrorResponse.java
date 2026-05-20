@@ -38,6 +38,9 @@ public enum ErrorResponse {
     USER_EMAIL_ALREADY_EXISTS("Selle e-mailiga kasutaja on juba olemas", 712),
     USER_ALREADY_INACTIVE("Kasutaja on juba deaktiveeritud", 713),
 
+    // ProductType
+    PRODUCT_TYPE_NOT_FOUND("Tootegruppi ei leitud", 911),
+
     // VAT
     VAT_SETTING_NOT_FOUND("KM määra ei leitud", 811),
     ;

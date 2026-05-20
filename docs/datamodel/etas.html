@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <style>
+
+body {
+    font: normal normal normal 14px Helvetica, Arial, Sans-serif;
+    background: white;
+}
+
+div.header { text-align: center; }
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 0.5em;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+</style>
+    </head>
+    <body>
+        <div class="header">
+            <p>
+                <img src="data:image/jpg;base64,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" alt="Created with Redgate Data Modeler">
+            </p>
+            <h1 class="main-header">
+etas - physical data model documentation            </h1>
+        </div>
+        <div class="generalInfo">
+            <p class="infoField">
+                <strong>
+Database engine:                 </strong>
+ PostgreSQL            </p>
+            <p class="infoField">
+                <strong>
+Version:                 </strong>
+2.4            </p>
+            <p class="infoField">
+                <strong>
+Description:                 </strong>
+            </p>
+        </div>
+        <div class="tableOfContents">
+            <h2>
+Table of contents            </h2>
+            <ol type="1" class="contentsList">
+                <li>
+                    <a href="#tables">
+Tables                    </a>
+                    <ol class="contentsSublist">
+                        <li>
+                            <a href="#tableAppUser">
+app_user                            </a>
+                        </li>
+                        <li>
+                            <a href="#tableVatSetting">
+vat_setting                            </a>
+                        </li>
+                        <li>
+                            <a href="#tableSeller">
+seller                            </a>
+                        </li>
+                        <li>
+                            <a href="#tableSellerContact">
+seller_contact                            </a>
+                        </li>
+                        <li>
+                            <a href="#tableRole">
+role                            </a>
+                        </li>
+                        <li>
+                            <a href="#tableSellerRegion">
+seller_region                            </a>
+                        </li>
+                        <li>
+                            <a href="#tableCommissionRate">
+commission_rate                            </a>
+                        </li>
+                        <li>
+                            <a href="#tableSalesReport">
+sales_report                            </a>
+                        </li>
+                        <li>
+                            <a href="#tableCommissionCalculation">
+commission_calculation                            </a>
+                        </li>
+                        <li>
+                            <a href="#tableInvoice">
+invoice                            </a>
+                        </li>
+                        <li>
+                            <a href="#tableRegion">
+region                            </a>
+                        </li>
+                        <li>
+                            <a href="#tableSellerRole">
+seller_role                            </a>
+                        </li>
+                        <li>
+                            <a href="#tableProductType">
+product_type                            </a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#references">
+References                    </a>
+                    <ol class="contentsSublist">
+                        <li>
+                            <a href="#referenceFk0">
+FK_0                            </a>
+                        </li>
+                        <li>
+                            <a href="#referenceFk3">
+FK_3                            </a>
+                        </li>
+                        <li>
+                            <a href="#referenceFk4">
+FK_4                            </a>
+                        </li>
+                        <li>
+                            <a href="#referenceFk8">
+FK_8                            </a>
+                        </li>
+                        <li>
+                            <a href="#referenceAgentRegionRegion">
+agent_region_region                            </a>
+                        </li>
+                        <li>
+                            <a href="#referenceAgentRoleAgentContact">
+agent_role_agent_contact                            </a>
+                        </li>
+                        <li>
+                            <a href="#referenceAgentRoleRole">
+agent_role_role                            </a>
+                        </li>
+                        <li>
+                            <a href="#referenceAgentAppUser">
+agent_app_user                            </a>
+                        </li>
+                        <li>
+                            <a href="#referenceCommissionRateProductType">
+commission_rate_product_type                            </a>
+                        </li>
+                        <li>
+                            <a href="#referenceCommissionCalculationCommissionRate">
+commission_calculation_commission_rate                            </a>
+                        </li>
+                        <li>
+                            <a href="#referenceSalesReportSeller">
+sales_report_seller                            </a>
+                        </li>
+                        <li>
+                            <a href="#referenceCommissionCalculationSalesReport">
+commission_calculation_sales_report                            </a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#areas">
+Areas                    </a>
+                    <ol class="contentsSublist">
+                        <li>
+                            <a href="#areaAruande ülevaade (salesReportSummary)">
+Aruande &uuml;levaade (sales_report_summary)                            </a>
+                        </li>
+                        <li>
+                            <a href="#areaKonkreetse rea akordion (salesReportDetail)">
+Konkreetse rea akordion (sales_report_detail)                            </a>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+        <div id="tablesDiv">
+            <h2 id="tables">
+1. Tables            </h2>
+            <h3 id="tableAppUser">
+1.1. Table app_user            </h3>
+            <h4>
+1.1.1. Columns            </h4>
+            <table class="columnsTable">
+                <thead>
+                    <tr class="titleRow">
+                        <th>
+Column name                        </th>
+                        <th>
+Type                        </th>
+                        <th>
+Properties                        </th>
+                        <th>
+Description                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+id                        </td>
+                        <td>
+serial                        </td>
+                        <td>
+PK                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+first_name                        </td>
+                        <td>
+varchar(100)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+middle_name                        </td>
+                        <td>
+varchar(100)                        </td>
+                        <td>
+null                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+last_name                        </td>
+                        <td>
+varchar(100)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+email                        </td>
+                        <td>
+varchar(255)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+password                        </td>
+                        <td>
+varchar(255)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+user_status                        </td>
+                        <td>
+varchar(20)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+user_role                        </td>
+                        <td>
+char(1)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>
+1.1.2. Alternate keys            </h4>
+            <table class="alternateKeysTable">
+                <thead>
+                    <tr class="titleRow">
+                        <th>
+Key name                        </th>
+                        <th>
+Columns                        </th>
+                        <th>
+Description                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+AK_0                        </td>
+                        <td>
+email                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 id="tableVatSetting">
+1.2. Table vat_setting            </h3>
+            <h4>
+1.2.1. Columns            </h4>
+            <table class="columnsTable">
+                <thead>
+                    <tr class="titleRow">
+                        <th>
+Column name                        </th>
+                        <th>
+Type                        </th>
+                        <th>
+Properties                        </th>
+                        <th>
+Description                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+id                        </td>
+                        <td>
+serial                        </td>
+                        <td>
+PK                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+vat_rate                        </td>
+                        <td>
+numeric(5,2)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+updated_at                        </td>
+                        <td>
+timestamp                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+updated_by                        </td>
+                        <td>
+varchar(200)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 id="tableSeller">
+1.3. Table seller            </h3>
+            <h4>
+1.3.1. Columns            </h4>
+            <table class="columnsTable">
+                <thead>
+                    <tr class="titleRow">
+                        <th>
+Column name                        </th>
+                        <th>
+Type                        </th>
+                        <th>
+Properties                        </th>
+                        <th>
+Description                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+id                        </td>
+                        <td>
+serial                        </td>
+                        <td>
+PK                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+company_name                        </td>
+                        <td>
+varchar(255)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+org_id                        </td>
+                        <td>
+int                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+contract_start                        </td>
+                        <td>
+date                        </td>
+                        <td>
+null                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+contract_end                        </td>
+                        <td>
+date                        </td>
+                        <td>
+null                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+notes                        </td>
+                        <td>
+varchar(2000)                        </td>
+                        <td>
+null                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+status                        </td>
+                        <td>
+varchar(10)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+created_at                        </td>
+                        <td>
+timestamp                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+created_by                        </td>
+                        <td>
+int                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>
+1.3.2. Alternate keys            </h4>
+            <table class="alternateKeysTable">
+                <thead>
+                    <tr class="titleRow">
+                        <th>
+Key name                        </th>
+                        <th>
+Columns                        </th>
+                        <th>
+Description                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+AK_1                        </td>
+                        <td>
+org_id                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 id="tableSellerContact">
+1.4. Table seller_contact            </h3>
+            <h4>
+1.4.1. Columns            </h4>
+            <table class="columnsTable">
+                <thead>
+                    <tr class="titleRow">
+                        <th>
+Column name                        </th>
+                        <th>
+Type                        </th>
+                        <th>
+Properties                        </th>
+                        <th>
+Description                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+id                        </td>
+                        <td>
+serial                        </td>
+                        <td>
+PK                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+seller_id                        </td>
+                        <td>
+integer                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+first_name                        </td>
+                        <td>
+varchar(100)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+middle_name                        </td>
+                        <td>
+varchar(100)                        </td>
+                        <td>
+null                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+last_name                        </td>
+                        <td>
+varchar(100)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+phone                        </td>
+                        <td>
+varchar(50)                        </td>
+                        <td>
+null                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+email                        </td>
+                        <td>
+varchar(255)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 id="tableRole">
+1.5. Table role            </h3>
+            <h4>
+1.5.1. Columns            </h4>
+            <table class="columnsTable">
+                <thead>
+                    <tr class="titleRow">
+                        <th>
+Column name                        </th>
+                        <th>
+Type                        </th>
+                        <th>
+Properties                        </th>
+                        <th>
+Description                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+id                        </td>
+                        <td>
+serial                        </td>
+                        <td>
+PK                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+code                        </td>
+                        <td>
+varchar(5)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+seller_role_name                        </td>
+                        <td>
+varchar(100)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>
+1.5.2. Alternate keys            </h4>
+            <table class="alternateKeysTable">
+                <thead>
+                    <tr class="titleRow">
+                        <th>
+Key name                        </th>
+                        <th>
+Columns                        </th>
+                        <th>
+Description                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+AK_2                        </td>
+                        <td>
+code                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 id="tableSellerRegion">
+1.6. Table seller_region            </h3>
+            <h4>
+1.6.1. Columns            </h4>
+            <table class="columnsTable">
+                <thead>
+                    <tr class="titleRow">
+                        <th>
+Column name                        </th>
+                        <th>
+Type                        </th>
+                        <th>
+Properties                        </th>
+                        <th>
+Description                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+id                        </td>
+                        <td>
+serial                        </td>
+                        <td>
+PK                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+seller_id                        </td>
+                        <td>
+integer                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+region_id                        </td>
+                        <td>
+int                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+sales_point_count                        </td>
+                        <td>
+integer                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 id="tableCommissionRate">
+1.7. Table commission_rate            </h3>
+            <h4>
+1.7.1. Columns            </h4>
+            <table class="columnsTable">
+                <thead>
+                    <tr class="titleRow">
+                        <th>
+Column name                        </th>
+                        <th>
+Type                        </th>
+                        <th>
+Properties                        </th>
+                        <th>
+Description                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+id                        </td>
+                        <td>
+serial                        </td>
+                        <td>
+PK                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+seller_id                        </td>
+                        <td>
+integer                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+fee_per_transaction                        </td>
+                        <td>
+numeric(10,4)                        </td>
+                        <td>
+null                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+fee_percent                        </td>
+                        <td>
+numeric(5,2)                        </td>
+                        <td>
+null                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+includes_vat                        </td>
+                        <td>
+boolean                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+valid_from                        </td>
+                        <td>
+date                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+valid_to                        </td>
+                        <td>
+date                        </td>
+                        <td>
+null                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+product_type_id                        </td>
+                        <td>
+int                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 id="tableSalesReport">
+1.8. Table sales_report            </h3>
+            <h4>
+1.8.1. Columns            </h4>
+            <table class="columnsTable">
+                <thead>
+                    <tr class="titleRow">
+                        <th>
+Column name                        </th>
+                        <th>
+Type                        </th>
+                        <th>
+Properties                        </th>
+                        <th>
+Description                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+id                        </td>
+                        <td>
+serial                        </td>
+                        <td>
+PK                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+seller_id                        </td>
+                        <td>
+int                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+department_name                        </td>
+                        <td>
+varchar(255)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+department_id                        </td>
+                        <td>
+varchar(50)                        </td>
+                        <td>
+null                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+payment_channel                        </td>
+                        <td>
+varchar(100)                        </td>
+                        <td>
+null                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+product_type                        </td>
+                        <td>
+varchar(100)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+transaction_count                        </td>
+                        <td>
+integer                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+sales_amount                        </td>
+                        <td>
+numeric(12,2)                        </td>
+                        <td>
+null                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+fee_sum                        </td>
+                        <td>
+int                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+period                        </td>
+                        <td>
+varchar(20)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+region                        </td>
+                        <td>
+varchar(100)                        </td>
+                        <td>
+null                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+created_at                        </td>
+                        <td>
+timestamp                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 id="tableCommissionCalculation">
+1.9. Table commission_calculation            </h3>
+            <h4>
+1.9.1. Columns            </h4>
+            <table class="columnsTable">
+                <thead>
+                    <tr class="titleRow">
+                        <th>
+Column name                        </th>
+                        <th>
+Type                        </th>
+                        <th>
+Properties                        </th>
+                        <th>
+Description                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+id                        </td>
+                        <td>
+serial                        </td>
+                        <td>
+PK                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+commission_rate_id                        </td>
+                        <td>
+int                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+calculated_fee                        </td>
+                        <td>
+numeric(12,2)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+vat_amount                        </td>
+                        <td>
+numeric(12,2)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+total_fee                        </td>
+                        <td>
+numeric(12,2)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+calculation_date                        </td>
+                        <td>
+date                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+sales_report_id                        </td>
+                        <td>
+int                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 id="tableInvoice">
+1.10. Table invoice            </h3>
+            <h4>
+1.10.1. Columns            </h4>
+            <table class="columnsTable">
+                <thead>
+                    <tr class="titleRow">
+                        <th>
+Column name                        </th>
+                        <th>
+Type                        </th>
+                        <th>
+Properties                        </th>
+                        <th>
+Description                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+id                        </td>
+                        <td>
+serial                        </td>
+                        <td>
+PK                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+seller_id                        </td>
+                        <td>
+integer                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+period                        </td>
+                        <td>
+varchar(20)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+number                        </td>
+                        <td>
+varchar(100)                        </td>
+                        <td>
+null                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+amount                        </td>
+                        <td>
+numeric(12,2)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+issued_on                        </td>
+                        <td>
+date                        </td>
+                        <td>
+null                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+calculated_fee                        </td>
+                        <td>
+numeric(12,2)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+notes                        </td>
+                        <td>
+varchar(2000)                        </td>
+                        <td>
+null                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>
+1.10.2. Alternate keys            </h4>
+            <table class="alternateKeysTable">
+                <thead>
+                    <tr class="titleRow">
+                        <th>
+Key name                        </th>
+                        <th>
+Columns                        </th>
+                        <th>
+Description                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+AK_4                        </td>
+                        <td>
+seller_id, period                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 id="tableRegion">
+1.11. Table region            </h3>
+            <h4>
+1.11.1. Columns            </h4>
+            <table class="columnsTable">
+                <thead>
+                    <tr class="titleRow">
+                        <th>
+Column name                        </th>
+                        <th>
+Type                        </th>
+                        <th>
+Properties                        </th>
+                        <th>
+Description                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+id                        </td>
+                        <td>
+serial                        </td>
+                        <td>
+PK                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+region_name                        </td>
+                        <td>
+varchar(20)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+sequence_number                        </td>
+                        <td>
+int                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 id="tableSellerRole">
+1.12. Table seller_role            </h3>
+            <h4>
+1.12.1. Columns            </h4>
+            <table class="columnsTable">
+                <thead>
+                    <tr class="titleRow">
+                        <th>
+Column name                        </th>
+                        <th>
+Type                        </th>
+                        <th>
+Properties                        </th>
+                        <th>
+Description                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+id                        </td>
+                        <td>
+serial                        </td>
+                        <td>
+PK                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+seller_contact_id                        </td>
+                        <td>
+int                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+seller_role_id                        </td>
+                        <td>
+int                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 id="tableProductType">
+1.13. Table product_type            </h3>
+            <h4>
+1.13.1. Columns            </h4>
+            <table class="columnsTable">
+                <thead>
+                    <tr class="titleRow">
+                        <th>
+Column name                        </th>
+                        <th>
+Type                        </th>
+                        <th>
+Properties                        </th>
+                        <th>
+Description                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+id                        </td>
+                        <td>
+serial                        </td>
+                        <td>
+PK                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+product_type_name                        </td>
+                        <td>
+varchar(100)                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="referencesDiv">
+            <h2 id="references">
+2. Reference            </h2>
+            <h3 id="referenceFk0">
+2.1. Reference FK_0            </h3>
+            <h4>
+2.1.1. Columns            </h4>
+            <table class="referencesTable">
+                <tr>
+                    <td>
+                        <a href="#tableSeller">
+seller                        </a>
+                    </td>
+                    <td>
+0..*                    </td>
+                    <td>
+                        <a href="#tableSellerContact">
+seller_contact                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+id                    </td>
+                    <td>
+&lt;-&gt;                    </td>
+                    <td>
+seller_id                    </td>
+                </tr>
+            </table>
+            <h3 id="referenceFk3">
+2.2. Reference FK_3            </h3>
+            <h4>
+2.2.1. Columns            </h4>
+            <table class="referencesTable">
+                <tr>
+                    <td>
+                        <a href="#tableSeller">
+seller                        </a>
+                    </td>
+                    <td>
+0..*                    </td>
+                    <td>
+                        <a href="#tableSellerRegion">
+seller_region                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+id                    </td>
+                    <td>
+&lt;-&gt;                    </td>
+                    <td>
+seller_id                    </td>
+                </tr>
+            </table>
+            <h3 id="referenceFk4">
+2.3. Reference FK_4            </h3>
+            <h4>
+2.3.1. Columns            </h4>
+            <table class="referencesTable">
+                <tr>
+                    <td>
+                        <a href="#tableSeller">
+seller                        </a>
+                    </td>
+                    <td>
+0..*                    </td>
+                    <td>
+                        <a href="#tableCommissionRate">
+commission_rate                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+id                    </td>
+                    <td>
+&lt;-&gt;                    </td>
+                    <td>
+seller_id                    </td>
+                </tr>
+            </table>
+            <h3 id="referenceFk8">
+2.4. Reference FK_8            </h3>
+            <h4>
+2.4.1. Columns            </h4>
+            <table class="referencesTable">
+                <tr>
+                    <td>
+                        <a href="#tableSeller">
+seller                        </a>
+                    </td>
+                    <td>
+0..*                    </td>
+                    <td>
+                        <a href="#tableInvoice">
+invoice                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+id                    </td>
+                    <td>
+&lt;-&gt;                    </td>
+                    <td>
+seller_id                    </td>
+                </tr>
+            </table>
+            <h3 id="referenceAgentRegionRegion">
+2.5. Reference agent_region_region            </h3>
+            <h4>
+2.5.1. Columns            </h4>
+            <table class="referencesTable">
+                <tr>
+                    <td>
+                        <a href="#tableRegion">
+region                        </a>
+                    </td>
+                    <td>
+0..*                    </td>
+                    <td>
+                        <a href="#tableSellerRegion">
+seller_region                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+id                    </td>
+                    <td>
+&lt;-&gt;                    </td>
+                    <td>
+region_id                    </td>
+                </tr>
+            </table>
+            <h3 id="referenceAgentRoleAgentContact">
+2.6. Reference agent_role_agent_contact            </h3>
+            <h4>
+2.6.1. Columns            </h4>
+            <table class="referencesTable">
+                <tr>
+                    <td>
+                        <a href="#tableSellerContact">
+seller_contact                        </a>
+                    </td>
+                    <td>
+0..*                    </td>
+                    <td>
+                        <a href="#tableSellerRole">
+seller_role                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+id                    </td>
+                    <td>
+&lt;-&gt;                    </td>
+                    <td>
+seller_contact_id                    </td>
+                </tr>
+            </table>
+            <h3 id="referenceAgentRoleRole">
+2.7. Reference agent_role_role            </h3>
+            <h4>
+2.7.1. Columns            </h4>
+            <table class="referencesTable">
+                <tr>
+                    <td>
+                        <a href="#tableRole">
+role                        </a>
+                    </td>
+                    <td>
+0..*                    </td>
+                    <td>
+                        <a href="#tableSellerRole">
+seller_role                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+id                    </td>
+                    <td>
+&lt;-&gt;                    </td>
+                    <td>
+seller_role_id                    </td>
+                </tr>
+            </table>
+            <h3 id="referenceAgentAppUser">
+2.8. Reference agent_app_user            </h3>
+            <h4>
+2.8.1. Columns            </h4>
+            <table class="referencesTable">
+                <tr>
+                    <td>
+                        <a href="#tableAppUser">
+app_user                        </a>
+                    </td>
+                    <td>
+0..*                    </td>
+                    <td>
+                        <a href="#tableSeller">
+seller                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+id                    </td>
+                    <td>
+&lt;-&gt;                    </td>
+                    <td>
+created_by                    </td>
+                </tr>
+            </table>
+            <h3 id="referenceCommissionRateProductType">
+2.9. Reference commission_rate_product_type            </h3>
+            <h4>
+2.9.1. Columns            </h4>
+            <table class="referencesTable">
+                <tr>
+                    <td>
+                        <a href="#tableProductType">
+product_type                        </a>
+                    </td>
+                    <td>
+0..*                    </td>
+                    <td>
+                        <a href="#tableCommissionRate">
+commission_rate                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+id                    </td>
+                    <td>
+&lt;-&gt;                    </td>
+                    <td>
+product_type_id                    </td>
+                </tr>
+            </table>
+            <h3 id="referenceCommissionCalculationCommissionRate">
+2.10. Reference commission_calculation_commission_rate            </h3>
+            <h4>
+2.10.1. Columns            </h4>
+            <table class="referencesTable">
+                <tr>
+                    <td>
+                        <a href="#tableCommissionRate">
+commission_rate                        </a>
+                    </td>
+                    <td>
+1..1                    </td>
+                    <td>
+                        <a href="#tableCommissionCalculation">
+commission_calculation                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+id                    </td>
+                    <td>
+&lt;-&gt;                    </td>
+                    <td>
+commission_rate_id                    </td>
+                </tr>
+            </table>
+            <h3 id="referenceSalesReportSeller">
+2.11. Reference sales_report_seller            </h3>
+            <h4>
+2.11.1. Columns            </h4>
+            <table class="referencesTable">
+                <tr>
+                    <td>
+                        <a href="#tableSeller">
+seller                        </a>
+                    </td>
+                    <td>
+0..*                    </td>
+                    <td>
+                        <a href="#tableSalesReport">
+sales_report                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+id                    </td>
+                    <td>
+&lt;-&gt;                    </td>
+                    <td>
+seller_id                    </td>
+                </tr>
+            </table>
+            <h3 id="referenceCommissionCalculationSalesReport">
+2.12. Reference commission_calculation_sales_report            </h3>
+            <h4>
+2.12.1. Columns            </h4>
+            <table class="referencesTable">
+                <tr>
+                    <td>
+                        <a href="#tableSalesReport">
+sales_report                        </a>
+                    </td>
+                    <td>
+1..1                    </td>
+                    <td>
+                        <a href="#tableCommissionCalculation">
+commission_calculation                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+id                    </td>
+                    <td>
+&lt;-&gt;                    </td>
+                    <td>
+sales_report_id                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="areasDiv">
+            <h2 id="areas">
+3. Subject areas            </h2>
+            <h3 id="areaAruande ülevaade (salesReportSummary)">
+3.1. Subject area Aruande &uuml;levaade (sales_report_summary)            </h3>
+            <h4>
+3.1.1. References            </h4>
+            <ul class="subjectAreaList">
+                <li>
+                    <a href="#referenceFk0">
+FK_0                    </a>
+                </li>
+                <li>
+                    <a href="#referenceFk3">
+FK_3                    </a>
+                </li>
+                <li>
+                    <a href="#referenceFk4">
+FK_4                    </a>
+                </li>
+                <li>
+                    <a href="#referenceFk8">
+FK_8                    </a>
+                </li>
+                <li>
+                    <a href="#referenceAgentRegionRegion">
+agent_region_region                    </a>
+                </li>
+                <li>
+                    <a href="#referenceAgentRoleAgentContact">
+agent_role_agent_contact                    </a>
+                </li>
+                <li>
+                    <a href="#referenceAgentRoleRole">
+agent_role_role                    </a>
+                </li>
+                <li>
+                    <a href="#referenceAgentAppUser">
+agent_app_user                    </a>
+                </li>
+                <li>
+                    <a href="#referenceCommissionRateProductType">
+commission_rate_product_type                    </a>
+                </li>
+                <li>
+                    <a href="#referenceCommissionCalculationCommissionRate">
+commission_calculation_commission_rate                    </a>
+                </li>
+                <li>
+                    <a href="#referenceSalesReportSeller">
+sales_report_seller                    </a>
+                </li>
+                <li>
+                    <a href="#referenceCommissionCalculationSalesReport">
+commission_calculation_sales_report                    </a>
+                </li>
+            </ul>
+            <h3 id="areaKonkreetse rea akordion (salesReportDetail)">
+3.2. Subject area Konkreetse rea akordion (sales_report_detail)            </h3>
+            <h4>
+3.2.1. References            </h4>
+            <ul class="subjectAreaList">
+                <li>
+                    <a href="#referenceFk0">
+FK_0                    </a>
+                </li>
+                <li>
+                    <a href="#referenceFk3">
+FK_3                    </a>
+                </li>
+                <li>
+                    <a href="#referenceFk4">
+FK_4                    </a>
+                </li>
+                <li>
+                    <a href="#referenceFk8">
+FK_8                    </a>
+                </li>
+                <li>
+                    <a href="#referenceAgentRegionRegion">
+agent_region_region                    </a>
+                </li>
+                <li>
+                    <a href="#referenceAgentRoleAgentContact">
+agent_role_agent_contact                    </a>
+                </li>
+                <li>
+                    <a href="#referenceAgentRoleRole">
+agent_role_role                    </a>
+                </li>
+                <li>
+                    <a href="#referenceAgentAppUser">
+agent_app_user                    </a>
+                </li>
+                <li>
+                    <a href="#referenceCommissionRateProductType">
+commission_rate_product_type                    </a>
+                </li>
+                <li>
+                    <a href="#referenceCommissionCalculationCommissionRate">
+commission_calculation_commission_rate                    </a>
+                </li>
+                <li>
+                    <a href="#referenceSalesReportSeller">
+sales_report_seller                    </a>
+                </li>
+                <li>
+                    <a href="#referenceCommissionCalculationSalesReport">
+commission_calculation_sales_report                    </a>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
