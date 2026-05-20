@@ -2,7 +2,6 @@ package ee.valiit.etas.service;
 
 import ee.valiit.etas.controller.seller.dto.CommissionRateDto;
 import ee.valiit.etas.controller.seller.dto.CommissionRateResponseDto;
-import ee.valiit.etas.infrastructure.exception.DataNotFoundException;
 import ee.valiit.etas.infrastructure.exception.ConflictException;
 import ee.valiit.etas.infrastructure.exception.DataNotFoundException;
 import ee.valiit.etas.infrastructure.exception.ForbiddenException;
@@ -14,13 +13,11 @@ import ee.valiit.etas.persistence.producttype.ProductType;
 import ee.valiit.etas.persistence.producttype.ProductTypeRepository;
 import ee.valiit.etas.persistence.seller.Seller;
 import ee.valiit.etas.persistence.seller.SellerRepository;
-import ee.valiit.etas.persistence.seller.SellerRepository;
 import ee.valiit.etas.persistence.user.User;
 import ee.valiit.etas.persistence.user.UserRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -34,7 +31,6 @@ public class SellerCommissionRateService {
     private final SellerRepository sellerRepository;
     private final ProductTypeRepository productTypeRepository;
     private final UserRepository userRepository;
-    private final SellerRepository sellerRepository;
     private final CommissionCalculationRepository commissionCalculationRepository;
 
 

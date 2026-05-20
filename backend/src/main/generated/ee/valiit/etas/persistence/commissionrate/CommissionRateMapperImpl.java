@@ -1,5 +1,6 @@
 package ee.valiit.etas.persistence.commissionrate;
 
+import ee.valiit.etas.controller.seller.dto.CommissionRateDto;
 import ee.valiit.etas.controller.seller.dto.CommissionRateResponseDto;
 import ee.valiit.etas.persistence.producttype.ProductType;
 import java.time.LocalDate;
@@ -11,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-05-19T09:12:39+0300",
+    date = "2026-05-20T13:51:32+0300",
     comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.10 (JetBrains s.r.o.)"
 )
 @Component
@@ -49,6 +50,26 @@ public class CommissionRateMapperImpl implements CommissionRateMapper {
         }
 
         return list;
+    }
+
+    @Override
+    public void updateCommissionRate(CommissionRateDto commissionRateDto, CommissionRate commissionRate) {
+        if ( commissionRateDto == null ) {
+            return;
+        }
+
+        if ( commissionRateDto.getFeePerTransaction() != null ) {
+            commissionRate.setFeePerTransaction( commissionRateDto.getFeePerTransaction() );
+        }
+        if ( commissionRateDto.getFeePercent() != null ) {
+            commissionRate.setFeePercent( commissionRateDto.getFeePercent() );
+        }
+        if ( commissionRateDto.getIncludesVat() != null ) {
+            commissionRate.setIncludesVat( commissionRateDto.getIncludesVat() );
+        }
+
+        commissionRate.setValidFrom( commissionRateDto.getValidFrom() != null ? LocalDate.parse(commissionRateDto.getValidFrom(), DateTimeFormatter.ofPattern("dd.MM.yyyy")) : null );
+        commissionRate.setValidTo( commissionRateDto.getValidTo() != null ? LocalDate.parse(commissionRateDto.getValidTo(), DateTimeFormatter.ofPattern("dd.MM.yyyy")) : null );
     }
 
     private String commissionRateProductTypeProductTypeName(CommissionRate commissionRate) {
