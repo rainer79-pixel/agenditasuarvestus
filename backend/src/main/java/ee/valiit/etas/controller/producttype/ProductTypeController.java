@@ -1,8 +1,8 @@
-package ee.valiit.etas.controller.region;
+package ee.valiit.etas.controller.producttype;
 
-import ee.valiit.etas.controller.region.dto.RegionResponseDto;
+import ee.valiit.etas.controller.producttype.dto.ProductTypeResponseDto;
 import ee.valiit.etas.infrastructure.error.ApiError;
-import ee.valiit.etas.service.RegionService;
+import ee.valiit.etas.service.ProductTypeService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -18,16 +18,16 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
-public class RegionController {
-    private final RegionService regionService;
+public class ProductTypeController {
+    private final ProductTypeService productTypeService;
 
-    @GetMapping("/region")
-    @Operation(summary = "Kõik piirkonnad")
+    @GetMapping("/product-type")
+    @Operation(summary = "Kõik tootegrupid")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Piirkonnad tagastatud"),
+            @ApiResponse(responseCode = "200", description = "Tootegrupid tagastatud"),
             @ApiResponse(responseCode = "500", description = "Serveri viga",
                     content = @Content(schema = @Schema(implementation = ApiError.class)))})
-    public List<RegionResponseDto> getRegions() {
-        return regionService.getRegions();
+    public List<ProductTypeResponseDto> getProductTypes(){
+        return productTypeService.getProductTypes();
     }
 }

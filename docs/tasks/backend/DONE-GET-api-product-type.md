@@ -2,7 +2,7 @@
 
 **Kontroller:** `ProductTypeController.java`
 **Tüüp:** Backend
-**Staatus:** To Do
+**Staatus:** Done ✅
 
 ## Kontekst
 
@@ -58,9 +58,9 @@ Loetakse kõik read `product_type` tabelist. Tabel sisaldab fikseeritud seed-and
 
 ## Vastuvõtu kriteeriumid
 
-- [ ] `GET /api/product-type` tagastab 200 ja tootegruppide massiivi
-- [ ] Kõik tootegrupid tagastatakse
-- [ ] `ProductTypeResponseDto` on loodud Java klassina õigesse paketti
-- [ ] Controller, Service, Mapper kihid on eraldatud
-- [ ] Kontrolleri meetodil on `@Operation` ja `@ApiResponses` annotatsioonid
-- [ ] Swagger UI kaudu on endpoint nähtav ja testitav
+- [x] `GET /api/product-type` tagastab 200 ja tootegruppide massiivi
+- [x] Kõik tootegrupid tagastatakse
+- [x] `ProductTypeResponseDto` on loodud Java klassina õigesse paketti
+- [x] Controller, Service, Mapper kihid on eraldatud
+- [x] Kontrolleri meetodil on `@Operation` ja `@ApiResponses` annotatsioonid
+- [x] Swagger UI kaudu on endpoint nähtav ja testitav
