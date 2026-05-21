@@ -17,6 +17,7 @@ public enum ErrorResponse {
 
     // Contact
     CONTACT_NOT_FOUND("Kontakti ei leitud", 311),
+    ROLE_NOT_FOUND("Rolli ei leitud", 312),
 
     // Region
     SELLER_REGION_NOT_FOUND("Piirkonda ei leitud", 321),

@@ -1,5 +1,6 @@
 package ee.valiit.etas.persistence.sellercontact;
 
+import ee.valiit.etas.controller.seller.dto.SellerContactDto;
 import ee.valiit.etas.controller.seller.dto.SellerContactResponseDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -17,4 +18,7 @@ public interface SellerContactMapper {
     @Mapping(source = "phone", target = "phone")
     @Mapping(source = "email", target = "email")
     SellerContactResponseDto toSellerContactResponseDto(SellerContact sellerContact);
+    @Mapping(ignore = true, target = "id")
+    @Mapping(ignore = true, target = "seller")
+    SellerContact toSellerContact(SellerContactDto sellerContactDto);
 }

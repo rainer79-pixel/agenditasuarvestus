@@ -11,13 +11,13 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SellerContactDto {
-    @NotBlank
+    @NotBlank(message = "Eesnimi on kohustuslik")
     private String firstName;
     private String middleName;
-    @NotBlank
+    @NotBlank(message = "Perekonnanimi on kohustuslik")
     private String lastName;
     private String phone;
-    @NotBlank
+    @NotBlank(message = "E-mail on kohustuslik")
     private String email;
     private List<String> roles;
 }
