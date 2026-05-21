@@ -63,7 +63,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
         FieldError firstError = ex.getBindingResult().getFieldErrors().getFirst();
 
         ApiError apiError = new ApiError();
-        apiError.setMessage(firstError.getField() + ": " + firstError.getDefaultMessage());
+        apiError.setMessage(firstError.getDefaultMessage());
         apiError.setErrorCode(777);
 
         return new ResponseEntity<>(apiError, HttpStatus.BAD_REQUEST);

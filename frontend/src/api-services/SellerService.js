@@ -28,4 +28,7 @@ export default {
   sendDeleteSellerContact(sellerId, contactId, userId) {
     return axios.delete('/api/seller/' + sellerId + '/contacts/' + contactId + '?userId=' + userId)
   },
+  sendPostSellerContact(sellerId, userId, contactData) {
+    return axios.post('/api/seller/' + sellerId + '/contacts?userId=' + userId, contactData)
+  },
 }
