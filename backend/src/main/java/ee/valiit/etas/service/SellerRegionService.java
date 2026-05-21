@@ -2,8 +2,12 @@ package ee.valiit.etas.service;
 
 import ee.valiit.etas.controller.seller.dto.SellerRegionDto;
 import ee.valiit.etas.controller.seller.dto.SellerRegionResponseDto;
+import ee.valiit.etas.infrastructure.exception.ConflictException;
 import ee.valiit.etas.infrastructure.exception.DataNotFoundException;
 import ee.valiit.etas.infrastructure.exception.ForbiddenException;
+import ee.valiit.etas.persistence.region.Region;
+import ee.valiit.etas.persistence.region.RegionRepository;
+import ee.valiit.etas.persistence.seller.Seller;
 import ee.valiit.etas.persistence.seller.SellerRepository;
 import ee.valiit.etas.persistence.sellerregion.SellerRegion;
 import ee.valiit.etas.persistence.sellerregion.SellerRegionMapper;
@@ -25,6 +29,7 @@ public class SellerRegionService {
     private final SellerRegionMapper sellerRegionMapper;
     private final UserRepository userRepository;
     private final SellerRepository sellerRepository;
+    private final RegionRepository regionRepository;
 
     public List<SellerRegionResponseDto> findSellerRegions(Integer sellerId) {
         List<SellerRegion> sellerRegions = sellerRegionRepository.findSellerRegionsBy(sellerId);
@@ -46,6 +51,22 @@ public class SellerRegionService {
         validateSellerExists(sellerId);
         validateSellerRegionExists(regionId);
         sellerRegionRepository.deleteById(regionId);
+    }
+
+    @Transactional
+    public void addSellerRegion(Integer userId, Integer sellerId, SellerRegionDto sellerRegionDto) {
+        validateUserIsAdmin(userId);
+        Seller seller = getSellerById(sellerId);
+        Region region = getRegionById(sellerRegionDto.getRegionId());
+        validateSellerRegionNotDuplicate(sellerId, region.getId());
+        createAndSaveSellerRegion(seller, region, sellerRegionDto);
+    }
+
+    private void createAndSaveSellerRegion(Seller seller, Region region, SellerRegionDto sellerRegionDto) {
+        SellerRegion sellerRegion = sellerRegionMapper.toSellerRegion(sellerRegionDto);
+        sellerRegion.setSeller(seller);
+        sellerRegion.setRegion(region);
+        sellerRegionRepository.save(sellerRegion);
     }
 
     private void validateUserIsAdmin(Integer userId) {
@@ -70,6 +91,22 @@ public class SellerRegionService {
     private void validateSellerRegionExists(Integer regionId) {
         if (!sellerRegionRepository.existsById(regionId)) {
             throw new DataNotFoundException(SELLER_REGION_NOT_FOUND.getMessage(), SELLER_REGION_NOT_FOUND.getErrorCode());
+        }
+    }
+
+    private Seller getSellerById(Integer sellerId) {
+        return sellerRepository.findById(sellerId)
+                .orElseThrow(() -> new DataNotFoundException(SELLER_NOT_FOUND.getMessage(), SELLER_NOT_FOUND.getErrorCode()));
+    }
+
+    private Region getRegionById(Integer regionId) {
+        return regionRepository.findById(regionId)
+                .orElseThrow(() -> new DataNotFoundException(SELLER_REGION_NOT_FOUND.getMessage(), SELLER_REGION_NOT_FOUND.getErrorCode()));
+    }
+
+    private void validateSellerRegionNotDuplicate(Integer sellerId, Integer regionId) {
+        if (sellerRegionRepository.sellerRegionExistsBy(sellerId, regionId)) {
+            throw new ConflictException(SELLER_REGION_ALREADY_EXISTS.getMessage(), SELLER_REGION_ALREADY_EXISTS.getErrorCode());
         }
     }
 }

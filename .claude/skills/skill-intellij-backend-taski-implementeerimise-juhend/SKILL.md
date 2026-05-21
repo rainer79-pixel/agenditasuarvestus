@@ -484,7 +484,20 @@ Enne kui pead koodi valmis, kontrolli läbi:
 > ja kontrolli, et vastus vastab taskifailist leitud näidisandmetele.
 ```
 
-### 5. Loo juhendi fail
+### 5. Kontrolli mapper konventsioon
+
+Mõlemas projektis (ETAS ja bank40back) esineb muster, kus **kõik väljad mappitakse eksplitsiitselt** — ka need, mille nimed kattuvad. See teeb kaardistuse ühes kohas täielikult nähtavaks ega jäta midagi "vaikimisi automaatseks".
+
+```java
+// EELISTATUD — kõik väljad nähtavad
+@Mapping(source = "locationName", target = "name")
+@Mapping(source = "numberOfAtms", target = "numberOfAtms")  // kattuv nimi, aga siiski kirjas
+Location toLocation(LocationDto locationDto);
+```
+
+Kui kahtled, vaata olemasolevaid mappereid projektis ja järgi sama mustrit.
+
+### 6. Loo juhendi fail
 
 Koosta konkreetne juhend ülaltoodud malli põhjal, kohandades seda valitud taski spetsiifikaga:
 
@@ -496,7 +509,7 @@ Loo fail: `docs/tasks/backend/instructions/<taskifailinimi-ilma-laiendita>-juhen
 
 Näide: task `GET-api-users-userId-transactions-history.md` → juhend `docs/tasks/backend/instructions/GET-api-users-userId-transactions-history-juhend.md`
 
-### 6. Teavita kasutajat
+### 7. Teavita kasutajat
 
 Näita lühidalt:
 - Loodud juhendi faili tee
@@ -512,3 +525,34 @@ Implementeerimise voog: RestController → Service → Repository → Service �
 
 Alusta Samm 1-st — kontrolli esmalt, kas vastav kontrolleri klass juba eksisteerib.
 ```
+
+### 8. Juhenda õpilast sammhaaval
+
+Pärast juhendi loomist jätka interaktiivselt — **ära anna kogu sammu sisu korraga**. Juhend on raamistik, mitte skript.
+
+**Põhireeglid:**
+
+- **Üks küsimus / üks samm korraga** — anna järgmine samm alles pärast kinnitust ("tehtud", "ok", "jah")
+- **Küsi enne edasiliikumist** — iga sammu lõpus: *"Kas on küsimusi, või liigume edasi?"*
+- **Loe fail enne järgmise sammu andmist** — kontrolli, mis tegelikult kirjutatud on, mitte ära eelda
+- **Kui õpilane küsib selgitust, mine väga lihtsaks:**
+  - Murra süntaks visuaalselt osadeks (nooled/tulbad)
+  - Kasuta analoogiaid (nt interface = tellimus restoranis, implementatsioon = köök)
+  - Ära eelda eelteadmisi — seleta nii nagu oleks esimest korda
+- **Ära anna koodilahendust ette** — anna vihje, oota katset, anna tagasisidet
+
+**Näide heast vihjestiklist:**
+
+```
+// VALE — liiga palju korraga
+Lisa service muutuja, kutsu getRegions() välja ja muuda tagastustüüp List<RegionResponseDto>-ks.
+
+// ÕIGE — üks asi korraga
+Lisa regionService väli kontrollerisse. Kus see peaks olema?
+```
+
+**Levinud vead mida jälgida:**
+- Vale pakett (nt `controller.controller` asemel `controller.region`) — kontrolli kohe kui fail luuakse
+- `@Operation` summary ei kirjelda endpointi täpselt (nt "Näita edasimüüja piirkondi" endpoint mis tagastab kõiki piirkondi)
+- Lista mapper meetodi nimi ainsuses (nt `toRegionResponseDto`) — peaks olema mitmuses (`toRegionResponseDtos`)
+- Repository meetodi nimi liiga pikk JPA konventsioonist (nt `findByOrderBySequenceNumberAsc`) — projekti tava on lühike `findAllRegions()`

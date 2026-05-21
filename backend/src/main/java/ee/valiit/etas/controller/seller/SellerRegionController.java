@@ -33,6 +33,26 @@ public class SellerRegionController {
         return sellerRegionService.findSellerRegions(sellerId);
     }
 
+    @PostMapping("/seller/{sellerId}/regions")
+    @Operation(summary = "Lisa edasimüüjale piirkond")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "201", description = "Piirkond lisatud"),
+            @ApiResponse(responseCode = "400", description = "Vigased andmed",
+                    content = @Content(schema = @Schema(implementation = ApiError.class))),
+            @ApiResponse(responseCode = "403", description = "Kasutajal pole õigust",
+                    content = @Content(schema = @Schema(implementation = ApiError.class))),
+            @ApiResponse(responseCode = "404", description = "Edasimüüjat või piirkonda ei leitud",
+                    content = @Content(schema = @Schema(implementation = ApiError.class))),
+            @ApiResponse(responseCode = "409", description = "Piirkond on juba lisatud",
+                    content = @Content(schema = @Schema(implementation = ApiError.class))),
+            @ApiResponse(responseCode = "500", description = "Serveri viga",
+                    content = @Content(schema = @Schema(implementation = ApiError.class)))})
+    public void addSellerRegion(@RequestParam Integer userId,
+                                @PathVariable Integer sellerId,
+                                @Valid @RequestBody SellerRegionDto sellerRegionDto) {
+        sellerRegionService.addSellerRegion(userId, sellerId, sellerRegionDto);
+    }
+
     @PutMapping("/seller/{sellerId}/regions/{regionId}")
     @Operation(summary = "Uuenda piirkonna müügipunktide arv")
     @ApiResponses(value = {
