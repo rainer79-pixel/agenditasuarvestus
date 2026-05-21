@@ -12,6 +12,9 @@ import lombok.NoArgsConstructor;
 public class SellerRegionDto {
 
     @NotNull
+    private Integer regionId;
+
+    @NotNull
     @Min(0)
     private Integer salesPointCount;
 }

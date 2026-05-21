@@ -3,6 +3,16 @@ package ee.valiit.etas.infrastructure.error;
 import lombok.Getter;
 
 @Getter
+// Auth        → 1xx
+// Seller      → 2xx
+// Contact     → 3xx  (sh Region 32x)
+// Commission  → 4xx
+// Excel       → 5xx
+// Invoice     → 6xx
+// User        → 7xx
+// VAT         → 8xx
+// ProductType → 9xx
+
 public enum ErrorResponse {
 
     // Auth
@@ -20,6 +30,8 @@ public enum ErrorResponse {
 
     // Region
     SELLER_REGION_NOT_FOUND("Piirkonda ei leitud", 321),
+    SELLER_REGION_ALREADY_EXISTS("See piirkond on juba lisatud", 322),
+
 
     // Commission rate
     COMMISSION_RATE_NOT_FOUND("Teenustasu määra ei leitud", 411),

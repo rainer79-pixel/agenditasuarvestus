@@ -31,5 +31,4 @@ public class SellerRegion {
     @NotNull
     @Column(name = "sales_point_count", nullable = false)
     private Integer salesPointCount;
-
 }
