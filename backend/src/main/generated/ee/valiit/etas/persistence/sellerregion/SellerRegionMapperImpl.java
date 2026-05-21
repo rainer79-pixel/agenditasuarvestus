@@ -1,5 +1,6 @@
 package ee.valiit.etas.persistence.sellerregion;
 
+import ee.valiit.etas.controller.seller.dto.SellerRegionDto;
 import ee.valiit.etas.controller.seller.dto.SellerRegionResponseDto;
 import ee.valiit.etas.persistence.region.Region;
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-05-19T09:12:39+0300",
+    date = "2026-05-21T15:25:32+0300",
     comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.10 (JetBrains s.r.o.)"
 )
 @Component
@@ -42,6 +43,19 @@ public class SellerRegionMapperImpl implements SellerRegionMapper {
         }
 
         return list;
+    }
+
+    @Override
+    public SellerRegion toSellerRegion(SellerRegionDto sellerRegionDto) {
+        if ( sellerRegionDto == null ) {
+            return null;
+        }
+
+        SellerRegion sellerRegion = new SellerRegion();
+
+        sellerRegion.setSalesPointCount( sellerRegionDto.getSalesPointCount() );
+
+        return sellerRegion;
     }
 
     private String sellerRegionRegionRegionName(SellerRegion sellerRegion) {

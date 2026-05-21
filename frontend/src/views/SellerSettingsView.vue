@@ -15,7 +15,9 @@
     <div class="mb-4">
       <div class="d-flex justify-content-between align-items-center mb-2">
         <h5>Kontaktid</h5>
-        <button class="btn btn-success btn-sm">+ Lisa kontakt</button>
+        <button class="btn btn-success btn-sm" @click="isContactModalOpen = true">
+          + Lisa kontakt
+        </button>
       </div>
       <table class="table table-bordered">
         <thead>
@@ -54,6 +56,12 @@
       <h5>Teenustasud</h5>
       <!-- TODO: teenustasud -->
     </div>
+    <SellerSettingsContactModal
+      v-if="isContactModalOpen"
+      :seller-id="sellerId"
+      @event-modal-closed="isContactModalOpen = false"
+      @event-contact-saved="handleContactSaved"
+    />
   </div>
 </template>
 
@@ -63,9 +71,11 @@
 import SellerService from '@/api-services/SellerService.js'
 import NavigationService from '@/navigation/NavigationService.js'
 import AuthService from '@/auth/AuthService.js'
+import SellerSettingsContactModal from '@/components/modals/SellerSettingsContactModal.vue'
 
 export default {
   name: 'SellerSettingsView',
+  components: { SellerSettingsContactModal },
   data() {
     return {
       sellerId: null,
@@ -74,6 +84,7 @@ export default {
       regions: [],
       commissionRates: [],
       errorMessage: '',
+      isContactModalOpen: false,
     }
   },
   methods: {
@@ -105,6 +116,10 @@ export default {
         .catch((error) => {
           this.errorMessage = error.response.data.message
         })
+    },
+    handleContactSaved() {
+      this.isContactModalOpen = false
+      this.loadContacts()
     },
   },
   beforeMount() {
