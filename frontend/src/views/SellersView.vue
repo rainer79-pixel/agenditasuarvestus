@@ -40,17 +40,9 @@
             </span>
           </td>
           <td>
-            <button class="btn btn-primary btn-sm me-1" @click="goToSellerView(seller.sellerId)">
-              Vaata
-            </button>
-            <button
-              v-if="isAdmin"
-              class="btn btn-primary btn-sm me-1"
-              @click="goToSellerFormView(seller.sellerId)"
-            >
-              Muuda
-            </button>
-            <button v-if="isAdmin" class="btn btn-secondary btn-sm">Seaded</button>
+            <button class="btn btn-primary btn-sm me-1" style="width: 80px" @click="goToSellerView(seller.sellerId)">Vaata</button>
+            <button v-if="isAdmin" class="btn btn-primary btn-sm me-1" style="width: 80px" @click="goToSellerFormView(seller.sellerId)">Muuda</button>
+            <button v-if="isAdmin" class="btn btn-secondary btn-sm" style="width: 80px" @click="goToSellerSettingsView(seller.sellerId)">Seaded</button>
           </td>
         </tr>
       </tbody>
@@ -98,6 +90,9 @@ export default {
     },
     goToSellerFormView(sellerId = null) {
       NavigationService.navigateToSellerFormView(sellerId)
+    },
+    goToSellerSettingsView(sellerId) {
+      NavigationService.navigateToSellerSettingsView(sellerId)
     },
   },
   beforeMount() {

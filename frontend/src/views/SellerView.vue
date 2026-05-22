@@ -1,4 +1,4 @@
-<template>
+  <template>
   <div class="container pt-4">
     <div v-if="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
 
@@ -77,7 +77,7 @@
     <div class="row mt-4">
       <div class="col">
         <button class="btn btn-secondary me-2" @click="goToSellersView()">Tagasi nimekirja</button>
-        <button v-if="isAdmin" class="btn btn-secondary">Seaded</button>
+        <button v-if="isAdmin" class="btn btn-secondary" @click="goToSellerSettingsView()">Seaded</button>
       </div>
     </div>
   </div>
@@ -144,6 +144,9 @@ export default {
         .catch(() => {
           this.errorMessage = 'Teenustasude laadimine ebaõnnestus'
         })
+    },
+    goToSellerSettingsView() {
+      NavigationService.navigateToSellerSettingsView(this.sellerId)
     },
     goToSellersView() {
       NavigationService.navigateToSellersView()
