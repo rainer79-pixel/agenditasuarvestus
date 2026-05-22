@@ -12,10 +12,13 @@ CREATE TABLE app_user (
 );
 
 CREATE TABLE vat_setting (
-    id         SERIAL        PRIMARY KEY,
-    vat_rate   NUMERIC(5,2)  NOT NULL,
-    updated_at TIMESTAMP     NOT NULL DEFAULT now(),
-    updated_by VARCHAR(200)  NOT NULL
+    id              SERIAL        PRIMARY KEY,
+    vat_rate        NUMERIC(5,2)  NOT NULL,
+    updated_at      TIMESTAMP     NOT NULL DEFAULT now(),
+    updated_by      INTEGER       NOT NULL REFERENCES app_user(id),
+    valid_from_date DATE          NOT NULL,
+    valid_to_date   DATE,
+    status          VARCHAR(20)   NOT NULL
 );
 
 CREATE TABLE region (

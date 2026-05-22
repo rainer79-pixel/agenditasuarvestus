@@ -43,10 +43,6 @@ INSERT INTO product_type (product_type_name) VALUES
     ('kaardi tagasiost'),
     ('raha valjamakse');
 
--- vat_setting: KM määr
-INSERT INTO vat_setting (vat_rate, updated_at, updated_by)
-VALUES (22, now(), 'Mari Maasikas');
-
 -- ----------------------------------------------------------------
 -- Testandmed (CRUD valideerimiseks)
 -- ----------------------------------------------------------------
@@ -57,13 +53,21 @@ INSERT INTO app_user (first_name, middle_name, last_name, email, password, user_
     ('Mari', NULL, 'Maasikas', 'mari@agent.ee', '123', 'A', 'A'),
     ('Jaan', 'Arvo', 'Tamm',   'jt@agent.ee',   '123', 'A', 'U');
 
+-- vat_setting: KM määr (updated_by=1 on Mari Maasikas)
+INSERT INTO vat_setting (vat_rate, updated_at, updated_by, valid_from_date, valid_to_date, status)
+VALUES (24, now(), 1, '2024-01-01', NULL, 'A');
+
 -- seller
 -- org_id 10406134 vastab näidis-Exceli seller_org_id-le
 -- created_by=1 (Mari Maasikas)
 -- status: 'A'=aktiivne, 'D'=deaktiveeritud
-INSERT INTO seller (company_name, org_id, contract_start, contract_end, notes, status, created_by) VALUES
-    ('ETAS AS',   10406134, '2024-01-01', NULL,         'Näidisedasimüüja — vastab Exceli näidisfailile', 'A', 1),
-    ('Ühistu OÜ', 20506789, '2022-06-01', '2025-12-31', NULL,                                            'A', 1);
+-- INSERT INTO seller (company_name, org_id, contract_start, contract_end, notes, status, created_by) VALUES
+--     ('ETAS AS',   10406134, '2024-01-01', NULL,         'Näidisedasimüüja — vastab Exceli näidisfailile', 'A', 1),
+--     ('Ühistu OÜ', 20506789, '2022-06-01', '2025-12-31', NULL,                                            'A', 1);
+
+INSERT INTO etas.seller (id, company_name, org_id, contract_start, contract_end, notes, status, created_at, created_by) VALUES (default, 'Agent A OÜ ', 1588, '2024-01-01', null, 'Näidisedasimüüja — vastab Exceli näidisfailile', 'A', '2026-05-22 06:47:15.861101', 1);
+INSERT INTO etas.seller (id, company_name, org_id, contract_start, contract_end, notes, status, created_at, created_by) VALUES (default, 'Arvelduskeskus OÜ', 1222, '2022-06-01', null, null, 'A', '2026-05-22 06:47:15.861101', 1);
+
 
 -- seller_contact (seller_id: ETAS AS=1, Ühistu OÜ=2)
 INSERT INTO seller_contact (seller_id, first_name, middle_name, last_name, phone, email) VALUES
@@ -87,28 +91,39 @@ INSERT INTO seller_region (seller_id, region_id, sales_point_count) VALUES
 
 -- commission_rate
 -- product_type_id: isikustamine=1, kaardimyyk=2, pilet=3, rahalaadimine=4,
---                  sooduskaardi isikustamine=5, kaardi tagasiost=6, raha valjamakse=7
-INSERT INTO commission_rate (seller_id, product_type_id, fee_per_transaction, fee_percent, includes_vat, valid_from, valid_to) VALUES
-    (1, 1, 0.0100, NULL, false, '2024-01-01', NULL),  -- ETAS AS: isikustamine
-    (1, 2, 0.0100, NULL, false, '2024-01-01', NULL),  -- ETAS AS: kaardimyyk
-    (1, 3, NULL,   1.00, false, '2024-01-01', NULL),  -- ETAS AS: pilet
-    (1, 4, NULL,   1.00, false, '2024-01-01', NULL),  -- ETAS AS: rahalaadimine
-    (1, 5, 0.0100, NULL, false, '2024-01-01', NULL),  -- ETAS AS: sooduskaardi isikustamine
-    (1, 6, 0.0100, NULL, false, '2024-01-01', NULL),  -- ETAS AS: kaardi tagasiost
-    (1, 7, 0.0100, NULL, false, '2024-01-01', NULL),  -- ETAS AS: raha valjamakse
-    (2, 2, NULL,   1.00, false, '2022-06-01', NULL),  -- Ühistu OÜ: kaardimyyk
-    (2, 4, 0.0500, NULL, false, '2022-06-01', NULL);  -- Ühistu OÜ: rahalaadimine
+-- --                  sooduskaardi isikustamine=5, kaardi tagasiost=6, raha valjamakse=7
+-- INSERT INTO commission_rate (seller_id, product_type_id, fee_per_transaction, fee_percent, includes_vat, valid_from, valid_to) VALUES
+--     (1, 1, 0.0100, NULL, false, '2024-01-01', NULL),  -- ETAS AS: isikustamine
+--     (1, 2, 0.0100, NULL, false, '2024-01-01', NULL),  -- ETAS AS: kaardimyyk
+--     (1, 3, NULL,   1.00, false, '2024-01-01', NULL),  -- ETAS AS: pilet
+--     (1, 4, NULL,   1.00, false, '2024-01-01', NULL),  -- ETAS AS: rahalaadimine
+--     (1, 5, 0.0100, NULL, false, '2024-01-01', NULL),  -- ETAS AS: sooduskaardi isikustamine
+--     (1, 6, 0.0100, NULL, false, '2024-01-01', NULL),  -- ETAS AS: kaardi tagasiost
+--     (1, 7, 0.0100, NULL, false, '2024-01-01', NULL),  -- ETAS AS: raha valjamakse
+--     (2, 2, NULL,   1.00, false, '2022-06-01', NULL),  -- Ühistu OÜ: kaardimyyk
+--     (2, 4, 0.0500, NULL, false, '2022-06-01', NULL);  -- Ühistu OÜ: rahalaadimine
+INSERT INTO etas.commission_rate (id, seller_id, product_type_id, fee_per_transaction, fee_percent, includes_vat, valid_from, valid_to) VALUES (default, 1, 2, 1.0000, null, true, '2026-02-01', null);
+INSERT INTO etas.commission_rate (id, seller_id, product_type_id, fee_per_transaction, fee_percent, includes_vat, valid_from, valid_to) VALUES (default, 1, 4, null, 1.00, true, '2026-02-01', null);
+INSERT INTO etas.commission_rate (id, seller_id, product_type_id, fee_per_transaction, fee_percent, includes_vat, valid_from, valid_to) VALUES (default, 2, 3, 1.0000, null, true, '2026-02-01', null);
+
+
 
 -- sales_report (periood '04.2026' — vastab näidis-Exceli andmetele)
 -- product_type salvestatakse Exceli 'tyyp' väärtusena (lowercase string)
-INSERT INTO sales_report (seller_id, department_name, department_id, payment_channel, product_type, transaction_count, sales_amount, period, region) VALUES
-    (1, 'Pood 1', '2894', 'C', 'isikustamine',              100,    NULL, '04.2026', 'Tallinn'),
-    (1, 'Pood 2', '2543', 'C', 'kaardimyyk',                100,    NULL, '04.2026', 'Tartumaa'),
-    (1, 'Pood 1', '2894', 'E', 'pilet',                     300, 2500.00, '04.2026', 'Pärnumaa'),
-    (1, 'Pood 2', '2543', 'C', 'rahalaadimine',             100,  500.00, '04.2026', 'Harjumaa'),
-    (1, 'Pood 1', '2894', 'C', 'sooduskaardi isikustamine', 100,    NULL, '04.2026', 'Tallinn'),
-    (1, 'Pood 3', '2541', 'E', 'kaardi tagasiost',          100,    NULL, '04.2026', 'Harjumaa'),
-    (1, 'Pood 2', '2543', 'C', 'raha valjamakse',           100,    NULL, '04.2026', 'Tartumaa');
+-- INSERT INTO sales_report (seller_id, department_name, department_id, payment_channel, product_type, transaction_count, sales_amount, period, region) VALUES
+--     (1, 'Pood 1', '2894', 'C', 'isikustamine',              100,    NULL, '04.2026', 'Tallinn'),
+--     (1, 'Pood 2', '2543', 'C', 'kaardimyyk',                100,    NULL, '04.2026', 'Tartumaa'),
+--     (1, 'Pood 1', '2894', 'E', 'pilet',                     300, 2500.00, '04.2026', 'Pärnumaa'),
+--     (1, 'Pood 2', '2543', 'C', 'rahalaadimine',             100,  500.00, '04.2026', 'Harjumaa'),
+--     (1, 'Pood 1', '2894', 'C', 'sooduskaardi isikustamine', 100,    NULL, '04.2026', 'Tallinn'),
+--     (1, 'Pood 3', '2541', 'E', 'kaardi tagasiost',          100,    NULL, '04.2026', 'Harjumaa'),
+--     (1, 'Pood 2', '2543', 'C', 'raha valjamakse',           100,    NULL, '04.2026', 'Tartumaa');
+
+INSERT INTO etas.sales_report (id, seller_id, department_name, department_id, payment_channel, product_type, transaction_count, sales_amount, fee_sum, period, region, created_at) VALUES (default, 1, 'Agent A OÜ ', '1588', 'C', 'kaardimyyk', 13, 133.00, 0.00, '2026-4', 'Piirkond 11', '2026-05-22 06:51:09.435965');
+INSERT INTO etas.sales_report (id, seller_id, department_name, department_id, payment_channel, product_type, transaction_count, sales_amount, fee_sum, period, region, created_at) VALUES (default, 1, 'Agent A OÜ ', '1588', 'C', 'rahalaadimine', 31, 310.00, 0.00, '2026-4', 'Piirkond 11', '2026-05-22 06:51:09.435965');
+INSERT INTO etas.sales_report (id, seller_id, department_name, department_id, payment_channel, product_type, transaction_count, sales_amount, fee_sum, period, region, created_at) VALUES (default, 2, 'Arvelduskeskus OÜ', '1222', 'PP', 'pilet', 1, 13.20, 0.00, '2026-4', 'Piirkond 14', '2026-05-22 06:51:09.435965');
+INSERT INTO etas.sales_report (id, seller_id, department_name, department_id, payment_channel, product_type, transaction_count, sales_amount, fee_sum, period, region, created_at) VALUES (default, 2, 'Arvelduskeskus OÜ', '1222', 'PPE', 'pilet', 2102, 232001.62, 0.00, '2026-4', 'Piirkond 14', '2026-05-22 06:51:09.435965');
+
 
 -- commission_calculation (KM 22%, includes_vat=false → KM lisatakse peale)
 -- isikustamine:              100 × 0.0100  =  1.00 | vat= 0.22 | total=  1.22
@@ -119,15 +134,15 @@ INSERT INTO sales_report (seller_id, department_name, department_id, payment_cha
 -- kaardi tagasiost:          100 × 0.0100  =  1.00 | vat= 0.22 | total=  1.22
 -- raha valjamakse:           100 × 0.0100  =  1.00 | vat= 0.22 | total=  1.22
 -- commission_rate_id IDs järjekorras: isikust=1, kaardimyyk=2, pilet=3, rahalaadimine=4, soodus=5, tagasiost=6, raha=7
-INSERT INTO commission_calculation (sales_report_id, commission_rate_id, calculated_fee, vat_amount, total_fee, calculation_date) VALUES
-    (1, 1,  1.00, 0.22,  1.22, '2026-05-01'),
-    (2, 2,  1.00, 0.22,  1.22, '2026-05-01'),
-    (3, 3, 25.00, 5.50, 30.50, '2026-05-01'),
-    (4, 4,  5.00, 1.10,  6.10, '2026-05-01'),
-    (5, 5,  1.00, 0.22,  1.22, '2026-05-01'),
-    (6, 6,  1.00, 0.22,  1.22, '2026-05-01'),
-    (7, 7,  1.00, 0.22,  1.22, '2026-05-01');
-
+-- INSERT INTO commission_calculation (sales_report_id, commission_rate_id, calculated_fee, vat_amount, total_fee, calculation_date) VALUES
+--     (1, 1,  1.00, 0.22,  1.22, '2026-05-01'),
+--     (2, 2,  1.00, 0.22,  1.22, '2026-05-01'),
+--     (3, 3, 25.00, 5.50, 30.50, '2026-05-01'),
+--     (4, 4,  5.00, 1.10,  6.10, '2026-05-01'),
+--     (5, 5,  1.00, 0.22,  1.22, '2026-05-01'),
+--     (6, 6,  1.00, 0.22,  1.22, '2026-05-01'),
+--     (7, 7,  1.00, 0.22,  1.22, '2026-05-01');
+--
 -- invoice (ETAS AS, periood 04.2026)
 -- Arvutatud kogusumma total_fee: 1.22+1.22+30.50+6.10+1.22+1.22+1.22 = 42.70
 INSERT INTO invoice (seller_id, period, number, amount, issued_on, calculated_fee, notes) VALUES

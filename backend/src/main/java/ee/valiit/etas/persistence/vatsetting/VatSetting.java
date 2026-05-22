@@ -1,13 +1,16 @@
 package ee.valiit.etas.persistence.vatsetting;
 
+import ee.valiit.etas.persistence.user.User;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.ColumnDefault;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.Instant;
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -15,22 +18,36 @@ import java.time.LocalDateTime;
 @Table(name = "vat_setting", schema = "etas")
 public class VatSetting {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private Integer id;
+    @Size(max = 20)
+    @NotNull
+    @Column(name = "status", nullable = false, length = 20)
+    private String status;
+
+    @Column(name = "valid_to_date")
+    private LocalDate validToDate;
+
+    @NotNull
+    @Column(name = "valid_from_date", nullable = false)
+    private LocalDate validFromDate;
+
+    @NotNull
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "updated_by", nullable = false)
+    private User updatedBy;
+
+    @NotNull
+    @ColumnDefault("now()")
+    @Column(name = "updated_at", nullable = false)
+    private Instant updatedAt;
 
     @NotNull
     @Column(name = "vat_rate", nullable = false, precision = 5, scale = 2)
     private BigDecimal vatRate;
 
-    @NotNull
-    @Column(name = "updated_at", nullable = false)
-    private LocalDateTime updatedAt;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
+    private Integer id;
 
-    @Size(max = 200)
-    @NotNull
-    @Column(name = "updated_by", nullable = false, length = 200)
-    private String updatedBy;
 
 }
