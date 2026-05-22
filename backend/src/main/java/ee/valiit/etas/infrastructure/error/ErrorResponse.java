@@ -43,6 +43,7 @@ public enum ErrorResponse {
     IMPORT_SELLER_NOT_FOUND("Impordifailis on tundmatu edasimüüja", 511),
     IMPORT_PRODUCT_GROUP_UNKNOWN("Impordifailis on tundmatu tootegrupp", 512),
     IMPORT_PERIOD_ALREADY_EXISTS("Sellel perioodil on aruanne juba olemas", 513),
+    IMPORT_INVALID_HEADER("Laetav raport ei vasta header tingimustele", 514),
 
     // Invoice
     INVOICE_NOT_FOUND("Arvet ei leitud", 611),

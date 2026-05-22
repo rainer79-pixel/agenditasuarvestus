@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface SellerRepository extends JpaRepository<Seller, Integer> {
 
@@ -15,4 +16,6 @@ public interface SellerRepository extends JpaRepository<Seller, Integer> {
     List<Seller> findAllSellers();
 
     boolean existsByOrgId(Integer orgId);
+
+    Optional<Seller> findByOrgId(Integer orgId);
 }

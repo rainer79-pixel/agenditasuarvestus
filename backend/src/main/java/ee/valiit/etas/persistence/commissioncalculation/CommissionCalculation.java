@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.ColumnDefault;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -40,10 +41,11 @@ public class CommissionCalculation {
     private BigDecimal vatAmount;
 
     @NotNull
-    @Column(name = "total_fee", nullable = false, precision = 12, scale = 2)
-    private BigDecimal totalFee;
+    @Column(name = "calculated_fee_plus_vat", nullable = false, precision = 12, scale = 2)
+    private BigDecimal calculatedFeePlusVat;
 
     @NotNull
+    @ColumnDefault("CURRENT_DATE")
     @Column(name = "calculation_date", nullable = false)
     private LocalDate calculationDate;
 
