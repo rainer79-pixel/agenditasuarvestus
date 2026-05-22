@@ -6,6 +6,7 @@ import ee.valiit.etas.persistence.seller.SellerRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Optional;
@@ -20,7 +21,7 @@ public class DashboardService {
 
     public DashboardResponseDto getDashboardResponse() {
         int sellerCount = sellerRepository.countSellersBy(ACTIVE.getCode());
-        Optional<LocalDateTime> lastImportDate = salesReportRepository.findLastImportDate();
+        Optional<LocalDate> lastImportDate = salesReportRepository.findLastImportDate();
         String lastImport = lastImportDate
                 .map(date -> date.format(DateTimeFormatter.ofPattern("dd.MM.yyyy")))
                 .orElse(null);

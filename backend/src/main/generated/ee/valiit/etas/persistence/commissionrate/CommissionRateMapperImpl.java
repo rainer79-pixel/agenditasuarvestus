@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-05-21T14:43:31+0300",
+    date = "2026-05-22T11:42:19+0300",
     comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.10 (JetBrains s.r.o.)"
 )
 @Component
@@ -70,6 +70,24 @@ public class CommissionRateMapperImpl implements CommissionRateMapper {
 
         commissionRate.setValidFrom( commissionRateDto.getValidFrom() != null ? LocalDate.parse(commissionRateDto.getValidFrom(), DateTimeFormatter.ofPattern("dd.MM.yyyy")) : null );
         commissionRate.setValidTo( commissionRateDto.getValidTo() != null ? LocalDate.parse(commissionRateDto.getValidTo(), DateTimeFormatter.ofPattern("dd.MM.yyyy")) : null );
+    }
+
+    @Override
+    public CommissionRate toCommissionRate(CommissionRateDto commissionRateDto) {
+        if ( commissionRateDto == null ) {
+            return null;
+        }
+
+        CommissionRate commissionRate = new CommissionRate();
+
+        commissionRate.setFeePerTransaction( commissionRateDto.getFeePerTransaction() );
+        commissionRate.setFeePercent( commissionRateDto.getFeePercent() );
+        commissionRate.setIncludesVat( commissionRateDto.getIncludesVat() );
+
+        commissionRate.setValidFrom( commissionRateDto.getValidFrom() != null ? LocalDate.parse(commissionRateDto.getValidFrom(), DateTimeFormatter.ofPattern("dd.MM.yyyy")) : null );
+        commissionRate.setValidTo( commissionRateDto.getValidTo() != null ? LocalDate.parse(commissionRateDto.getValidTo(), DateTimeFormatter.ofPattern("dd.MM.yyyy")) : null );
+
+        return commissionRate;
     }
 
     private String commissionRateProductTypeProductTypeName(CommissionRate commissionRate) {

@@ -1,0 +1,112 @@
+Soovime luua uut andmebaasi vaadet "commission_calculation_view" SQL kujul, mille lisa
+database/2_create.sql alla
+
+commission_calculation_view alla  võiks olla alläjärgnevad veerud:
+
+sales_report_id,seller_id, product_type_id, company_name, product_type_name,
+transaction_count_sum,sales_amount_sum,fee_sum,
+fee_per_transaction,fee_percent,includes_vat,
+calculated_fee,vat_rate,vat_amount,calculated_fee_plus_vat
+
+
+
+
+
+üldine vaate eesmärk on võtta andmeid erinevatesst alljärgnevatest tabelitest,
+ning teha vajalikud arvutused, mille põhjal hilisemas etapis (mitte selle viewga),
+soovime teha kandeid commission_calculation tabelisse eraldi sammuna Spring bootis programmiliselt
+
+Tabelid:
+sales_report_detail (põhitabel)
+sales_report
+seller
+product_type
+commission_rate
+vat_setting
+
+Tabelite andmed CSV kujul (samad mis ka database/3_import.sql scriptis):
+
+sales_report_detail (põhitabel)
+id,sales_report_id,seller_id,department_name,department_id,payment_channel,product_type,transaction_count,sales_amount,fee,period,region,created_at
+1,1,1,Agent A OÜ ,1588,C,kaardimyyk,13,133.00,0.00,2026-4,Piirkond 11,2026-05-22 06:51:09.435965
+2,1,1,Agent A OÜ ,1588,C,rahalaadimine,31,310.00,0.00,2026-4,Piirkond 11,2026-05-22 06:51:09.435965
+3,1,2,Arvelduskeskus OÜ,1222,PP,pilet,1,13.20,0.00,2026-4,Piirkond 14,2026-05-22 06:51:09.435965
+4,1,2,Arvelduskeskus OÜ,1222,PPE,pilet,2102,232001.62,0.00,2026-4,Piirkond 14,2026-05-22 06:51:09.435965
+
+
+sales_report
+id,created_by,period,created_at
+1,1,2026-4,2026-05-01
+
+
+
+seller
+id,company_name,org_id,contract_start,contract_end,notes,status,created_at,created_by
+1,Agent A OÜ ,1588,2024-01-01,,Näidisedasimüüja — vastab Exceli näidisfailile,A,2026-05-22 06:47:15.861101,1
+2,Arvelduskeskus OÜ,1222,2022-06-01,,,A,2026-05-22 06:47:15.861101,1
+
+
+product_type
+id,product_type_name
+1,isikustamine
+2,kaardimyyk
+3,pilet
+4,rahalaadimine
+5,sooduskaardi isikustamine
+6,kaardi tagasiost
+7,raha valjamakse
+
+
+
+commission_rate
+id,seller_id,product_type_id,fee_per_transaction,fee_percent,includes_vat,valid_from,valid_to
+10,1,2,1.0000,,true,2026-02-01,
+11,1,4,,1.00,true,2026-02-01,
+12,2,3,1.0000,,true,2026-02-01,
+
+vat_setting
+id,vat_rate,updated_at,updated_by,valid_from_date,valid_to_date,status
+1,24.00,2026-05-22 07:03:34.042658,1,2024-01-01,,A
+
+
+otsi sales_report tabelist id alusel (näidis: 1) veeru 'period' väärtus (näidis: 2026-4)
+
+otsi vat_setting tabelist varasemalt leitud 'period' väärtuse  (näidis: 2026-4) alusel vat_rate väärtus (näidis: 24.00) ja salvesta seee muutjasse
+vat_rate väärtuse leiad sellise algoritmi järgi. period näidis 2026-4 on kombinatsioon aastats 2026 ja kuust 4 (aprill),
+Algoritm peab leidma vat_setting tabelist õige rea, selliselt, et 2026-4 on selline aasta ja kuu mis jääb valid_from_date ja valid_to_date vahele (inclusive)
+
+
+otsi sales_report_detail tabelist read sales_report_id alusel, sest nende admete alusel teeme calculatsioone)
+
+sales_report_detail tabelis on veerg product_type kus sees on string väärtused, mille abil peab leidma tabelist product_type ülesse tema id väärtuse (edaspidi product_type_id)
+
+sales_report_detail tabeli on veeru seller_id, product_type_id, valid_from,valid_to abil peab leidma tabelist commission_rate fee_per_transaction,fee_percent,includes_vat,valid_from,valid_to
+kasutama peab varasemalt leitud 'period' väärtust  (näidis: 2026-4) ja leidma algoritm abil tabelist õige rea, selliselt, et 2026-4 on selline aasta ja kuu mis jääb valid_from ja valid_to vahele (inclusive)
+
+
+sellest sales_report_detail tabelist soovime me ridu kokku grupeerida
+sales_report_id,seller_id, ja leitud product_type_id alusel
+samal ajal on vaja summeerida veergude transaction_count,sales_amount,fee summad (view tulemuses siis vastavalt transaction_count_sum,sales_amount_sum,fee_sum)
+
+Nüüd kus kõik andmed on olemas, saame kokku panna
+commission_calculation_view koos tema veergudega:
+
+sales_report_id,seller_id, product_type_id, company_name, product_type_name,
+transaction_count_sum,sales_amount_sum,fee_sum,
+fee_per_transaction,fee_percent,includes_vat
+calculated_fee,vat_rate,vat_amount,calculated_fee_plus_vat
+
+
+
+alljärgnevad andmed saab nii:
+calculated_fee -> arvutamine sõltub includes_vat väärtused (true või false)
+kui includes_vat = true -> ((transaction_count_sum * fee_per_transaction) + (sales_amount_sum * fee_percent)) / vat_rate
+kui includes_vat = false -> ((transaction_count_sum * fee_per_transaction) + (sales_amount_sum * fee_percent))
+
+vat_amount -> arvutamine: calculated_fee * (vat_rate / 100)
+
+
+calculated_fee_plus_vat -> arvutamine: calculated_fee + vat_amount
+
+
+

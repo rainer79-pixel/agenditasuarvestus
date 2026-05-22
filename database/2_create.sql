@@ -85,7 +85,15 @@ CREATE TABLE commission_rate (
 );
 
 CREATE TABLE sales_report (
+    id         SERIAL       PRIMARY KEY,
+    created_by INTEGER      NOT NULL REFERENCES app_user(id),
+    period     VARCHAR(10)  NOT NULL,
+    created_at DATE         NOT NULL DEFAULT CURRENT_DATE
+);
+
+CREATE TABLE sales_report_detail (
     id                SERIAL        PRIMARY KEY,
+    sales_report_id   INTEGER       NOT NULL REFERENCES sales_report(id),
     seller_id         INTEGER       NOT NULL REFERENCES seller(id),
     department_name   VARCHAR(255)  NOT NULL,
     department_id     VARCHAR(50),
@@ -93,7 +101,7 @@ CREATE TABLE sales_report (
     product_type      VARCHAR(100)  NOT NULL,
     transaction_count INTEGER       NOT NULL,
     sales_amount      NUMERIC(12,2),
-    fee_sum           NUMERIC(12,2),
+    fee               NUMERIC(12,2),
     period            VARCHAR(20)   NOT NULL,
     region            VARCHAR(100),
     created_at        TIMESTAMP     NOT NULL DEFAULT now()
