@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -65,5 +66,26 @@ public class SellerCommissionRateController {
                                            @PathVariable Integer sellerId,
                                            @PathVariable Integer commissionRateId) {
         sellerCommissionRateService.deleteSellerCommissionRate(userId, sellerId, commissionRateId);
+    }
+
+    @PostMapping("/seller/{sellerId}/commission-rates")
+    @ResponseStatus(HttpStatus.CREATED)
+    @Operation(summary = "Lisa teenustasu")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "201", description = "Teenustasu lisatud"),
+            @ApiResponse(responseCode = "400", description = "Kohustuslik väli puudub",
+                    content = @Content(schema = @Schema(implementation = ApiError.class))),
+            @ApiResponse(responseCode = "403", description = "Kasutajal pole õigust",
+                    content = @Content(schema = @Schema(implementation = ApiError.class))),
+            @ApiResponse(responseCode = "404", description = "Edasimüüjat või tootegruppi ei leitud",
+                    content = @Content(schema = @Schema(implementation = ApiError.class))),
+            @ApiResponse(responseCode = "409", description = "Sellel tootegrupil on juba kehtiv teenustasu",
+                    content = @Content(schema = @Schema(implementation = ApiError.class))),
+            @ApiResponse(responseCode = "500", description = "Serveri viga",
+            content = @Content(schema = @Schema(implementation = ApiError.class)))})
+    public void addSellerCommissionRate(@PathVariable Integer sellerId,
+                                  @RequestParam Integer userId,
+                                  @Valid @RequestBody CommissionRateDto commissionRateDto) {
+        sellerCommissionRateService.addSellerCommissionRate(sellerId, userId, commissionRateDto);
     }
 }

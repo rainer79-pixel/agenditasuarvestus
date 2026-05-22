@@ -41,7 +41,7 @@ public class SellerCommissionRateService {
 
     @Transactional
     public void updateCommissionRate(Integer sellerId, Integer commissionRateId, CommissionRateDto commissionRateDto) {
-        Seller seller = sellerRepository.findById(sellerId)
+        sellerRepository.findById(sellerId)
                 .orElseThrow(() -> new DataNotFoundException(SELLER_NOT_FOUND.getMessage(), SELLER_NOT_FOUND.getErrorCode()));
         CommissionRate commissionRate = commissionRateRepository.findById(commissionRateId)
                 .orElseThrow(() -> new DataNotFoundException(COMMISSION_RATE_NOT_FOUND.getMessage(), COMMISSION_RATE_NOT_FOUND.getErrorCode()));
@@ -81,5 +81,21 @@ public class SellerCommissionRateService {
         if (commissionCalculationRepository.commissionCalculationExistsBy(commissionRateId)) {
             throw new ConflictException(COMMISSION_RATE_IN_USE.getMessage(), COMMISSION_RATE_IN_USE.getErrorCode());
         }
+    }
+    @Transactional
+    public void addSellerCommissionRate(Integer sellerId, Integer userId, CommissionRateDto commissionRateDto) {
+        validateUserIsAdmin(userId);
+        validateSellerExists(sellerId);
+        Seller seller = sellerRepository.findById(sellerId)
+                .orElseThrow(() -> new DataNotFoundException(SELLER_NOT_FOUND.getMessage(), SELLER_NOT_FOUND.getErrorCode()));
+        ProductType productType = productTypeRepository.findById(commissionRateDto.getProductTypeId())
+                .orElseThrow(() -> new DataNotFoundException(PRODUCT_TYPE_NOT_FOUND.getMessage(), PRODUCT_TYPE_NOT_FOUND.getErrorCode()));
+        if (commissionRateRepository.commissionRateExistsBy(sellerId, commissionRateDto.getProductTypeId())) {
+            throw new ConflictException(COMMISSION_RATE_ALREADY_EXISTS.getMessage(), COMMISSION_RATE_ALREADY_EXISTS.getErrorCode());
+        }
+        CommissionRate commissionRate = commissionRateMapper.toCommissionRate(commissionRateDto);
+        commissionRate.setSeller(seller);
+        commissionRate.setProductType(productType);
+        commissionRateRepository.save(commissionRate);
     }
 }
