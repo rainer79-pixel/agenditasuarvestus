@@ -24,7 +24,7 @@ haldamiseks, teenustasude arvutamiseks Exceli müügiaruande põhjal ning edasim
 - Swagger (springdoc-openapi)
 - p6spy (SQL logimine arenduses)
 - Apache POI (Excel import)
-- Spring Security (sessioonipõhine autentimine)
+- Spring Security (lisatakse hiljem — praegu lihtne email+password autentimine)
 
 ### Frontend
 - Vue.js 3 (Options API — `data()`, `methods`, `beforeMount()`)
@@ -110,7 +110,7 @@ Swagger UI: http://localhost:8080/swagger-ui/index.html
 - Kontakte saab kustutada
 - Excel import on fikseeritud formaadiga — näidisfail: `docs/0.6_Issuer_sales_report.xlsx`
 - Ühel perioodil saab olla ainult üks aruanne
-- KM määr (22%) on seadistatav andmebaasist — Admin saab muuta ilma arendajata
+- KM määr (24%) on seadistatav andmebaasist — Admin saab muuta ilma arendajata; `vat_setting` toetab mitut kirjet kehtivusperioodidega
 - Parool on praegu lihttekstina (BCrypt ja Spring Security lisatakse hiljem)
 
 ## Andmemudel
@@ -127,9 +127,9 @@ Pärast `database/3_import.sql` käivitamist on andmebaasis:
 | jt@agent.ee | 123 | User |
 
 | Edasimüüja | org_id | Seis |
-|------------|-----------------|------|
-| ETAS AS | 10406134 | ACTIVE |
-| Ühistu OÜ | 20506789 | ACTIVE |
+|------------|--------|------|
+| Agent A OÜ | 1588 | ACTIVE |
+| Arvelduskeskus OÜ | 1222 | ACTIVE |
 
 ## Dokumentatsioon
 

@@ -196,9 +196,9 @@ Süsteemil on kaks rolli. **User** on igapäevane tööriista kasutaja — teeb 
 
 **Import:** `multipart/form-data`
 ```
-period: "04.2026"
-file:   (binary .xlsx)
+file: (binary .xlsx)
 ```
+> Periood loetakse automaatselt Exceli `a_date` veerust — eraldi `period` parameetrit ei saadeta.
 
 **Nimekiri:** `ReportResponseDto.java`
 ```json
@@ -306,7 +306,7 @@ file:   (binary .xlsx)
 - **Modaalid** — SellerSettingsView avab kolm eraldi modali (kontakt, piirkond, teenustasu)
 - **Excel import fikseeritud formaadiga** — `docs/0.6_Issuer_sales_report.xlsx`
 - **Ühel perioodil saab olla ainult üks aruanne**
-- **KM määr seadistatav** — praegu 22%, Admin saab muuta ilma arendajata
+- **KM määr seadistatav** — praegu 24%, Admin saab muuta ilma arendajata; `vat_setting` toetab mitut kirjet `valid_from_date` / `valid_to_date` perioodidega — õige KM määr leitakse impordi perioodi järgi
 
 ## 7. Teenustasu arvutuse loogika
 
@@ -333,7 +333,19 @@ KM määr võetakse andmebaasist vat_setting tabelist
 
 ![Andmemudel](../datamodel/edasimüüjatasuarvestus%20data%20modeler.png)
 
-Tabelid: `app_user`, `vat_setting`, `region`, `role`, `product_type`, `seller`, `seller_contact`, `seller_role`, `seller_region`, `commission_rate`, `sales_report`, `commission_calculation`, `invoice`
+Tabelid: `app_user`, `vat_setting`, `region`, `role`, `product_type`, `seller`, `seller_contact`, `seller_role`, `seller_region`, `commission_rate`, `sales_report`, `sales_report_detail`, `commission_calculation`, `invoice`
+
+Vaated: `commission_calculation_view`
+
+**Muutunud tabelite struktuur:**
+
+`vat_setting` — lisandusid `valid_from_date DATE`, `valid_to_date DATE`, `status VARCHAR(20)`. Toetab nüüd mitut kirjet erinevate kehtivusperioodidega.
+
+`sales_report` — jagati kaheks tabeliks:
+- `sales_report` (id, created_by, period, created_at) — ühe impordi sessioon
+- `sales_report_detail` (id, sales_report_id FK, seller_id FK, department_name, department_id, payment_channel, product_type, transaction_count, sales_amount, fee, period, region, created_at) — kõik Exceli read
+
+`commission_calculation` — veerg `total_fee` asemel on `calculated_fee_plus_vat`.
 
 ## 9. Arenduse järjekord
 
