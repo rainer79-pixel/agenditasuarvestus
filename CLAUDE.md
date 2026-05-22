@@ -178,15 +178,17 @@ Paremal: Kasutajanimi | `Logi välja`
 
 **commission_rate** — id, seller_id (FK), product_type_id (FK), fee_per_transaction, fee_percent, includes_vat, valid_from, valid_to (null=kehtib lõputult)
 
-**sales_report** — id, seller_id (FK), department_name, department_id, payment_channel, product_type (varchar — salvestatakse Exceli string otse), transaction_count, sales_amount, period, region, created_at (timestamp — impordi hetk, DEFAULT now())
+**sales_report** — id, created_by (FK → app_user), period, created_at — ühe impordi sessioon
 
-**commission_calculation** — id, sales_report_id (FK → sales_report), commission_rate_id (FK), calculated_fee, vat_amount, total_fee, calculation_date
+**sales_report_detail** — id, sales_report_id (FK → sales_report), seller_id (FK), department_name, department_id, payment_channel, product_type (varchar — salvestatakse Exceli string otse), transaction_count, sales_amount, fee, period, region, created_at (timestamp)
+
+**commission_calculation** — id, sales_report_id (FK → sales_report), commission_rate_id (FK), calculated_fee, vat_amount, calculated_fee_plus_vat, calculation_date
 
 **invoice** — id, seller_id (FK), period, number, amount, issued_on, calculated_fee, notes — UNIQUE (seller_id, period)
 
 **app_user** — id, first_name, middle_name, last_name, email (login, unikaalne), password (BCrypt), user_role char(1), user_status
 
-**vat_setting** — id, vat_rate, updated_at, updated_by
+**vat_setting** — id, vat_rate, updated_at, updated_by, valid_from_date, valid_to_date (null = kehtib lõputult), status — toetab mitut kirjet erinevate perioodidega; õige rida leitakse impordi perioodi järgi
 
 ---
 
