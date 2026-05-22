@@ -1,0 +1,22 @@
+[
+  {
+    "sellerId": 1,
+    "companyName": "Agent A OÜ",
+    "period": "04.2026",
+    "transactionCount": 1240,
+    "salesAmount": 12500.00,
+    "feeAmount": 380.00,
+    "vatAmount": 83.60,
+    "totalFee": 463.60
+  },
+  {
+    "sellerId": 2,
+    "companyName": "Arvelduskeskus OÜ",
+    "period": "04.2026",
+    "transactionCount": 890,
+    "salesAmount": 8300.00,
+    "feeAmount": 260.00,
+    "vatAmount": 57.20,
+    "totalFee": 317.20
+  }
+]

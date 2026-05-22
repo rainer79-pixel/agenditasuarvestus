@@ -1,0 +1,10 @@
+{
+  "productTypeName": "string",
+  "transactionCount": 0,
+  "salesAmount": 0.0,
+  "feePerTransaction": 0.0,
+  "feePercent": 0.0,
+  "calculatedFee": 0.0,
+  "vatAmount": 0.0,
+  "totalFee": 0.0
+}

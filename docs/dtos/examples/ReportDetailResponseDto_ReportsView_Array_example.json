@@ -1,0 +1,32 @@
+[
+  {
+    "productTypeName": "isikustamine",
+    "transactionCount": 100,
+    "salesAmount": 0.00,
+    "feePerTransaction": 0.01,
+    "feePercent": null,
+    "calculatedFee": 1.00,
+    "vatAmount": 0.22,
+    "totalFee": 1.22
+  },
+  {
+    "productTypeName": "kaardimyyk",
+    "transactionCount": 100,
+    "salesAmount": 0.00,
+    "feePerTransaction": 0.01,
+    "feePercent": null,
+    "calculatedFee": 1.00,
+    "vatAmount": 0.22,
+    "totalFee": 1.22
+  },
+  {
+    "productTypeName": "pilet",
+    "transactionCount": 300,
+    "salesAmount": 2500.00,
+    "feePerTransaction": null,
+    "feePercent": 1.00,
+    "calculatedFee": 25.00,
+    "vatAmount": 5.50,
+    "totalFee": 30.50
+  }
+]

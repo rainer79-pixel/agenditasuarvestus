@@ -1,0 +1,10 @@
+{
+  "sellerId": 0,
+  "companyName": "string",
+  "period": "string",
+  "transactionCount": 0,
+  "salesAmount": 0.0,
+  "feeAmount": 0.0,
+  "vatAmount": 0.0,
+  "totalFee": 0.0
+}
