@@ -1,0 +1,1145 @@
+issuer_name;seller_name;seller_org_id;dept_name;seller_dept_id;payment_channel;tyyp;tehinguid;summas;price_add_sum;fee_sum;a_date;buyer_channel;piirkond;liiniomanik
+Mugav Maksekeskus OÜ Harjumaa;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;pilet;1;13;0;0;2026-4;Seller;Piirkond 1;Liiniomanik 1
+Mugav Maksekeskus OÜ Harjumaa;Sõidupunkt Partner OÜ;5896;Sõidupunkt Partner OÜ;5896;C;pilet;0;0;0;0;2026-4;Seller;Piirkond 2;Liiniomanik 2
+Mugav Maksekeskus OÜ Harjumaa;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;1;12,2;0;0;2026-4;Seller;Piirkond 2;Liiniomanik 2
+Mugav Maksekeskus OÜ Harjumaa;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;1;12,2;0;0;2026-4;Seller;Piirkond 2;Liiniomanik 2
+Mugav Maksekeskus OÜ Harjumaa;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;pilet;1;12,2;0;0;2026-4;Seller;Piirkond 2;Liiniomanik 2
+Mugav Maksekeskus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PPE;pilet;-1;-60;0;0;2026-4;Seller;Piirkond 3;Liiniomanik 3
+Sõidukaardi Keskus OÜ;Tasupunkt OÜ;953;Tasupunkt OÜ;953;E;rahalaadimine;2;110;0;0;2026-4;Driver sales;Piirkond 4;Liiniomanik 4
+Sõidukaardi Keskus OÜ;Tasupunkt OÜ;953;Tasupunkt OÜ;953;C;rahalaadimine;13;10;0;0;2026-4;Driver sales;Piirkond 4;Liiniomanik 4
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ;5032;Kiire Kaart OÜ;5032;E;rahalaadimine;21;13;0;0;2026-4;Driver sales;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ;5032;Kiire Kaart OÜ;5032;C;rahalaadimine;77;30;0;0;2026-4;Driver sales;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ;5032;Kiire Kaart OÜ;5032;C;rahalaadimine;3;20;0;0;2026-4;Driver sales;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ;5032;Kiire Kaart OÜ;5032;C;rahalaadimine;113;1213;0;0;2026-4;Driver sales;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ;5032;Kiire Kaart OÜ;5032;C;rahalaadimine;22;723;0;0;2026-4;Driver sales;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ;5032;Kiire Kaart OÜ;5032;C;rahalaadimine;3;30;0;0;2026-4;Driver sales;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ;5032;Kiire Kaart OÜ;5032;C;rahalaadimine;233;2713;0;0;2026-4;Driver sales;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ;5032;Kiire Kaart OÜ;5032;C;rahalaadimine;11;220;0;0;2026-4;Driver sales;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ;5032;Kiire Kaart OÜ;5032;E;rahalaadimine;3;60;0;0;2026-4;Driver sales;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ;5032;Kiire Kaart OÜ;5032;C;rahalaadimine;23;330;0;0;2026-4;Driver sales;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ;5032;Kiire Kaart OÜ;5032;E;rahalaadimine;10;130;0;0;2026-4;Driver sales;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ;1645;Kiire Kaart OÜ;1645;C;rahalaadimine;301;1320;0;0;2026-4;Driver sales;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ ;4288;Kiire Kaart OÜ ;4288;E;rahalaadimine;21;33;0;0;2026-4;Driver sales;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ ;4288;Kiire Kaart OÜ ;4288;C;rahalaadimine;3;733;0;0;2026-4;Driver sales;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ ;4288;Kiire Kaart OÜ ;4288;C;rahalaadimine;22;220;0;0;2026-4;Driver sales;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ ;4288;Kiire Kaart OÜ ;4288;E;rahalaadimine;1;123;0;0;2026-4;Driver sales;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Piletisadam OÜ;1321;Piletisadam OÜ;1321;C;rahalaadimine;1;3;0;0;2026-4;Driver sales;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Kaarditugi OÜ;2846;Kaarditugi OÜ;2846;C;rahalaadimine;222;2220;0;0;2026-4;Driver sales;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Liinikeskus OÜ;1322;Liinikeskus OÜ;1322;C;rahalaadimine;62;3233;0;0;2026-4;Driver sales;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Liinikeskus OÜ;1322;Liinikeskus OÜ;1322;C;rahalaadimine;1;3;0;0;2026-4;Driver sales;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Arvepartner OÜ;4046;Arvepartner OÜ;4046;C;rahalaadimine;30;10;0;0;2026-4;Driver sales;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvepartner OÜ;4046;Arvepartner OÜ;4046;E;rahalaadimine;22;260;0;0;2026-4;Driver sales;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Sõiduterminal OÜ;1862;Sõiduterminal OÜ;1862;C;rahalaadimine;2;20;0;0;2026-4;Driver sales;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Maakonnakaart OÜ;2906;Maakonnakaart OÜ;2906;C;rahalaadimine;2;10;0;0;2026-4;Driver sales;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Müügilaegas OÜ;1773;Müügilaegas OÜ;1773;C;rahalaadimine;163;13000;0;0;2026-4;Driver sales;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Tehingupunkt OÜ;2064;Tehingupunkt OÜ;2064;C;rahalaadimine;121;1173;0;0;2026-4;Driver sales;Piirkond 13;Liiniomanik 13
+Arvelduskeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;PP;pilet;1;13,2;0;0;2026-4;Web;Piirkond 14;Liiniomanik 14
+Arvelduskeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;PPE;pilet;2102;232001,62;0;0;2026-4;Web;Piirkond 5;Liiniomanik 5
+Arvelduskeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;B;pilet;-162;-12322;0;1201;2026-4;Web;Piirkond 6;Liiniomanik 6
+Arvelduskeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;W;pilet;3003;233,26;0;0;2026-4;Web;Piirkond 7;Liiniomanik 7
+Arvelduskeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;PP;pilet;1;16;0;0;2026-4;Web;Piirkond 7;Liiniomanik 7
+Arvelduskeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;W;pilet;-6;-37,2;0;0;2026-4;Web;Piirkond 8;Liiniomanik 8
+Arvelduskeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;PP;pilet;0;0;0;0;2026-4;Web;Piirkond 9;Liiniomanik 9
+Arvelduskeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;I;pilet;-237;-3321,06;0;0;2026-4;Web;Piirkond 10;Liiniomanik 10
+Linna Piletikeskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;pilet;1;33;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Linna Piletikeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;9;272,3;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Linna Piletikeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;11;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Linna Piletikeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;3;103,6;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Linna Piletikeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;3;103,6;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Linna Piletikeskus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PPE;pilet;-1;-32,27;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Linna Piletikeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;17;21,27;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Linna Piletikeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;32;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Linna Piletikeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;2;20,6;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Linna Piletikeskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;1;30;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Linna Piletikeskus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PPE;pilet;-2;-100,7;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Linna Piletikeskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;1;36,7;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Linna Piletikeskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;3;121,3;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Linna Piletikeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;33;2060,1;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Linna Piletikeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;3;231;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Linna Piletikeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;2;133,7;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Linna Piletikeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;3;222;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Linna Piletikeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;32,27;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Linna Piletikeskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;1;63,1;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Linna Piletikeskus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PPE;pilet;-1;-36,7;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Linna Piletikeskus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;C;pilet;-1;-32,1;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Linna Piletikeskus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PP;pilet;-1;-36,7;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Linna Piletikeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;3;132,3;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Linna Piletikeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;20,2;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Linna Piletikeskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;3;11,3;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Linna Piletikeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;33;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Linna Piletikeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;3,3;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Linna Piletikeskus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PPE;pilet;-1;-12,3;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Linna Piletikeskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;3;13,6;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Linna Piletikeskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;pilet;1;63,3;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Linna Piletikeskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;3;13,6;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Linna Piletikeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;3,6;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Linna Piletikeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;32,6;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Linna Piletikeskus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PPE;pilet;-2;-71,2;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Linna Piletikeskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;6;271,1;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Linna Piletikeskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;2;1,1;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Linna Piletikeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;33;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Linna Piletikeskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;PPE;pilet;-1;-21,2;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Kiire Kaart OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PP;pilet;-2;-23,76;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Kiire Kaart OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PPE;pilet;-12;-12,37;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ;5032;Kiire Kaart OÜ;5032;C;rahalaadimine;13;210;0;0;2026-4;Driver sales;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ;5032;Kiire Kaart OÜ;5032;E;rahalaadimine;11;210;0;0;2026-4;Driver sales;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ;5032;Kiire Kaart OÜ;5032;C;rahalaadimine;2;130;0;0;2026-4;Driver sales;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ;5032;Kiire Kaart OÜ;5032;C;rahalaadimine;10;110;0;0;2026-4;Driver sales;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ;5032;Kiire Kaart OÜ;5032;E;rahalaadimine;1;10;0;0;2026-4;Driver sales;Piirkond 14;Liiniomanik 14
+Kiire Kaart OÜ;Kiire Kaart OÜ;5122;Kiire Kaart OÜ;5122;C;pilet;1;3;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Mugav Maksekeskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;1;26;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Mugav Maksekeskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;3;7;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;1;32;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;1;32;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Mugav Maksekeskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;21;712;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Mugav Maksekeskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;2;33;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;3;121;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;3;2;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;1;111;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;110;3011;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Mugav Maksekeskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;1;32;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Mugav Maksekeskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;1;16;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Mugav Maksekeskus OÜ;Teenustasu Partner OÜ;8700;Teenustasu Partner OÜ;8700;C;pilet;2;120;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Mugav Maksekeskus OÜ;Sõidupunkt Partner OÜ;5896;Sõidupunkt Partner OÜ;5896;C;pilet;10;1112;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Mugav Maksekeskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;pilet;3;116;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;pilet;30;20;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;pilet;13;326;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Mugav Maksekeskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;pilet;1;60;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Mugav Maksekeskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;pilet;2;30;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;33;1302;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;2;22;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;11;321;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;16;610;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;32;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;6;206;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;11;1166;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;32;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;32;1;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;2;22;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;32;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;11;1066;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;26;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;2;61;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;11;10;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;16;610;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;32;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;13;10;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;33;1316;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;3;121;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;32;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;320;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;2;61;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;16;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;20;73;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;32;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;3;171;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;21;21;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;2;61;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;C;pilet;-1;-1;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Mugav Maksekeskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;E;pilet;1;32;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Mugav Maksekeskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;C;pilet;1;1;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Mugav Maksekeskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;2;22;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Mugav Maksekeskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;2;271;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Mugav Maksekeskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;pilet;2;61;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;1;32;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;pilet;2;61;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Mugav Maksekeskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;3;121;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Mugav Maksekeskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;pilet;1;32;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;6;220;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;3;26;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;pilet;2;61;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;1;32;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;2;22;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;3;171;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;11;120;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;3;110;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;32;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;26;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;32;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;32;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;9;236;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;2;22;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;3;171;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;32;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;3;211;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;6;122;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;32;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;6;136;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;60;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;13;130;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;10;320;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;32;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;2;61;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;12;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;2;36;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ;Reisitasu OÜ;5122;Reisitasu OÜ;5122;C;pilet;2;22;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;C;pilet;-1;-32;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PP;pilet;-2;-61;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Mugav Maksekeskus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PPE;pilet;-6;-220;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Reisiabi Partner OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;100;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Reisiabi Partner OÜ;2514;Reisiabi Partner OÜ;2514;C;rahalaadimine;1;10;0;0;2026-4;Driver sales;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Reisiabi Partner OÜ;2514;Reisiabi Partner OÜ;2514;E;rahalaadimine;3;30;0;0;2026-4;Driver sales;Piirkond 6;Liiniomanik 6
+Terminal Teenused OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;3;73;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Terminal Teenused OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;2;30;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Terminal Teenused OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;2;30;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Terminal Teenused OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;7;173;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Terminal Teenused OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;3;73;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Terminal Teenused OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;2;30;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Terminal Teenused OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;1;100;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Terminal Teenused OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;20;300;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Terminal Teenused OÜ;Sõidupunkt Partner OÜ;5896;Sõidupunkt Partner OÜ;5896;C;pilet;1;100;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Terminal Teenused OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;pilet;1;23;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Terminal Teenused OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;pilet;3;123;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Terminal Teenused OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;20;300;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Terminal Teenused OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;11;273;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Terminal Teenused OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;30;732,3;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Terminal Teenused OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;16;100;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Terminal Teenused OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;33;7,3;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Terminal Teenused OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;13;1037,3;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Terminal Teenused OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;10;232,3;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Terminal Teenused OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;11;273;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Terminal Teenused OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;pilet;6;130;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Terminal Teenused OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;pilet;9;200;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Terminal Teenused OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;C;pilet;-1;-23;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Terminal Teenused OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PPE;pilet;-11;-273;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Terminal Teenused OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PP;pilet;-2;-30;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Maakonnakaart OÜ;2906;Maakonnakaart OÜ;2906;C;kaardimyyk;1;3;0;0;2026-4;Driver sales;Piirkond 5;Liiniomanik 5
+Agent A OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;E;pilet;2;30;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Agent A OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;E;pilet;1;100;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Agent A OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;23;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Lõuna Müügivõrk OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;pilet;1;20;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Põhja Teenused OÜ;Põhja Teenused OÜ;5725;Põhja Teenused OÜ;5725;C;pilet;1;0;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Põhja Teenused OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;E;pilet;7;173;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Põhja Teenused OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;23;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Reisivõrk OÜ;1173;Reisivõrk OÜ;1173;C;kaardimyyk;21;72;0;0;2026-4;Driver sales;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasupunkt OÜ;953;Tasupunkt OÜ;953;E;kaardimyyk;12;36;0;0;2026-4;Driver sales;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasupunkt OÜ;953;Tasupunkt OÜ;953;C;kaardimyyk;16;1;0;0;2026-4;Driver sales;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Arvepartner OÜ;4046;Arvepartner OÜ;4046;C;kaardimyyk;11;33;0;0;2026-4;Driver sales;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Arvepartner OÜ;4046;Arvepartner OÜ;4046;E;kaardimyyk;1;3;0;0;2026-4;Driver sales;Piirkond 14;Liiniomanik 14
+Kaardipartner OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;1;100;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Kaardipartner OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;22;330;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Kaardipartner OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;pilet;10;230;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Kaardipartner OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;pilet;2;223;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Keskuse Piletid OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;10;122;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Keskuse Piletid OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;7;130;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Keskuse Piletid OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;13;122;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Keskuse Piletid OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;3;3;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Keskuse Piletid OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;66;27;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Keskuse Piletid OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;223;1330;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Keskuse Piletid OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;136;2363;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Keskuse Piletid OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;201;222;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Keskuse Piletid OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;30;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Keskuse Piletid OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;I;pilet;1;30;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Keskuse Piletid OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;10;112;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Keskuse Piletid OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;36;331;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Keskuse Piletid OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;pilet;3;71;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Keskuse Piletid OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;pilet;2;22;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Keskuse Piletid OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PPE;pilet;-2;-20;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ;5122;Kiire Kaart OÜ;5122;C;pilet;-2;-1;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sadama Müügipunkt OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;1;20;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sadama Müügipunkt OÜ;Sõidupunkt Partner OÜ;5896;Sõidupunkt Partner OÜ;5896;C;pilet;2;10;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sadama Müügipunkt OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;pilet;9;121;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sadama Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;33;332;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sadama Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;31;630;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sadama Müügipunkt OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;I;pilet;21;10;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Mugav Maksekeskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;71;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Mugav Maksekeskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;1;71;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ;5032;Kiire Kaart OÜ;5032;C;rahalaadimine;1;10;0;0;2026-4;Driver sales;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Liinikeskus OÜ;1322;Liinikeskus OÜ;1322;C;rahalaadimine;17;130;0;0;2026-4;Driver sales;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Piletirida OÜ;4218;Piletirida OÜ;4218;C;kaardimyyk;9;21;0;0;2026-4;Driver sales;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Piletirida OÜ;4218;Piletirida OÜ;4218;C;rahalaadimine;101;1133;0;0;2026-4;Driver sales;Piirkond 9;Liiniomanik 9
+Mugav Maksekeskus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PPE;pilet;-1;-1;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;PPE;pilet;7;272,6;0;0;2026-4;Web;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PPE;pilet;-2;-1,6;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ Harjumaa;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;3;111;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ Harjumaa;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;1;1;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Mugav Maksekeskus OÜ Harjumaa;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;26;121;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Mugav Maksekeskus OÜ Harjumaa;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;1;1;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Mugav Maksekeskus OÜ Harjumaa;Sõidupunkt Partner OÜ;5896;Sõidupunkt Partner OÜ;5896;C;pilet;0;0;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Mugav Maksekeskus OÜ Harjumaa;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;pilet;1;1;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Mugav Maksekeskus OÜ Harjumaa;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;pilet;3;210;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ Harjumaa;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;pilet;1;1;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;11;313,6;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;6;2;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;1;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;10;10;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;20;260;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;122;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;122;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;3;111;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;1;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;2;132;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;6;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;2;26;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;1;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;2;132;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Mugav Maksekeskus OÜ Harjumaa;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;I;pilet;3;111;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Mugav Maksekeskus OÜ Harjumaa;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;C;pilet;1;1;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ Harjumaa;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;E;pilet;1;1;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ Harjumaa;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;pilet;1;1;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ Harjumaa;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;1;33,6;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ Harjumaa;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;1;1;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Mugav Maksekeskus OÜ Harjumaa;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;1;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Mugav Maksekeskus OÜ Harjumaa;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;3;111;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Mugav Maksekeskus OÜ Harjumaa;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;2;26;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Mugav Maksekeskus OÜ Harjumaa;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;1;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Mugav Maksekeskus OÜ Harjumaa;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;1;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ Harjumaa;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;1;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ Harjumaa;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;3;111;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Mugav Maksekeskus OÜ Harjumaa;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;0;0;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Mugav Maksekeskus OÜ Harjumaa;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;2;26;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ Harjumaa;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;2;26;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ Harjumaa;Reisitasu OÜ;5122;Reisitasu OÜ;5122;E;pilet;2;26;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;PPE;pilet;33;1071,33;0;0;2026-4;Web;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;PPE;pilet;-1;-33;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Mugav Maksekeskus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PP;pilet;-1;-13,1;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;13;71,2;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;2;103,1;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;21;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;7;131;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;3;16;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;3;16;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Mugav Maksekeskus OÜ Harjumaa;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;1;62;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Mugav Maksekeskus OÜ Harjumaa;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;2;121;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ Harjumaa;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;EUR3D1;pilet;-1;-13,1;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;PPE;pilet;113;1376,1;0;0;2026-4;Web;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;PPE;pilet;-1;-33,2;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;PP;pilet;-2;-16,13;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Mugav Maksekeskus OÜ Harjumaa;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;pilet;1;76;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;27;1260;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;76;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;6;133,2;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;76;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;3;22;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;3;22;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;76;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;2;132;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;7;302,2;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;76;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;2;132;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ Harjumaa;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;C;pilet;1;76;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Mugav Maksekeskus OÜ Harjumaa;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;1;76;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Mugav Maksekeskus OÜ Harjumaa;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;76;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Mugav Maksekeskus OÜ Harjumaa;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;76;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Mugav Maksekeskus OÜ Harjumaa;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;76;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Mugav Maksekeskus OÜ Harjumaa;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;76;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;PPE;pilet;116;627;0;0;2026-4;Web;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PPE;pilet;-2;-26,73;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;2;10;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Mugav Maksekeskus OÜ Harjumaa;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;20;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;PPE;pilet;61;1626,2;0;0;2026-4;Web;Piirkond 10;Liiniomanik 10
+Mugav Maksekeskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;PPE;pilet;-1;-2;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PP;pilet;-1;-2;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Mugav Maksekeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;PPE;pilet;10;23,3;0;0;2026-4;Web;Piirkond 12;Liiniomanik 12
+Mugav Maksekeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;PPE;pilet;32;27,33;0;0;2026-4;Web;Piirkond 13;Liiniomanik 13
+Mugav Maksekeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;PPE;pilet;27;1176,1;0;0;2026-4;Web;Piirkond 14;Liiniomanik 14
+Mugav Maksekeskus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PPE;pilet;-1;-2;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Mugav Maksekeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;PPE;pilet;6;11,03;0;0;2026-4;Web;Piirkond 6;Liiniomanik 6
+Mugav Maksekeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;PPE;pilet;1;32,2;0;0;2026-4;Web;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;PPE;pilet;-1;-2;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Mugav Maksekeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;PPE;pilet;6;16,33;0;0;2026-4;Web;Piirkond 8;Liiniomanik 8
+Mugav Maksekeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;PPE;pilet;-1;-2;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Mugav Maksekeskus OÜ;Arvelduskeskus OÜ;1222;Arvelduskeskus OÜ;1222;PPE;pilet;2;36;0;0;2026-4;Web;Piirkond 10;Liiniomanik 10
+Raudtee Partner OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;1;13;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Raudtee Partner OÜ;Piletipesa OÜ;1528;Piletipesa OÜ;1528;C;pilet;113;220;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Raudtee Partner OÜ;Piletipesa OÜ;1528;Piletipesa OÜ;1528;C;pilet;622;1073;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Raudtee Partner OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;12;3033;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Raudtee Partner OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;31;163;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Raudtee Partner OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;3;37;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Raudtee Partner OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;12;200;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Raudtee Partner OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;10;130;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Raudtee Partner OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;10;130;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Raudtee Partner OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PPE;pilet;-1;-13;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Raudtee Partner OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;C;pilet;-2;-30;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Piletimaailm OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;9;160;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;C;raha valjamakse;3;-22,12;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Müügikaart OÜ;6546;Müügikaart OÜ;6546;C;raha valjamakse;9;-67,07;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;I;raha valjamakse;1;-232,61;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Kiire Kaart OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;12;173;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Kiire Kaart OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;pilet;12;173;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Kiire Kaart OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;pilet;9;200;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Saarte Müügipunkt OÜ;2960;Saarte Müügipunkt OÜ;2960;C;isikustamine;33;0;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Saarte Müügipunkt OÜ;2960;Saarte Müügipunkt OÜ;2960;C;kaardi tagasiost;30;0;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;kaardimyyk;3;2;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;kaardimyyk;1;3;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;kaardimyyk;2;6;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;kaardimyyk;1;12;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;rahalaadimine;3;33;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;rahalaadimine;7;32;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;kaardimyyk;6;1;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;kaardimyyk;1;12;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;rahalaadimine;3;0;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;rahalaadimine;3;30;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;kaardimyyk;3;13;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;kaardimyyk;10;30;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;rahalaadimine;1;3;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;kaardimyyk;1;12;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;isikustamine;13;13;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;isikustamine;10;10;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;kaardimyyk;12;36;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;kaardimyyk;11;33;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;rahalaadimine;22;273;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;rahalaadimine;23;263;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;isikustamine;3;3;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;kaardimyyk;9;21;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;kaardimyyk;7;21;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;rahalaadimine;1;10;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;rahalaadimine;3;10;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;isikustamine;13;13;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;isikustamine;6;6;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;kaardimyyk;20;60;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;kaardimyyk;1;31;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;rahalaadimine;1;33;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;rahalaadimine;6;63;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;kaardimyyk;10;30;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;rahalaadimine;2;36;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;isikustamine;11;11;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;isikustamine;6;6;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;kaardimyyk;12;36;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;kaardimyyk;6;1;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;rahalaadimine;9;71;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;rahalaadimine;11;72;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;isikustamine;3;3;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;isikustamine;7;7;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;kaardimyyk;11;12;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;kaardimyyk;2;27;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;rahalaadimine;1;10;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;sooduskaardi isikustamine;2;2;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;isikustamine;16;16;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;kaardimyyk;12;37;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;kaardimyyk;3;13;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;rahalaadimine;13;102;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;rahalaadimine;1;3;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;isikustamine;12;12;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;kaardimyyk;13;13;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;kaardimyyk;3;13;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;rahalaadimine;1;3;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;kaardimyyk;2;267;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;isikustamine;3;3;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;kaardimyyk;3;2;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;kaardimyyk;1;12;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;rahalaadimine;1;10;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;kaardimyyk;1;3;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;rahalaadimine;1;13;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;rahalaadimine;1;3;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;kaardimyyk;1;3;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;kaardimyyk;1;3;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;isikustamine;7;7;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;kaardimyyk;16;1;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;rahalaadimine;2;20;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;kaardimyyk;3;13;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;rahalaadimine;1;20;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;isikustamine;61;61;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;kaardimyyk;7;231;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;rahalaadimine;36;167;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;isikustamine;3;3;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;kaardimyyk;1;12;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;kaardimyyk;6;1;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;rahalaadimine;7;36;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;rahalaadimine;7;23;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;kaardimyyk;6;1;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;kaardimyyk;2;6;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;rahalaadimine;1;60;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;rahalaadimine;1;30;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;kaardimyyk;7;21;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;kaardimyyk;1;3;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;rahalaadimine;1;10;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;rahalaadimine;1;30;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Teenustasu Partner OÜ;8700;Teenustasu Partner OÜ;8700;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Teenustasu Partner OÜ;8700;Teenustasu Partner OÜ;8700;C;kaardimyyk;9;21;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Teenustasu Partner OÜ;8700;Teenustasu Partner OÜ;8700;C;rahalaadimine;1;37;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Kiire Kaart OÜ;5032;Kiire Kaart OÜ;5032;I;rahalaadimine;2;0;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Sõidupunkt Partner OÜ;5896;Sõidupunkt Partner OÜ;5896;C;isikustamine;111;111;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Sõidupunkt Partner OÜ;5896;Sõidupunkt Partner OÜ;5896;C;kaardimyyk;230;620;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Sõidupunkt Partner OÜ;5896;Sõidupunkt Partner OÜ;5896;C;rahalaadimine;127;22;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Sõidupunkt Partner OÜ;5896;Sõidupunkt Partner OÜ;5896;C;isikustamine;12;12;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Sõidupunkt Partner OÜ;5896;Sõidupunkt Partner OÜ;5896;C;kaardimyyk;31;23;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Sõidupunkt Partner OÜ;5896;Sõidupunkt Partner OÜ;5896;C;rahalaadimine;6;30;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Kaardiruum OÜ;9484;Kaardiruum OÜ;9484;C;isikustamine;2;0;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Bussijaama Teenused OÜ;1794;Bussijaama Teenused OÜ;1794;C;isikustamine;12;0;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Bussijaama Teenused OÜ;1794;Bussijaama Teenused OÜ;1794;C;kaardimyyk;11;33;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;isikustamine;13;13;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;kaardimyyk;31;102;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;kaardimyyk;9;21;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;rahalaadimine;7;120;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;rahalaadimine;1;70;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;isikustamine;21;21;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;kaardimyyk;11;123;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;rahalaadimine;1;26;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;isikustamine;6;6;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;isikustamine;9;;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;kaardimyyk;10;30;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;kaardimyyk;12;36;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;rahalaadimine;11;123;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;rahalaadimine;10;61;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;isikustamine;22;22;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;kaardimyyk;1;111;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;kaardimyyk;10;30;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;rahalaadimine;6;61;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;rahalaadimine;2;1;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;isikustamine;13;13;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;kaardimyyk;23;62;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;kaardimyyk;2;6;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;rahalaadimine;161;1122;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;rahalaadimine;13;77;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;isikustamine;6;6;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;isikustamine;3;3;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;kaardimyyk;3;13;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;kaardimyyk;12;36;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;rahalaadimine;1;10;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;rahalaadimine;1;20;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;kaardimyyk;7;21;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;kaardimyyk;11;33;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;rahalaadimine;9;37;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;rahalaadimine;7;73;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;isikustamine;3;3;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;kaardimyyk;11;33;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;kaardimyyk;7;21;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;rahalaadimine;6;32;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;rahalaadimine;27;206;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;kaardimyyk;2;6;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;kaardimyyk;3;13;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;rahalaadimine;1;10;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;rahalaadimine;2;7;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;kaardimyyk;1;3;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;kaardimyyk;7;21;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Piletipesa OÜ;1528;Piletipesa OÜ;1528;C;isikustamine;161;161;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Piletipesa OÜ;1528;Piletipesa OÜ;1528;C;kaardimyyk;201;603;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Piletipesa OÜ;1528;Piletipesa OÜ;1528;C;rahalaadimine;133;331;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;212;212;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;721;2172;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardi tagasiost;37;-111;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;373;130;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;3;2;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;1;20;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;3;3;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;110;120;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;111;21;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;3;3;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;32;136;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;237;1721;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;63;63;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;72;237;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;236;113;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;3;3;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;17;111;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;210;132;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;11;11;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;61;122;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;20;112;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;122;37;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;31;127;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;32;32;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;61;122;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;116;16;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;10;10;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;22;227;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;32;222;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;162;162;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;236;76;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;137;133;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;11;11;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;3;111;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;31;311;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;sooduskaardi isikustamine;1;1;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;23;23;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;67;201;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;11;133;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;132;132;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;12;1167;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;22;2103;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;100;100;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;102;327;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;300;3231;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;130;130;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;131;133;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;361;132;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;3;3;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;1;31;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;11;3;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;13;13;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;112;336;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;331;233;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;10;30;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;17;162;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;1;3;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;1;20;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;11;11;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;31;23;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;21;13;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;3;3;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;7;21;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;27;27;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;17;111;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;27;261;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;1;10;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;1;10;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;6;6;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;101;303;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;211;2133;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;7;7;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;11;12;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;26;370;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;13;13;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;21;72;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;6;70;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;72;72;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;111;333;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;36;322;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;2;27;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;3;21;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;31;31;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;117;331;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;31;613;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;9;;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;16;1101;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardi tagasiost;223;-662;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;333;2273;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;6;6;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;231;702;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardi tagasiost;121;-372;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;172;1367;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;22;22;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;11;132;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;21;223;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;21;21;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;23;711;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;20;2336;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;13;13;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;23;62;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;11;1;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;36;36;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;230;620;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;31;2737;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;33;33;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;13;171;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;211;1326;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;3;6;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;11;11;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;762;2307;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardi tagasiost;337;-1671;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;10;1022;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;3;3;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;17;31;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;9;1;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;126;126;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;27;31;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;117;10023;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;6;6;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;22;66;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;1;713;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;3;30;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;3;2;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;23;213;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;3;2;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;1;10;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;71;71;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;12;316;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;103;717;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;sooduskaardi isikustamine;1;1;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;12;12;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;37;111;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;1;10;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;23;23;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;21;273;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;76;611;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;21;21;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;36;16;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;100;71;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;3;2;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;3;11;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;132;132;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;313;1022;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;27;2337;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;sooduskaardi isikustamine;1;1;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;isikustamine;6;6;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;kaardimyyk;12;37;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;rahalaadimine;3;21;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;sooduskaardi isikustamine;1;1;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;I;isikustamine;36;0;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;I;kaardi tagasiost;21;-63;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;O;rahalaadimine;23;27,36;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;PPE;rahalaadimine;-1;-2;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;O;raha valjamakse;11072;-32110,2;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;I;sooduskaardi isikustamine;2;0;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;I;kaardimyyk;2;216;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;I;rahalaadimine;3;11,02;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;E;isikustamine;9;0;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;C;isikustamine;9;0;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;C;kaardimyyk;16;1;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;E;kaardimyyk;21;72;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;C;kaardi tagasiost;3;-2;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;E;rahalaadimine;2;13;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;C;rahalaadimine;3;1,01;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;isikustamine;3;3;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;kaardimyyk;13;32;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;kaardimyyk;2;6;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;rahalaadimine;3;30;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;isikustamine;7;7;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;kaardimyyk;13;13;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;kaardimyyk;2;6;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;rahalaadimine;3;37;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;isikustamine;23;23;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;isikustamine;9;;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;kaardimyyk;32;26;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;kaardimyyk;13;13;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;rahalaadimine;10;6;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;isikustamine;26;26;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;isikustamine;23;23;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;kaardimyyk;22;7;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;kaardimyyk;11;123;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;rahalaadimine;3;63;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;rahalaadimine;13;22;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;isikustamine;3;3;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;kaardimyyk;16;13;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;kaardimyyk;7;21;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;rahalaadimine;17;166;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;rahalaadimine;3;11;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;isikustamine;11;11;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;isikustamine;6;6;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;kaardimyyk;7;21;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;kaardimyyk;22;66;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;rahalaadimine;1;2;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;rahalaadimine;9;2;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;kaardimyyk;1;3;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;rahalaadimine;1;10;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;isikustamine;9;;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;kaardimyyk;13;13;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;kaardimyyk;1;12;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;rahalaadimine;1;3;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;kaardimyyk;32;26;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;rahalaadimine;67;372;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;kaardimyyk;13;32;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;rahalaadimine;21;11;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;isikustamine;3;3;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;kaardimyyk;1;3;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;kaardimyyk;6;1;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;rahalaadimine;3;2;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;rahalaadimine;1;10;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Sõiduabi Keskus OÜ;8092;Sõiduabi Keskus OÜ;8092;E;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Sõiduabi Keskus OÜ;8092;Sõiduabi Keskus OÜ;8092;E;kaardimyyk;2;6;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;9;;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;20;60;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;9;63;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;2;6;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;3;13;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;1;31;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;7;61;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;11;11;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;22;7;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;3;20;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;13;13;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;9;33;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;3;2;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;1;20;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;13;13;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;22;227;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;30;323;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;E;isikustamine;9;;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;E;kaardimyyk;11;33;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;10;30;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;E;rahalaadimine;2;30;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;2;13;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;9;;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;7;21;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;26;267;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;17;17;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;33;22;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;6;22;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;11;11;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;32;26;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;11;170;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;12;37;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;3;13;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;30;30;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;37;111;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;11;122;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;7;7;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;32;26;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;2;23;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;6;6;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;13;32;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;30;236;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;13;13;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;31;23;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;2;123;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;2;6;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;1;10;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;6;6;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;2;27;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;7;63;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;7;21;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;2;20;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;9;;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;13;13;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;7;20;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;17;17;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;23;73;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;11;112;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;3;3;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;23;62;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;31;211;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;6;6;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;11;33;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;6;17;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;31;102;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;1;13;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;9;;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;20;60;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;11;100;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;11;11;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;16;1;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;7;7;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;E;isikustamine;10;10;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;E;kaardimyyk;32;117;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;1;31;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;E;rahalaadimine;20;17;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;13;10;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;2;27;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;12;3;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;12;36;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;1;10;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;21;21;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;31;23;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;11;20;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;10;10;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;31;162;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;27;23;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;E;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;3;13;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;E;kaardimyyk;3;13;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;E;rahalaadimine;9;67;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;1;60;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;2;6;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;1;3;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;13;13;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;23;73;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;26;31;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;17;17;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;1;111;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;16;133;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;6;6;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;2;27;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;3;2;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;12;12;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;16;1;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;9;6;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;2;6;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;12;37;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;1;23;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;7;21;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;2;3;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;31;31;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;60;10;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;27;302;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;3;3;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;13;13;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;11;123;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;21;21;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;32;117;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;11;103;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;sooduskaardi isikustamine;1;1;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;7;7;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;20;60;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;36;322;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;12;12;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;30;20;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;66;31;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;12;37;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;13;31;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;E;kaardimyyk;3;2;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;1;3;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;2;20;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;16;1;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;2;73;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;6;1;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;2;23;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;11;12;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;11;136;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;3;3;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;12;37;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;17;12;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;10;10;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;22;7;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;3;0;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;11;11;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;3;111;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;10;33;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;3;3;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;7;21;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;1;20;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;16;16;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;30;20;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;26;227;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;2;27;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;3;32;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;isikustamine;3;3;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;kaardimyyk;32;26;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;rahalaadimine;1;130;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;sooduskaardi isikustamine;1;1;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Reisitasu OÜ;5122;Reisitasu OÜ;5122;E;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Reisitasu OÜ;5122;Reisitasu OÜ;5122;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Reisitasu OÜ;5122;Reisitasu OÜ;5122;E;kaardimyyk;2;27;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Reisitasu OÜ;5122;Reisitasu OÜ;5122;C;kaardimyyk;12;37;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Reisitasu OÜ;5122;Reisitasu OÜ;5122;C;rahalaadimine;2;62;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Reisitasu OÜ;5122;Reisitasu OÜ;5122;E;rahalaadimine;1;10;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Linnapartner Teenused OÜ;1605;Linnapartner Teenused OÜ;1605;C;kaardimyyk;231;762;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Müügikaart OÜ;6546;Müügikaart OÜ;6546;C;isikustamine;9;0;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Müügikaart OÜ;6546;Müügikaart OÜ;6546;C;kaardimyyk;71;213;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Müügikaart OÜ;6546;Müügikaart OÜ;6546;I;rahalaadimine;3;230;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Müügikaart OÜ;6546;Müügikaart OÜ;6546;C;rahalaadimine;11;171,22;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Maakonna Teenindus OÜ;822;Maakonna Teenindus OÜ;822;C;isikustamine;2;0;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Maakonna Teenindus OÜ;822;Maakonna Teenindus OÜ;822;E;isikustamine;2;0;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;isikustamine;7;7;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;kaardimyyk;6;1;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;kaardimyyk;12;36;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;rahalaadimine;26;223;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;rahalaadimine;30;13;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;isikustamine;31;31;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;isikustamine;23;23;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;kaardimyyk;70;210;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;kaardimyyk;11;132;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;rahalaadimine;20;1622;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;rahalaadimine;131;1602;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;isikustamine;17;17;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;isikustamine;11;11;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;kaardimyyk;11;33;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;kaardimyyk;11;12;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;rahalaadimine;13;121,3;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;rahalaadimine;7;76,3;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;isikustamine;2;2;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;kaardimyyk;11;12;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;kaardimyyk;10;120;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;kaardi tagasiost;73;-223;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;rahalaadimine;11;22;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;rahalaadimine;12;33;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;isikustamine;17;17;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;isikustamine;1;1;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;kaardimyyk;20;60;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;kaardimyyk;12;37;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;rahalaadimine;23;116;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;rahalaadimine;36;271;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;isikustamine;3;3;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;isikustamine;11;11;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;kaardimyyk;9;21;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;kaardimyyk;10;30;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;rahalaadimine;20;207,7;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;rahalaadimine;9;7;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;I;isikustamine;120;0;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;I;sooduskaardi isikustamine;12;0;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Saarte Müügipunkt OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;1;2;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Saarte Müügipunkt OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;1;11;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Saarte Müügipunkt OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;3;33;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Saarte Müügipunkt OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;3;22;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Saarte Müügipunkt OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;1;3,3;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Saarte Müügipunkt OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;1;76,3;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Saarte Müügipunkt OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;1;30;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Saarte Müügipunkt OÜ;Sõidupunkt Partner OÜ;5896;Sõidupunkt Partner OÜ;5896;C;pilet;1;17;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Saarte Müügipunkt OÜ;Sõidupunkt Partner OÜ;5896;Sõidupunkt Partner OÜ;5896;C;pilet;0;0;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Saarte Müügipunkt OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;pilet;3;22;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Saarte Müügipunkt OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;pilet;1;30;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Saarte Müügipunkt OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;pilet;6;101;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Saarte Müügipunkt OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;pilet;16;26,3;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Saarte Müügipunkt OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;pilet;1;30;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Saarte Müügipunkt OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;pilet;1;30;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Saarte Müügipunkt OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;pilet;1;2;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Saarte Müügipunkt OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;pilet;2;60;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;17;3117;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;30;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;10;1200;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;21;11,3;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;7;263,3;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;3,3;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;22;121;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;113;11;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;17;721,3;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;122;1333;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;30;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;9;161;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;2;1;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;37;301;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;2;113;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;37;211,3;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;3;30;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;70;211,3;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;2;613;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;323;303;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;31;627,3;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;101;1731,3;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;17;330,3;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;273;2623,3;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;213;172,3;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;3;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;3;222;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;10;161;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;20;112,3;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;12;301;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;11;363;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;223;2230;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Saarte Müügipunkt OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;11;161;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Saarte Müügipunkt OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;O;pilet;3;0;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Saarte Müügipunkt OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;EUR3D1;pilet;-1;-2;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Saarte Müügipunkt OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;I;pilet;2;2232;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Saarte Müügipunkt OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;E;pilet;1;30;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Saarte Müügipunkt OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;pilet;1;13;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Saarte Müügipunkt OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;1;30;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Saarte Müügipunkt OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;3;7;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Saarte Müügipunkt OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;pilet;6;112;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Saarte Müügipunkt OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;6;2,3;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Saarte Müügipunkt OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;pilet;2;111;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Saarte Müügipunkt OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;pilet;10;133,3;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Saarte Müügipunkt OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;1;126,3;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Saarte Müügipunkt OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;3;76,3;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Saarte Müügipunkt OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;pilet;2;11;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Saarte Müügipunkt OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;2;32;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Saarte Müügipunkt OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;pilet;2;11,3;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Saarte Müügipunkt OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;pilet;1;30;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Saarte Müügipunkt OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;E;pilet;1;32,3;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;7;102,3;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;13;11;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;6;37,3;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;16;330,3;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;2;11;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;11;231;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;13;121,3;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;2;33,3;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;12;332,3;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;13;211,3;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;22,3;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;2;33,3;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;20;221,3;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;3;130;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;3;12,3;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;2;60;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;3,3;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;12;222,3;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;11;163;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;3;6;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;2;7;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;30;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Saarte Müügipunkt OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;3;130;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Saarte Müügipunkt OÜ;Reisitasu OÜ;5122;Reisitasu OÜ;5122;C;pilet;12;132;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Saarte Müügipunkt OÜ;Reisitasu OÜ;5122;Reisitasu OÜ;5122;E;pilet;1;36;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Saarte Müügipunkt OÜ;Linnapartner Teenused OÜ;1605;Linnapartner Teenused OÜ;1605;C;pilet;263;2332;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Saarte Müügipunkt OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;pilet;13;33,3;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Saarte Müügipunkt OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;pilet;10;76;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Saarte Müügipunkt OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;C;pilet;-1;-30;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Saarte Müügipunkt OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PPE;pilet;-3;-63,3;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;raha valjamakse;37;-2;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;raha valjamakse;223;-2;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;raha valjamakse;121;-1;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;raha valjamakse;337;-61,6;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;I;raha valjamakse;21;0;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Sõidukaardi Keskus OÜ;7474;Sõidukaardi Keskus OÜ;7474;C;raha valjamakse;3;0;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Sõidukaardi Keskus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;raha valjamakse;73;-31,2;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Maakonna Teenindus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;7;200,23;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Maakonna Teenindus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;1;31;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Maakonna Teenindus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;3;72;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Maakonna Teenindus OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;1;1,3;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Maakonna Teenindus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;pilet;13;321,63;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Maakonna Teenindus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;pilet;33;6,7;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Maakonna Teenindus OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;C;pilet;3;12,33;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Maakonna Teenindus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;631;13121,3;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Maakonna Teenindus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;37;111,1;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Maakonna Teenindus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;12;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Maakonna Teenindus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;10;201,1;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Maakonna Teenindus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;7;130,2;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Maakonna Teenindus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;pilet;37;210;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Maakonna Teenindus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;pilet;21;100,1;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Maakonna Teenindus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;33;623,3;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Maakonna Teenindus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;26;2126,03;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Maakonna Teenindus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;3;1311;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Maakonna Teenindus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;E;pilet;2;33,3;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Maakonna Teenindus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;12,23;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Maakonna Teenindus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;12;372,3;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Maakonna Teenindus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;9;163,23;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Maakonna Teenindus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;17;221,03;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Maakonna Teenindus OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;21;131,03;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Maakonna Teenindus OÜ;Müügikaart OÜ;6546;Müügikaart OÜ;6546;I;pilet;1;12;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Maakonna Teenindus OÜ;Müügikaart OÜ;6546;Müügikaart OÜ;6546;C;pilet;23;2200,73;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Maakonna Teenindus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;pilet;26;621,73;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Maakonna Teenindus OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;pilet;17;337,73;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Maakonna Teenindus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PPE;pilet;-1;-103,1;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Maakonna Teenindus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PP;pilet;-3;-11;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Maakonna Teenindus OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;EUR3D3;pilet;-1;-20;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Maakonna Teenindus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;2;12,36;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Maakonna Teenindus OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;21,2;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Maakonna Teenindus OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;pilet;1;21,2;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Turismi Piletid OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;E;pilet;2;30;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Turismi Piletid OÜ;Kaardilahendus OÜ;9681;Kaardilahendus OÜ;9681;E;pilet;1;23;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Turismi Piletid OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;73;173;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Turismi Piletid OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;1;100;0;0;2026-4;Seller;Piirkond 11;Liiniomanik 11
+Turismi Piletid OÜ;Müügiruut OÜ;3574;Müügiruut OÜ;3574;C;pilet;1;100;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Turismi Piletid OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;3;73;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Turismi Piletid OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;2;30;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Turismi Piletid OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;pilet;30;713;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Turismi Piletid OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;pilet;12;1207,3;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Turismi Piletid OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PPE;pilet;-13;-337;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Turismi Piletid OÜ;Terminalipunkt OÜ;7835;Terminalipunkt OÜ;7835;PP;pilet;-2;-30;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+Linnaliini Partner OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;1;23;0;0;2026-4;Seller;Piirkond 8;Liiniomanik 8
+Linnaliini Partner OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;3;123;0;0;2026-4;Seller;Piirkond 9;Liiniomanik 9
+Bussijaama Teenused OÜ;Piletivõrk OÜ;8799;Piletivõrk OÜ;8799;C;pilet;3;73;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Bussijaama Teenused OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;100;0;0;2026-4;Seller;Piirkond 10;Liiniomanik 10
+Sõidukaardi Keskus OÜ;Agent A OÜ ;1588;Agent A OÜ ;1588;C;kaardimyyk;13;133;0;0;2026-4;Driver sales;Piirkond 11;Liiniomanik 11
+Sõidukaardi Keskus OÜ;Agent A OÜ ;1588;Agent A OÜ ;1588;C;rahalaadimine;31;310;0;0;2026-4;Driver sales;Piirkond 11;Liiniomanik 11
+Agent A OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;31;1273;0;0;2026-4;Seller;Piirkond 12;Liiniomanik 12
+Agent A OÜ;Arvopunkt OÜ;6134;Arvopunkt OÜ;6134;C;pilet;2;30;0;0;2026-4;Seller;Piirkond 13;Liiniomanik 13
+Agent A OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;1;132,3;0;0;2026-4;Seller;Piirkond 14;Liiniomanik 14
+Agent A OÜ;Tasuvara OÜ;9733;Tasuvara OÜ;9733;C;pilet;11;273;0;0;2026-4;Seller;Piirkond 5;Liiniomanik 5
+Agent A OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;E;pilet;10;230;0;0;2026-4;Seller;Piirkond 6;Liiniomanik 6
+Agent A OÜ;Lõunakaardi Teenused OÜ;2180;Lõunakaardi Teenused OÜ;2180;C;pilet;3;73;0;0;2026-4;Seller;Piirkond 7;Liiniomanik 7
+;;;;;;;41875;392066,62;;;;;;
