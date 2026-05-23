@@ -1,9 +1,8 @@
 package ee.valiit.etas.persistence.view;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import ee.valiit.etas.persistence.salesreport.SalesReport;
+import jakarta.persistence.*;
+
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import org.hibernate.annotations.Immutable;
@@ -70,5 +69,7 @@ public class CommissionCalculationView {
     @Column(name = "calculated_fee_plus_vat")
     private BigDecimal calculatedFeePlusVat;
 
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "sales_report_id", insertable = false, updatable = false)
+    private SalesReport salesReport;
 }

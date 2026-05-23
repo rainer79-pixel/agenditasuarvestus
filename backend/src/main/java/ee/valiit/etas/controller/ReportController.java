@@ -1,6 +1,7 @@
 package ee.valiit.etas.controller;
 
 import ee.valiit.etas.controller.report.dto.ReportDetailResponseDto;
+import ee.valiit.etas.controller.report.dto.ReportResponseDto;
 import ee.valiit.etas.infrastructure.error.ApiError;
 import ee.valiit.etas.service.ReportControllerService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -19,6 +20,21 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ReportController {
     private final ReportControllerService reportControllerService;
+
+    @GetMapping("/report/user/{userId}")
+    @Operation(summary = "Tagasta kasutaja aruannete nimekiri filtritega")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Aruanded leitud"),
+            @ApiResponse(responseCode = "404", description = "Aruandeid ei leitud",
+                    content = @Content(schema = @Schema(implementation = ApiError.class)))
+    })
+    public List<ReportResponseDto> getReports(
+            @PathVariable Integer userId,
+            @RequestParam(required = false) String periodFrom,
+            @RequestParam(required = false) String periodTo,
+            @RequestParam(required = false) Integer sellerId) {
+        return reportControllerService.getReports(userId, periodFrom, periodTo, sellerId);
+    }
 
     @PostMapping("/import/user/{userId}")
     public void addReport(

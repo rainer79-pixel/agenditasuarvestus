@@ -1,6 +1,7 @@
 package ee.valiit.etas.service;
 
 import ee.valiit.etas.controller.report.dto.ReportDetailResponseDto;
+import ee.valiit.etas.controller.report.dto.ReportResponseDto;
 import ee.valiit.etas.controller.report.dto.SalesReportRowDto;
 import ee.valiit.etas.infrastructure.exception.DataNotFoundException;
 import ee.valiit.etas.infrastructure.exception.ForbiddenException;
@@ -58,6 +59,14 @@ public class ReportControllerService {
     private final CommissionCalculationRepository commissionCalculationRepository;
     private final CommissionRateRepository commissionRateRepository;
     private final CommissionCalculationViewMapper commissionCalculationViewMapper;
+
+    public List<ReportResponseDto> getReports(Integer userId, String periodFrom, String periodTo, Integer sellerId) {
+        List<ReportResponseDto> reports = commissionCalculationViewRepository.findReports(periodFrom, periodTo, sellerId);
+        if (reports.isEmpty()) {
+            throw new DataNotFoundException(REPORT_NOT_FOUND.getMessage(), REPORT_NOT_FOUND.getErrorCode());
+        }
+        return reports;
+    }
 
     @Transactional
     public void addReport(Integer userId, MultipartFile file) {
