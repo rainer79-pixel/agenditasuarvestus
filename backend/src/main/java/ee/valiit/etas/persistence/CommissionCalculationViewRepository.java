@@ -8,4 +8,5 @@ import java.util.List;
 public interface CommissionCalculationViewRepository extends JpaRepository<CommissionCalculationView, Long> {
 
     List<CommissionCalculationView> findBySalesReportId(Integer salesReportId);
+    List<CommissionCalculationView> findBySalesReportIdAndSellerId(Integer salesReportId, Integer sellerId);
 }
