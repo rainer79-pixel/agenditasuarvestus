@@ -6,7 +6,7 @@ import SellersView from '@/views/SellersView.vue'
 import SellerView from '@/views/SellerView.vue'
 import SellerFormView from '@/views/SellerFormView.vue'
 import SellerSettingsView from '@/views/SellerSettingsView.vue'
-
+import UnderDevelopmentView from '@/views/UnderDevelopmentView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -47,9 +47,9 @@ const router = createRouter({
       component: SellerSettingsView,
     },
 
-    { path: '/reports', name: 'reportsRoute', component: DashboardView },
-    { path: '/invoice-control', name: 'invoiceControlRoute', component: DashboardView },
-    { path: '/settings', name: 'settingsRoute', component: DashboardView },
+    { path: '/reports', name: 'reportsRoute', component: UnderDevelopmentView },
+    { path: '/invoice-control', name: 'invoiceControlRoute', component: UnderDevelopmentView },
+    { path: '/settings', name: 'settingsRoute', component: UnderDevelopmentView },
   ],
 })
 

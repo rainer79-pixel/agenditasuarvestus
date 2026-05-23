@@ -32,7 +32,10 @@
       </thead>
       <tbody>
         <tr v-for="seller in filteredSellers" :key="seller.sellerId">
-          <td>{{ seller.companyName }}</td>
+          <td>
+            {{ seller.companyName }}
+            <span v-if="seller.notes" :title="seller.notes" style="cursor: help; color: #6c757d; font-size: 0.85em">ⓘ</span>
+          </td>
           <td>{{ seller.orgId }}</td>
           <td>
             <span class="badge" :class="seller.status === 'ACTIVE' ? 'bg-success' : 'bg-secondary'">

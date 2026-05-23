@@ -64,14 +64,14 @@ VALUES (24, now(), 1, '2024-01-01', NULL, 'A');
 -- org_id vastab Exceli seller_org_id veerul | created_by=1 (Mari Maasikas)
 -- ----------------------------------------------------------------
 INSERT INTO seller (company_name, org_id, contract_start, contract_end, notes, status, created_at, created_by) VALUES
-    ('Agent A OÜ',              1588, '2026-01-01', null, null, 'A', now(), 1),  -- id=1
+    ('Agent A OÜ',              1588, '2026-01-01', null, 'Eelistab suhtlust e-posti teel. Arved saata hiljemalt kuu 5. kuupäevaks.', 'A', now(), 1),  -- id=1
     ('Arvelduskeskus OÜ',       1222, '2026-01-01', null, null, 'A', now(), 1),  -- id=2
-    ('Arvopunkt OÜ',            6134, '2026-01-01', null, null, 'A', now(), 1),  -- id=3
+    ('Arvopunkt OÜ',            6134, '2026-01-01', null, 'Leping lõpeb 31.12.2026. Uuendamisel kontrollida teenustasude määrasid.', 'A', now(), 1),  -- id=3
     ('Tasuvara OÜ',             9733, '2026-01-01', null, null, 'A', now(), 1),  -- id=4
-    ('Piletivõrk OÜ',           8799, '2026-01-01', null, null, 'A', now(), 1),  -- id=5
+    ('Piletivõrk OÜ',           8799, '2026-01-01', null, 'Kliendil kaks erinevat arvelduskontot — kontrollida enne makse saatmist.', 'A', now(), 1),  -- id=5
     ('Müügiruut OÜ',            3574, '2026-01-01', null, null, 'A', now(), 1),  -- id=6
     ('Kaardilahendus OÜ',       9681, '2026-01-01', null, null, 'A', now(), 1),  -- id=7
-    ('Lõunakaardi Teenused OÜ', 2180, '2026-01-01', null, null, 'A', now(), 1),  -- id=8
+    ('Lõunakaardi Teenused OÜ', 2180, '2026-01-01', null, 'Uus kontaktisik alates 2026-03. Vana kontakt Jaan Tamm enam ei kehti.', 'A', now(), 1),  -- id=8
     ('Terminalipunkt OÜ',       7835, '2026-01-01', null, null, 'A', now(), 1),  -- id=9
     ('Sõidukaardi Keskus OÜ',   7474, '2026-01-01', null, null, 'A', now(), 1);  -- id=10
 
