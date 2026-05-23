@@ -35,3 +35,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### MapStruct generated sources ###
+src/main/generated/
