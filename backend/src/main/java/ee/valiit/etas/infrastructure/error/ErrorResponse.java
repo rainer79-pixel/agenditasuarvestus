@@ -45,6 +45,8 @@ public enum ErrorResponse {
     IMPORT_PERIOD_ALREADY_EXISTS("Sellel perioodil on aruanne juba olemas", 513),
     IMPORT_INVALID_HEADER("Laetav raport ei vasta header tingimustele", 514),
     REPORT_NOT_FOUND("Aruannet ei leitud", 516),
+    IMPORT_PERIOD_NOT_FOUND("Perioodi andmeid ei leitud", 515),
+
 
     // Invoice
     INVOICE_NOT_FOUND("Arvet ei leitud", 611),

@@ -49,21 +49,23 @@ public class SellerContactController {
                                     @PathVariable Integer contactId) {
         sellerContactService.deleteSellerContact(userId, sellerId, contactId);
     }
+
     @PostMapping("/seller/{sellerId}/contacts")
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Lisa kontakt")
     @ApiResponses(value = {
-    @ApiResponse(responseCode = "201", description = "OK"),
-            @ApiResponse(responseCode = "400", description = "Kohustuslik väli puudub"),
+            @ApiResponse(responseCode = "201", description = "Kontakt lisatud"),
+            @ApiResponse(responseCode = "400", description = "Kohustuslik väli puudub",
+                    content = @Content(schema = @Schema(implementation = ApiError.class))),
             @ApiResponse(responseCode = "403", description = "Pole õigust",
-            content = @Content(schema = @Schema(implementation = ApiError.class))),
+                    content = @Content(schema = @Schema(implementation = ApiError.class))),
             @ApiResponse(responseCode = "404", description = "Edasimüüjat või kontakti ei leitud",
                     content = @Content(schema = @Schema(implementation = ApiError.class))),
             @ApiResponse(responseCode = "500", description = "Serveri viga",
                     content = @Content(schema = @Schema(implementation = ApiError.class)))})
-    public void createAndSaveSellerContact(@RequestParam Integer userId,
-                                           @PathVariable Integer sellerId,
-                                           @Valid @RequestBody SellerContactDto sellerContactDto) {
+    public void addSellerContact(@RequestParam Integer userId,
+                                 @PathVariable Integer sellerId,
+                                 @Valid @RequestBody SellerContactDto sellerContactDto) {
         sellerContactService.addSellerContact(userId, sellerId, sellerContactDto);
     }
 }

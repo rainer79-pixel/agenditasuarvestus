@@ -1,6 +1,7 @@
 package ee.valiit.etas.infrastructure;
 
 import ee.valiit.etas.infrastructure.error.ApiError;
+import ee.valiit.etas.infrastructure.exception.BadRequestException;
 import ee.valiit.etas.infrastructure.exception.ConflictException;
 import ee.valiit.etas.infrastructure.exception.DataNotFoundException;
 import ee.valiit.etas.infrastructure.exception.ForbiddenException;
@@ -19,6 +20,14 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 @ControllerAdvice
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {
+
+    @ExceptionHandler
+    public ResponseEntity<ApiError> handleBadRequestException(BadRequestException exception) {
+        ApiError apiError = new ApiError();
+        apiError.setMessage(exception.getMessage());
+        apiError.setErrorCode(exception.getErrorCode());
+        return new ResponseEntity<>(apiError, HttpStatus.BAD_REQUEST);
+    }
 
     @ExceptionHandler
     public ResponseEntity<ApiError> handleForbiddenException(ForbiddenException exception) {

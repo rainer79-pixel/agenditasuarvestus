@@ -9,8 +9,8 @@ import org.mapstruct.ReportingPolicy;
 
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE,
         componentModel = MappingConstants.ComponentModel.SPRING)
-
 public interface SellerContactMapper {
+
     @Mapping(source = "id", target = "contactId")
     @Mapping(source = "firstName", target = "firstName")
     @Mapping(source = "middleName", target = "middleName")
@@ -18,6 +18,7 @@ public interface SellerContactMapper {
     @Mapping(source = "phone", target = "phone")
     @Mapping(source = "email", target = "email")
     SellerContactResponseDto toSellerContactResponseDto(SellerContact sellerContact);
+
     @Mapping(ignore = true, target = "id")
     @Mapping(ignore = true, target = "seller")
     SellerContact toSellerContact(SellerContactDto sellerContactDto);

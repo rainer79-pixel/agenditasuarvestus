@@ -1,4 +1,5 @@
 package ee.valiit.etas.persistence.commissionrate;
+
 import ee.valiit.etas.controller.seller.dto.CommissionRateDto;
 import ee.valiit.etas.controller.seller.dto.CommissionRateResponseDto;
 import org.mapstruct.*;

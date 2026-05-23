@@ -10,10 +10,9 @@ public interface CommissionCalculationViewMapper {
 
     CommissionCalculationViewDto toDto(CommissionCalculationView commissionCalculationView);
 
+    List<CommissionCalculationViewDto> toCommissionCalculationViewDtos(List<CommissionCalculationView> commissionCalculationViews);
 
-   List<CommissionCalculationViewDto> toCommissionCalculationViewDtos(List <CommissionCalculationView> commissionCalculationViews);
-
-   @Mapping(source = "productTypeName", target = "productTypeName")
+    @Mapping(source = "productTypeName", target = "productTypeName")
    @Mapping(source = "transactionCountSum", target = "transactionCount")
    @Mapping(source = "salesAmountSum", target = "salesAmount")
    @Mapping(source = "feePerTransaction", target = "feePerTransaction")

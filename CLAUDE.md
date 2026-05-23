@@ -30,14 +30,13 @@ etas/
   frontend/  — Vue.js frontend
   database/                 — SQL skriptid (schema, seed-andmed)
   docs/
-    specs/                              — Projektikirjeldus (PDF + MD)
+    specs/                              — Projektikirjeldus, projekt-struktuur, juhendmaterjalid (projectinstructions/)
     balsamiq/                           — Balsamiq failid ja wireframe'id (PDF, PNG, BMPR)
-    datamodel/                          — Andmemudel (PDF, PNG, SQL)
-    instructions/                       — Õppejõu juhendmaterjalid (PDF)
+    datamodeler/                        — Andmemudel (PDF, PNG)
     tasks/
-      tasks.md                          — Taskide ülevaade ja seis
       task-01/, task-02/, task-03/      — Vana süsteem: feature-põhised taski kirjeldused
-      backend/                          — Uus süsteem: üks fail per backend endpoint (nt PUT-api-seller-sellerId-status.md)
+      backend/                          — Backend endpointide taskid (DONE-* prefiksi saanud = valmis)
+      frontend/                         — Frontend taskid
     dtos/
       schema/                           — DTO välja nimed ja tüübid (NimiDto_schema.json)
       examples/                         — Realistlikud näidisandmed (NimiDto_VaateNimi_example.json)
@@ -143,7 +142,7 @@ Paremal: Kasutajanimi | `Logi välja`
 | DELETE | `/api/import/user/{userId}/{period}` | — | Kustuta impordi andmed perioodist |
 | GET | `/api/report/user/{userId}` | `ReportResponseDto[]` | Aruannete nimekiri |
 | GET | `/api/report/{sellerId}/{period}` | `ReportDetailResponseDto[]` | Aruande detailid |
-| GET | `/api/report/{sellerId}/{period}/export` | `.xlsx` fail | Ekspordi aruanne Excelisse |
+| GET | `/api/report/user/{userId}/export` | `.xlsx` fail | Ekspordi aruanne Excelisse |
 | GET | `/api/invoice/user/{userId}` | `InvoiceResponseDto[]` | Arvete nimekiri |
 | POST | `/api/invoice/user/{userId}` | `InvoiceDto` | Sisesta arve |
 | DELETE | `/api/invoice/number/{invoiceNumber}` | — | Kustuta arve |
@@ -244,7 +243,7 @@ Backend mapper teisendab DB koodi (`"A"`/`"D"`) ↔ API väärtuseks (`"ACTIVE"`
 7. Kuvab tulemused tabelis
 8. Kasutaja kinnitab ja salvestab
 
-**Excel faili formaat:** `docs/0.6_Issuer_sales_report.xlsx` (näidisfail)
+**Excel faili formaat:** `docs/specs/0.6_Issuer_sales_report.xlsx` (näidisfail)
 **Reegel:** ühel perioodil saab olla ainult üks aruanne
 
 | Veerg (Excel) | Kasutatakse | Vastendus DB / enum |
@@ -299,21 +298,19 @@ Backend otsib `product_type` tabelist rea, kus `name` kattub Exceli `tyyp` vää
 
 ## Arenduse järjekord
 
-Detailne taskide plaan: `docs/tasks/tasks.md`
-
 **Taskid ja seis:**
 
 | Task | Sisu | Seis |
 |------|------|------|
 | task-01 | Login ja autentimine | ✅ Valmis |
 | task-02 | Dashboard ja navbar | ✅ Valmis |
-| task-03 | Edasimüüjad (nimekiri, detailvaade, lisamine, muutmine, deaktiveerimine) | 🔄 Backend valmis, frontend pooleli |
-| task-04 | Edasimüüja kontaktid (POST/DELETE + SellerSettingsView raamistik + ContactModal) | ⬜ |
-| task-05 | Edasimüüja piirkonnad (GET /api/region + seller_region CRUD + RegionModal) | ⬜ |
-| task-06 | Teenustasud (GET /api/product-type + commission_rate CRUD + CommissionModal) | ⬜ |
-| task-07 | Excel import (Apache POI + POST/DELETE /api/import + ReportsView upload) | ⬜ |
-| task-08 | Teenustasu arvutus + aruanded (calculation + GET /api/report + ReportsView tabel) | ⬜ |
-| task-09 | Aruannete eksport (GET /api/report/export + ekspordi nupp) | ⬜ |
+| task-03 | Edasimüüjad (nimekiri, detailvaade, lisamine, muutmine, deaktiveerimine) | ✅ Valmis |
+| task-04 | Edasimüüja kontaktid (POST/DELETE + SellerSettingsView raamistik + ContactModal) | ✅ Valmis |
+| task-05 | Edasimüüja piirkonnad (GET /api/region + seller_region CRUD + RegionModal) | ✅ Valmis |
+| task-06 | Teenustasud (GET /api/product-type + commission_rate CRUD + CommissionModal) | ✅ Valmis |
+| task-07 | Excel import (Apache POI + POST/DELETE /api/import + ReportsView upload) | 🔄 Backend valmis, frontend pooleli |
+| task-08 | Teenustasu arvutus + aruanded (calculation + GET /api/report + ReportsView tabel) | 🔄 Backend valmis, frontend pooleli |
+| task-09 | Aruannete eksport (GET /api/report/user/{userId}/export + ekspordi nupp) | 🔄 Backend valmis, frontend pooleli |
 | task-10 | Arvete kontroll — **sõltumatu** (invoice CRUD + InvoiceControlView) | ⬜ |
 | task-11 | Seadistused (product_type POST/DELETE + vat_setting + user CRUD + SettingsView) | ⬜ |
 
@@ -352,15 +349,22 @@ Kodeerimistavad on eraldi alamfailides:
 - [x] task-01: Login ja autentimine — `POST /api/login`, `HomeView.vue`, `LoginView.vue`, `AuthService.js`, `NavigationService.js`, `LoginService.js`, `router/index.js`
 - [x] task-02: Dashboard ja navbar — `GET /api/dashboard`, `DashboardView.vue`, `DashboardService.js`, `App.vue` navbar, `NavigationService.js` täiendused, `router/index.js` placeholder route'id
 - [x] task-03 backend: Seller CRUD — `SellerController`, `SellerService`, `SellerRepository`, `SellerMapper`, `SellerDto`, `SellerStatusDto`, `SellerDetailResponseDto`; `SellerRegionRepository`, `SellerRegionMapper`, `SellerRegionResponseDto`; `CommissionRateRepository`, `CommissionRateMapper`, `CommissionRateResponseDto`; `SellerContactRepository`, `SellerContactRoleRepository`, `SellerContactMapper`, `SellerContactResponseDto`; `Status.java` täiendused (`apiValue`, `toApiValue`, `fromApiValue`); `ErrorResponse` täiendused (`ACCESS_DENIED`, `SELLER_ORG_ID_ALREADY_EXISTS`, `SELLER_ALREADY_ACTIVE`)
+- [x] task-03 frontend: `SellersView.vue`, `SellerView.vue`, `SellerFormView.vue`, `SellerService.js`, `router/index.js` täiendused
+- [x] task-04 backend: kontaktid — `POST/DELETE /api/seller/{sellerId}/contacts`, `SellerContactService`, `BadRequestException`
+- [x] task-04 frontend: `SellerSettingsView.vue` raamistik, `SellerSettingsContactModal.vue`
+- [x] task-05 backend: piirkonnad — `GET /api/region`, `POST/PUT/DELETE /api/seller/{sellerId}/regions`, `SellerRegionService`
+- [x] task-05 frontend: `SellerSettingsRegionModal.vue`, piirkondade haldus `SellerSettingsView.vue`-s
+- [x] task-06 backend: teenustasud — `GET /api/product-type`, `POST/PUT/DELETE /api/seller/{sellerId}/commission-rates`, `SellerCommissionRateService`
+- [x] task-06 frontend: `SellerSettingsProductModal.vue`, teenustasude haldus `SellerSettingsView.vue`-s
+- [x] task-07 backend: Excel import — Apache POI, `POST/DELETE /api/import/user/{userId}[/{period}]`, `ReportControllerService`
+- [x] task-08 backend: arvutus + aruanded — `commission_calculation_view`, `GET /api/report/user/{userId}`, `GET /api/report/{sellerId}/{period}`
+- [x] task-09 backend: eksport — `GET /api/report/user/{userId}/export`, Excel genereerimine Apache POI-ga
+- [x] `ValidationService` — jagatud valideerimisloogika (`validateUserIsAdmin`, `validateSellerExists`) eraldatud eraldi teenusesse
 
 ### Järgmine
-- [ ] task-03 frontend: `SellersView.vue`, `SellerView.vue`, `SellerFormView.vue`, `NavigationService.js` täiendused, `router/index.js` täiendused
-- [ ] task-04: kontaktid — `POST /api/seller/{sellerId}/contacts`, `DELETE .../contacts/{contactId}`, `SellerSettingsView.vue` raamistik, `SellerSettingsContactModal.vue`
-- [ ] task-05: piirkonnad — `GET /api/region`, seller_region POST/PUT/DELETE, `SellerSettingsRegionModal.vue`
-- [ ] task-06: teenustasud — `GET /api/product-type`, commission_rate POST/PUT/DELETE, `SellerSettingsProductModal.vue`
-- [ ] task-07: Excel import — Apache POI, `POST /api/import/user/{userId}`, `DELETE /api/import/user/{userId}/{period}`, `ReportsView.vue` upload
-- [ ] task-08: arvutus + aruanded — commission_calculation loogika, `GET /api/report/user/{userId}`, `GET /api/report/{sellerId}/{period}`, `ReportsView.vue` tabel
-- [ ] task-09: eksport — `GET /api/report/{sellerId}/{period}/export`, ekspordi nupp
+- [ ] task-07 frontend: `ReportsView.vue` — Excel import, periood kustutamine
+- [ ] task-08 frontend: `ReportsView.vue` — aruannete tabel, detailide laiendamine
+- [ ] task-09 frontend: `ReportsView.vue` — ekspordi nupp
 - [ ] task-10: arvete kontroll — invoice CRUD, `InvoiceControlView.vue` *(sõltumatu, paralleelne)*
 - [ ] task-11: seadistused — product_type POST/DELETE, vat_setting CRUD, user CRUD, `SettingsView.vue`
 

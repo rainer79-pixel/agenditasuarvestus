@@ -108,14 +108,14 @@ Swagger UI: http://localhost:8080/swagger-ui/index.html
 - Edasimüüjaid ei kustutata — deaktiveeritakse/aktiveeritakse (`PUT /api/seller/{sellerId}/status`)
 - Kasutajaid ei kustutata — deaktiveeritakse (`PUT /api/user/{userId}/status`)
 - Kontakte saab kustutada
-- Excel import on fikseeritud formaadiga — näidisfail: `docs/0.6_Issuer_sales_report.xlsx`
+- Excel import on fikseeritud formaadiga — näidisfail: `docs/specs/0.6_Issuer_sales_report.xlsx`
 - Ühel perioodil saab olla ainult üks aruanne
 - KM määr (24%) on seadistatav andmebaasist — Admin saab muuta ilma arendajata; `vat_setting` toetab mitut kirjet kehtivusperioodidega
 - Parool on praegu lihttekstina (BCrypt ja Spring Security lisatakse hiljem)
 
 ## Andmemudel
 
-<img src="docs/datamodel/etas.dbmodel.png" alt="Andmemudel">
+<img src="docs/datamodeler/etas.dbmodel.png" alt="Andmemudel">
 
 ## Testandmed
 
@@ -133,11 +133,11 @@ Pärast `database/3_import.sql` käivitamist on andmebaasis:
 
 ## Dokumentatsioon
 
-- `projekt-struktuur.md` — Kaustade struktuur visuaalselt (kood + tabel)
-- `docs/specs/` — Projekti kirjeldus
+- `docs/specs/projekt-struktuur.md` — Kaustade struktuur visuaalselt (kood + tabel)
+- `docs/specs/` — Projekti kirjeldus, juhendmaterjalid (`projectinstructions/`)
 - `docs/balsamiq/` — Balsamiq wireframe'id (PDF, BMPR, PNG)
-- `docs/datamodel/` — Andmemudel (PDF, HTML, SQL)
-- `docs/tasks/tasks.md` — Taskide ülevaade ja seis
-- `docs/tasks/backend/` — Üksikute backend endpointide taski kirjeldused
+- `docs/datamodeler/` — Andmemudel (PDF, PNG)
+- `docs/tasks/backend/` — Backend endpointide taski kirjeldused (DONE-* = valmis)
+- `docs/tasks/frontend/` — Frontend taski kirjeldused
 - `docs/dtos/` — DTO schema ja näidisandmed (`schema/`, `examples/`)
 - `docs/theory-materials/` — Õppematerjalid taskide kaupa

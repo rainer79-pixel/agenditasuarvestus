@@ -4,7 +4,6 @@ import ee.valiit.etas.Status;
 import ee.valiit.etas.controller.seller.dto.*;
 import ee.valiit.etas.infrastructure.exception.ConflictException;
 import ee.valiit.etas.infrastructure.exception.DataNotFoundException;
-import ee.valiit.etas.infrastructure.exception.ForbiddenException;
 import ee.valiit.etas.persistence.seller.Seller;
 import ee.valiit.etas.persistence.seller.SellerMapper;
 import ee.valiit.etas.persistence.seller.SellerRepository;
@@ -25,6 +24,7 @@ public class SellerService {
     private final SellerRepository sellerRepository;
     private final UserRepository userRepository;
     private final SellerMapper sellerMapper;
+    private final ValidationService validationService;
 
     public List<SellerDetailResponseDto> findSellers() {
         List<Seller> sellers = sellerRepository.findAllSellers();
@@ -38,7 +38,7 @@ public class SellerService {
 
     @Transactional
     public void addSeller(Integer userId, SellerDto sellerDto) {
-        validateUserIsAdmin(userId);
+        validationService.validateUserIsAdmin(userId);
         validateOrgIdIsAvailable(sellerDto.getOrgId());
         createAndSaveSeller(userId, sellerDto);
     }
@@ -61,14 +61,6 @@ public class SellerService {
     private Seller getSeller(Integer sellerId) {
         return sellerRepository.findById(sellerId)
                 .orElseThrow(() -> new DataNotFoundException(SELLER_NOT_FOUND.getMessage(), SELLER_NOT_FOUND.getErrorCode()));
-    }
-
-    private void validateUserIsAdmin(Integer userId) {
-        User user = userRepository.findById(userId)
-                .orElseThrow(() -> new DataNotFoundException(USER_NOT_FOUND.getMessage(), USER_NOT_FOUND.getErrorCode()));
-        if (!"A".equals(user.getUserRole())) {
-            throw new ForbiddenException(ACCESS_DENIED.getMessage(), ACCESS_DENIED.getErrorCode());
-        }
     }
 
     private void validateOrgIdIsAvailable(Integer orgId) {

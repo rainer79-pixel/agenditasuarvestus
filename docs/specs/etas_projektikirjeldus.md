@@ -192,7 +192,7 @@ Süsteemil on kaks rolli. **User** on igapäevane tööriista kasutaja — teeb 
 | DELETE | `/api/import/user/{userId}/{period}` | Kustuta impordi andmed perioodist |
 | GET | `/api/report/user/{userId}` | Aruannete nimekiri |
 | GET | `/api/report/{sellerId}/{period}` | Aruande detailid |
-| GET | `/api/report/{sellerId}/{period}/export` | Ekspordi aruanne Excelisse |
+| GET | `/api/report/user/{userId}/export` | Ekspordi aruanne Excelisse |
 
 **Import:** `multipart/form-data`
 ```
@@ -304,7 +304,7 @@ file: (binary .xlsx)
 - **SellerView on ainult lugemiseks** — muutmiseks eraldi SellerSettingsView
 - **Edasimüüja lisamine kahes sammus** — SellerFormView lisab põhiandmed, SellerSettingsView haldab kontakte/piirkondi/teenustasusid
 - **Modaalid** — SellerSettingsView avab kolm eraldi modali (kontakt, piirkond, teenustasu)
-- **Excel import fikseeritud formaadiga** — `docs/0.6_Issuer_sales_report.xlsx`
+- **Excel import fikseeritud formaadiga** — `docs/specs/0.6_Issuer_sales_report.xlsx`
 - **Ühel perioodil saab olla ainult üks aruanne**
 - **KM määr seadistatav** — praegu 24%, Admin saab muuta ilma arendajata; `vat_setting` toetab mitut kirjet `valid_from_date` / `valid_to_date` perioodidega — õige KM määr leitakse impordi perioodi järgi
 
@@ -331,7 +331,7 @@ KM määr võetakse andmebaasist vat_setting tabelist
 
 ## 8. Andmemudel
 
-![Andmemudel](../datamodel/edasimüüjatasuarvestus%20data%20modeler.png)
+![Andmemudel](../datamodeler/etas.dbmodel.png)
 
 Tabelid: `app_user`, `vat_setting`, `region`, `role`, `product_type`, `seller`, `seller_contact`, `seller_role`, `seller_region`, `commission_rate`, `sales_report`, `sales_report_detail`, `commission_calculation`, `invoice`
 

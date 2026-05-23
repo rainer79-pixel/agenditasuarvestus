@@ -3,8 +3,9 @@ package ee.valiit.etas.service;
 import ee.valiit.etas.controller.report.dto.ReportDetailResponseDto;
 import ee.valiit.etas.controller.report.dto.ReportResponseDto;
 import ee.valiit.etas.controller.report.dto.SalesReportRowDto;
+import ee.valiit.etas.infrastructure.exception.BadRequestException;
+import ee.valiit.etas.infrastructure.exception.ConflictException;
 import ee.valiit.etas.infrastructure.exception.DataNotFoundException;
-import ee.valiit.etas.infrastructure.exception.ForbiddenException;
 import ee.valiit.etas.persistence.CommissionCalculationViewRepository;
 import ee.valiit.etas.persistence.commissioncalculation.CommissionCalculation;
 import ee.valiit.etas.persistence.commissioncalculation.CommissionCalculationRepository;
@@ -27,11 +28,11 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.jspecify.annotations.NonNull;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.Instant;
@@ -59,8 +60,9 @@ public class ReportControllerService {
     private final CommissionCalculationRepository commissionCalculationRepository;
     private final CommissionRateRepository commissionRateRepository;
     private final CommissionCalculationViewMapper commissionCalculationViewMapper;
+    private final ValidationService validationService;
 
-    public List<ReportResponseDto> getReports(Integer userId, String periodFrom, String periodTo, Integer sellerId) {
+    public List<ReportResponseDto> getReports(String periodFrom, String periodTo, Integer sellerId) {
         List<ReportResponseDto> reports = commissionCalculationViewRepository.findReports(periodFrom, periodTo, sellerId);
         if (reports.isEmpty()) {
             throw new DataNotFoundException(REPORT_NOT_FOUND.getMessage(), REPORT_NOT_FOUND.getErrorCode());
@@ -70,12 +72,14 @@ public class ReportControllerService {
 
     @Transactional
     public void addReport(Integer userId, MultipartFile file) {
+        validationService.validateUserIsAdmin(userId);
         try (Workbook workbook = new XSSFWorkbook(file.getInputStream())) {
             Sheet sheet = workbook.getSheetAt(0);
             Map<String, Integer> headerMap = buildHeaderMap(sheet.getRow(0));
             validateHeaders(headerMap);
             List<SalesReportRowDto> rows = parseRows(sheet, headerMap);
-            String period = rows.get(0).getPeriod();
+            String period = rows.getFirst().getPeriod();
+            validatePeriodIsAvailable(period);
             User user = userRepository.findById(userId)
                     .orElseThrow(() -> new DataNotFoundException(USER_NOT_FOUND.getMessage(), USER_NOT_FOUND.getErrorCode()));
             SalesReport salesReport = createAndSaveSalesReport(user, period);
@@ -86,7 +90,6 @@ public class ReportControllerService {
         } catch (IOException e) {
             throw new RuntimeException("Faili lugemine ebaõnnestus");
         }
-
     }
 
     public List<ReportDetailResponseDto> getSellersReportDetails(Integer sellerId, String period) {
@@ -94,6 +97,33 @@ public class ReportControllerService {
         List<CommissionCalculationView> viewRows = commissionCalculationViewRepository
                 .findBySalesReportIdAndSellerId(salesReport.getId(), sellerId);
         return commissionCalculationViewMapper.toReportDetailResponseDtos(viewRows);
+    }
+
+    public byte[] exportReports(String periodFrom, String periodTo, Integer sellerId) {
+        List<ReportResponseDto> reports = getReports(periodFrom, periodTo, sellerId);
+        try (XSSFWorkbook workbook = new XSSFWorkbook();
+             ByteArrayOutputStream out = new ByteArrayOutputStream()) {
+            Sheet sheet = workbook.createSheet("Aruanne");
+            createExportHeaderRow(sheet);
+            for (int i = 0; i < reports.size(); i++) {
+                createExportDataRow(sheet, i + 1, reports.get(i));
+            }
+            createExportTotalsRow(sheet, reports);
+            workbook.write(out);
+            return out.toByteArray();
+        } catch (IOException e) {
+            throw new RuntimeException("Ekspordi genereerimine ebaõnnestus");
+        }
+    }
+
+    @Transactional
+    public void deleteReport(Integer userId, String period) {
+        validationService.validateUserIsAdmin(userId);
+        SalesReport salesReport = salesReportRepository.findByPeriod(period)
+                .orElseThrow(() -> new DataNotFoundException(IMPORT_PERIOD_NOT_FOUND.getMessage(), IMPORT_PERIOD_NOT_FOUND.getErrorCode()));
+        commissionCalculationRepository.deleteAllBy(salesReport.getId());
+        salesReportDetailRepository.deleteAllBy(salesReport.getId());
+        salesReportRepository.delete(salesReport);
     }
 
     private Map<String, Integer> buildHeaderMap(Row headerRow) {
@@ -106,7 +136,41 @@ public class ReportControllerService {
 
     private void validateHeaders(Map<String, Integer> headerMap) {
         if (!headerMap.keySet().containsAll(REQUIRED_HEADERS)) {
-            throw new ForbiddenException(IMPORT_INVALID_HEADER.getMessage(), IMPORT_INVALID_HEADER.getErrorCode());
+            throw new BadRequestException(IMPORT_INVALID_HEADER.getMessage(), IMPORT_INVALID_HEADER.getErrorCode());
+        }
+    }
+
+    private void createExportHeaderRow(Sheet sheet) {
+        Row header = sheet.createRow(0);
+        String[] headers = {"Edasimüüja", "Tehinguid", "Müügisumma (EUR)", "Teenustasu (EUR)", "KM (EUR)", "Kokku (EUR)"};
+        for (int i = 0; i < headers.length; i++) {
+            header.createCell(i).setCellValue(headers[i]);
+        }
+    }
+
+    private void createExportDataRow(Sheet sheet, int rowNum, ReportResponseDto report) {
+        Row row = sheet.createRow(rowNum);
+        row.createCell(0).setCellValue(report.getCompanyName());
+        row.createCell(1).setCellValue(report.getTransactionCount());
+        row.createCell(2).setCellValue(report.getSalesAmount().doubleValue());
+        row.createCell(3).setCellValue(report.getFeeAmount().doubleValue());
+        row.createCell(4).setCellValue(report.getVatAmount().doubleValue());
+        row.createCell(5).setCellValue(report.getTotalFee().doubleValue());
+    }
+
+    private void createExportTotalsRow(Sheet sheet, List<ReportResponseDto> reports) {
+        Row totals = sheet.createRow(reports.size() + 1);
+        totals.createCell(0).setCellValue("KOKKU");
+        totals.createCell(1).setCellValue(reports.stream().mapToLong(ReportResponseDto::getTransactionCount).sum());
+        totals.createCell(2).setCellValue(reports.stream().map(ReportResponseDto::getSalesAmount).reduce(BigDecimal.ZERO, BigDecimal::add).doubleValue());
+        totals.createCell(3).setCellValue(reports.stream().map(ReportResponseDto::getFeeAmount).reduce(BigDecimal.ZERO, BigDecimal::add).doubleValue());
+        totals.createCell(4).setCellValue(reports.stream().map(ReportResponseDto::getVatAmount).reduce(BigDecimal.ZERO, BigDecimal::add).doubleValue());
+        totals.createCell(5).setCellValue(reports.stream().map(ReportResponseDto::getTotalFee).reduce(BigDecimal.ZERO, BigDecimal::add).doubleValue());
+    }
+
+    private void validatePeriodIsAvailable(String period) {
+        if (salesReportRepository.existsByPeriod(period)) {
+            throw new ConflictException(IMPORT_PERIOD_ALREADY_EXISTS.getMessage(), IMPORT_PERIOD_ALREADY_EXISTS.getErrorCode());
         }
     }
 
@@ -218,4 +282,5 @@ public class ReportControllerService {
         return salesReportRepository.findByPeriod(period)
                 .orElseThrow(() -> new DataNotFoundException(REPORT_NOT_FOUND.getMessage(), REPORT_NOT_FOUND.getErrorCode()));
     }
+
 }

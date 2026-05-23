@@ -50,11 +50,12 @@ etas/
 │   └── 3_import.sql                    # Seed- ja testandmete import
 │
 └── docs/                               # Dokumentatsioon
-    ├── balsamiq/                       # Balsamiq wireframe'id (PDF, BMPR)
-    ├── datamodel/                      # Andmemudel (PDF, PNG, SQL)
-    ├── instructions/                   # Õppejõu juhendmaterjalid (PDF)
-    ├── specs/                          # Projektikirjeldus (MD)
-    └── tasks/                          # Ülesannete kirjeldused õpilastele
+    ├── balsamiq/                       # Balsamiq wireframe'id (PDF, BMPR, PNG)
+    ├── datamodeler/                    # Andmemudel (PDF, PNG)
+    ├── dtos/                           # DTO schema ja näidisandmed (schema/, examples/)
+    ├── specs/                          # Projektikirjeldus, projekt-struktuur, juhendid (projectinstructions/)
+    ├── tasks/                          # Ülesannete kirjeldused õpilastele (backend/, frontend/)
+    └── theory-materials/               # Õppematerjalid taskide kaupa
 ```
 
 ## Lühikirjeldused
@@ -86,7 +87,8 @@ etas/
 | `frontend/src/views/` | Täislehed, mida router kuvab — kasutavad komponente |
 | `database/` | SQL skriptid skeemi loomiseks ja andmete importimiseks |
 | `docs/balsamiq/` | Balsamiq wireframe'id koos API labelitega |
-| `docs/datamodel/` | Redgate Data Modeler — ER diagramm ja genereeritud SQL |
-| `docs/instructions/` | Õppejõu juhendmaterjalid |
-| `docs/specs/` | Projektikirjeldus |
-| `docs/tasks/` | Ülesannete kirjeldused õpilastele |
+| `docs/datamodeler/` | Redgate Data Modeler — ER diagramm (PDF, PNG) |
+| `docs/dtos/` | DTO schema ja näidisandmed (`schema/`, `examples/`) |
+| `docs/specs/` | Projektikirjeldus, projekt-struktuur, juhendmaterjalid |
+| `docs/tasks/` | Ülesannete kirjeldused õpilastele (backend/, frontend/) |
+| `docs/theory-materials/` | Õppematerjalid taskide kaupa |
