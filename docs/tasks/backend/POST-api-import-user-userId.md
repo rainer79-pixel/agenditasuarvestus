@@ -6,9 +6,18 @@
 
 ## Kontekst
 
-`ReportsView` võimaldab kasutajal laadida üles Exceli müügiaruande. Kasutaja valib perioodi (kuu + aasta) ja faili ning vajutab "Laadi üles". Backend loeb faili Apache POI-ga, valideerib päised, leiab edasimüüjad `seller_org_id` järgi, salvestab read `sales_report_detail` tabelisse ja arvutab teenustasud `commission_calculation` tabelisse.
+`ReportsView` võimaldab kasutajal laadida üles Exceli müügiaruande. Kasutaja valib faili ja vajutab "Laadi üles". Backend loeb faili Apache POI-ga, valideerib päised, leiab edasimüüjad `seller_org_id` järgi, salvestab read `sales_report_detail` tabelisse ja arvutab teenustasud `commission_calculation` tabelisse.
 
-**Olemasolev kood:** `ReportController.java` ja `ReportControllerService.java` on osaliselt implementeeritud, kuid puuduvad: rolli kontroll, perioodi duplikaadi kontroll, korrektne 400 veakäsitlus, `@ResponseStatus(201)` ja Swagger annotatsioonid.
+## Õppejõud on juba implementeerinud
+
+> **Ära tee neid uuesti — ainult täienda**
+
+- `ReportController.java` — `POST /api/import/user/{userId}` endpoint olemas, võtab vastu `file` parameetri
+- `ReportControllerService.java` — täielik Apache POI impordi loogika: päiste kaardistamine, ridade lugemine, edasimüüjate leidmine, `sales_report` + `sales_report_detail` + `commission_calculation` salvestamine
+- `ReportService.js` (frontend) — `sendPostImportReport(userId, file)` meetod olemas
+- `DashboardView.vue` (frontend) — import UI on ajutiselt dashboardil; **frontend taskis viiakse see üle ReportsView-sse**
+
+**Olemasolev kood vajab täiendamist:** puuduvad rolli kontroll, perioodi duplikaadi kontroll, korrektne 400 veakäsitlus, `@ResponseStatus(201)` ja Swagger annotatsioonid.
 
 ## Mocki vaade
 
@@ -39,13 +48,14 @@ Puudub — HTTP 201 tühi vastus
 |---------|----------------|-------------------|--------------|
 | Vale failivorming / vigased päised | `BadRequestException` *(uus)* | `IMPORT_INVALID_HEADER` | 400 |
 | Kasutajal pole Admin rolli | `ForbiddenException` | `ACCESS_DENIED` | 403 |
-| Tundmatu edasimüüja (seller_org_id ei leitud) | `DataNotFoundException` | `IMPORT_SELLER_NOT_FOUND` | 404 |
+| Tundmatu edasimüüja (seller_org_id ei leitud) | `DataNotFoundException` | `IMPORT_SELLER_NOT_FOUND` | 404 — vt märkus allpool |
 | Sellel perioodil on aruanne juba olemas | `ConflictException` | `IMPORT_PERIOD_ALREADY_EXISTS` | 409 |
 
 > **Märkus veahalduse kohta:**
 > - `BadRequestException` **puudub** — loo uus klass `exception/` paketti (järgi `ForbiddenException` mustrit) ja registreeri `RestExceptionHandler`-is (`HttpStatus.BAD_REQUEST`)
 > - Praegune kood viskab `ForbiddenException` (→ 403) vigaste päiste korral — see on **vale**, tuleb asendada `BadRequestException`-iga (→ 400)
 > - `IMPORT_INVALID_HEADER` (514), `IMPORT_SELLER_NOT_FOUND` (511), `IMPORT_PERIOD_ALREADY_EXISTS` (513) on juba `ErrorResponse.java`-s olemas
+> - **Tundmatu seller_org_id käitumine:** praegune kood teeb `continue` (jätab rea lihtsalt vahele). Mock spetsifikatsioon ütleb 404. **Arutada õppejõuga** kumb käitumine on eelistatud enne implementeerimist.
 
 ## Periood formaadist
 
