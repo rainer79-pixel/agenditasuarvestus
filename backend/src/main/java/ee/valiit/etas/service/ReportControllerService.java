@@ -1,5 +1,6 @@
 package ee.valiit.etas.service;
 
+import ee.valiit.etas.controller.report.dto.ReportDetailResponseDto;
 import ee.valiit.etas.controller.report.dto.SalesReportRowDto;
 import ee.valiit.etas.infrastructure.exception.DataNotFoundException;
 import ee.valiit.etas.infrastructure.exception.ForbiddenException;
@@ -18,9 +19,14 @@ import ee.valiit.etas.persistence.seller.SellerRepository;
 import ee.valiit.etas.persistence.user.User;
 import ee.valiit.etas.persistence.user.UserRepository;
 import ee.valiit.etas.persistence.view.CommissionCalculationView;
+import ee.valiit.etas.persistence.view.CommissionCalculationViewMapper;
 import lombok.RequiredArgsConstructor;
-import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.jspecify.annotations.NonNull;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -29,11 +35,7 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 import static ee.valiit.etas.infrastructure.error.ErrorResponse.*;
 
@@ -55,6 +57,7 @@ public class ReportControllerService {
     private final CommissionCalculationViewRepository commissionCalculationViewRepository;
     private final CommissionCalculationRepository commissionCalculationRepository;
     private final CommissionRateRepository commissionRateRepository;
+    private final CommissionCalculationViewMapper commissionCalculationViewMapper;
 
     @Transactional
     public void addReport(Integer userId, MultipartFile file) {
@@ -75,6 +78,13 @@ public class ReportControllerService {
             throw new RuntimeException("Faili lugemine ebaõnnestus");
         }
 
+    }
+
+    public List<ReportDetailResponseDto> getSellersReportDetails(Integer sellerId, String period) {
+        SalesReport salesReport = getSalesReportByPeriod(period);
+        List<CommissionCalculationView> viewRows = commissionCalculationViewRepository
+                .findBySalesReportIdAndSellerId(salesReport.getId(), sellerId);
+        return commissionCalculationViewMapper.toReportDetailResponseDtos(viewRows);
     }
 
     private Map<String, Integer> buildHeaderMap(Row headerRow) {
@@ -193,5 +203,10 @@ public class ReportControllerService {
             case STRING -> new BigDecimal(cell.getStringCellValue().trim());
             default -> null;
         };
+    }
+
+    private SalesReport getSalesReportByPeriod(String period) {
+        return salesReportRepository.findByPeriod(period)
+                .orElseThrow(() -> new DataNotFoundException(REPORT_NOT_FOUND.getMessage(), REPORT_NOT_FOUND.getErrorCode()));
     }
 }
