@@ -8,4 +8,7 @@ export default {
       headers: { 'Content-Type': 'multipart/form-data' },
     })
   },
+  sendDeleteImportReport(userId, period) {
+    return axios.delete('/api/import/user/' + userId + '/' + period)
+  },
 }
