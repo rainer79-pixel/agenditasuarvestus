@@ -267,6 +267,7 @@ export default {
         .then(() => {
           this.importSuccessMessage = 'Aruanne edukalt imporditud!'
           this.selectedFile = null
+          this.loadReports()
         })
         .catch((error) => {
           this.importErrorMessage = error.response?.data?.message ?? 'Import ebaõnnestus'
@@ -283,6 +284,7 @@ export default {
       ReportService.sendDeleteImportReport(AuthService.getUserId(), this.deleteYear + '-' + this.deleteMonth)
         .then(() => {
           this.deleteSuccessMessage = 'Perioodi andmed kustutatud.'
+          this.loadReports()
         })
         .catch((error) => {
           this.deleteErrorMessage = error.response?.data?.message ?? 'Kustutamine ebaõnnestus'
@@ -378,7 +380,6 @@ export default {
     const currentYear = new Date().getFullYear()
     this.years = Array.from({ length: 6 }, (_, i) => currentYear - i)
     this.setLastMonth()
-    this.loadReports()
     this.loadSellers()
   },
 }
