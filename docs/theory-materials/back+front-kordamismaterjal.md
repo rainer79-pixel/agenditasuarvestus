@@ -404,24 +404,86 @@ content = @Content(schema = @Schema(implementation = ApiError.class))
 
 ### 9.1 GET — lugemine
 
-**Nimekiri (kõik kirjed):**
-```
-Controller.getAll() → Service.findAll() → Repository.findAll() → Mapper.toDtos()
-```
-
-**Üksik kirje (ID järgi):**
-```
-Controller.getOne() → Service.findOne() → Repository.findById().orElseThrow() → Mapper.toDto()
-```
-
-**Filtritega nimekiri (query parameetrid):**
+**Kokkuvõte ühes pildis:**
 ```java
-@GetMapping("/report/user/{userId}")
-public List<ReportResponseDto> getReports(
-        @PathVariable Integer userId,
-        @RequestParam(required = false) String periodFrom,
-        @RequestParam(required = false) String periodTo,
-        @RequestParam(required = false) Integer sellerId) { ... }
+// GET /api/seller/user/3
+//                      ↑
+//                  userId=3
+
+// ─── CONTROLLER ────────────────────────────────────────────
+@GetMapping("/seller/user/{userId}")
+public List<SellerResponseDto> getSellers(
+    @PathVariable Integer userId)   // ← URL rajast /user/3 → userId=3
+{
+    return sellerService.findSellers(userId);
+}
+
+// ─── SERVICE ───────────────────────────────────────────────
+public List<SellerResponseDto> findSellers(Integer userId) {
+    validationService.validateUserIsAdmin(userId);
+    //                                      ↑
+    //                  userId=3 → DB: role="A"? jah → jätka, ei → 403
+    //                  Miks esimene? Mõttetu lugeda DB-st kui vastus tuleb niikuinii 403
+
+    List<Seller> sellers = sellerRepository.findAllSellers();
+    //                                           ↑
+    //                              JPQL — otsime Java klassist Seller, mitte tabelist seller
+
+    return sellerMapper.toSellerResponseDtos(sellers);
+    //                          ↑
+    //                  Entity list → DTO list (mapper teisendab automaatselt)
+}
+
+// ─── REPOSITORY ────────────────────────────────────────────
+@Query("select s from Seller s order by s.companyName")
+//              ↑
+//         JPQL — "Seller" on Java klass, mitte SQL tabel
+//         Vaikimisi findAll() pole sobiv — see ei sorteeri
+List<Seller> findAllSellers();
+
+// ─── MAPPER ────────────────────────────────────────────────
+@Mapping(source = "id", target = "sellerId")
+//                ↑                  ↑
+//         Entity väli nimi      DTO väli nimi — erinevad, seetõttu @Mapping
+@Mapping(expression = "java(Status.toApiValue(seller.getStatus()))", target = "status")
+//                                                    ↑                        ↑
+//                              DB väärtus "A"                      → API väärtus "ACTIVE"
+SellerResponseDto toSellerResponseDto(Seller seller);
+//                                                ↑
+//         Miks DTO mitte Entity? Entity sisaldab tundlikke välju — DTO on "turvaline pakett"
+
+List<SellerResponseDto> toSellerResponseDtos(List<Seller> sellers);
+//                              ↑
+//              MapStruct genereerib automaatselt, kasutab ülemist meetodit
+
+// ─── VASTUS ────────────────────────────────────────────────
+// → 200 OK + List<SellerResponseDto>
+```
+
+**Status enum — miks "A" mitte "ACTIVE" andmebaasis?**
+```java
+// DB tabel  →  API JSON    →  UI eesti keeles
+// "A"       →  "ACTIVE"   →  "Aktiivne"
+// "D"       →  "INACTIVE" →  "Peatatud"
+//
+// "A" on lühem → miljonite ridade puhul säästab oluliselt ruumi
+```
+
+**GET join fetch — LazyInitializationException probleem:**
+```java
+// PROBLEEM:
+@ManyToOne(fetch = FetchType.LAZY)   // Region laaditakse hiljem
+private Region region;
+// → Repository laeb SellerRegion-id → sessioon SULGUB → Mapper proovib region.regionName
+// → VIGA: LazyInitializationException
+
+// LAHENDUS — join fetch laeb mõlemad KORRAGA:
+@Query("select sr from SellerRegion sr join fetch sr.region where sr.seller.id = :sellerId")
+//                                     ↑
+//                         "too Region kaasa kohe, ära oota"
+List<SellerRegion> findAllBySellerId(Integer sellerId);
+//  ↑                    ↑                  ↑
+// tagastab listi    meetodi nimi       parameeter — sellerId tuleb URL @PathVariable-na
 ```
 
 **N+1 päring (aktsepteeritav väikeste koguste puhul):**
@@ -429,7 +491,7 @@ public List<ReportResponseDto> getReports(
 // Kontaktide rollid tulevad eraldi tabelist — 1 päring kontaktidele + N päringut rollidele
 for (SellerContact contact : contacts) {
     SellerContactResponseDto dto = sellerContactMapper.toSellerContactResponseDto(contact);
-    dto.setRoles(sellerContactRoleRepository.findRoleCodesBy(contact.getId()));  // eraldi päring
+    dto.setRoles(sellerContactRoleRepository.findRoleCodesBy(contact.getId()));
     result.add(dto);
 }
 // 3 kontakti → 4 päringut kokku. Aktsepteeritav kui N on väike.
@@ -439,86 +501,241 @@ for (SellerContact contact : contacts) {
 
 ### 9.2 POST — loomine
 
-```
-Controller → Service (valideeri) → Mapper (DTO→Entity) → Service (FK käsitsi) → Repository.save()
-```
-
-**Service loogika:**
+**Kokkuvõte ühes pildis:**
 ```java
-@Transactional
-public void addSellerRegion(Integer userId, Integer sellerId, SellerRegionDto dto) {
-    validationService.validateUserIsAdmin(userId);            // 1. õigused → 403
-    Seller seller = getSellerById(sellerId);                  // 2. seller olemas? → 404
-    Region region = getRegionById(dto.getRegionId());         // 3. region olemas? → 404
-    validateSellerRegionNotDuplicate(sellerId, region.getId()); // 4. duplikaat? → 409
-    createAndSaveSellerRegion(seller, region, dto);           // 5. salvesta
-}
+// POST /api/seller/1/regions?userId=3
+//                  ↑               ↑
+//             sellerId=1        userId=3 — kes saadab päringu
+// Body: { "regionId": 5, "salesPointCount": 12 }
+//              ↑                   ↑
+//         milline piirkond    mitu müügipunkti
 
-private void createAndSaveSellerRegion(Seller seller, Region region, SellerRegionDto dto) {
-    SellerRegion sellerRegion = sellerRegionMapper.toSellerRegion(dto); // salesPointCount
-    sellerRegion.setSeller(seller);   // FK objekt käsitsi — mapper ei saa ID-st objekti teha
-    sellerRegion.setRegion(region);   // FK objekt käsitsi
-    sellerRegionRepository.save(sellerRegion);
-}
-```
-
-**Miks FK objektid käsitsi?**
-Mapper teisendab ainult primitiivseid väärtusi. `regionId` (Integer) → `Region` (objekt) nõuab andmebaasipäringut — see on service töö.
-
-**Controller:**
-```java
+// ─── CONTROLLER ────────────────────────────────────────────
 @PostMapping("/seller/{sellerId}/regions")
-@ResponseStatus(HttpStatus.CREATED)   // ← 201, mitte vaikimisi 200
-public void addSellerRegion(...) { ... }
+@ResponseStatus(HttpStatus.CREATED)
+//                              ↑
+//                    201 — uus kirje loodi (mitte vaikimisi 200)
+public void addSellerRegion(
+    @PathVariable Integer sellerId,    // ← URL rajast /seller/1/   → sellerId=1
+    @RequestParam Integer userId,      // ← URL-ist ?userId=3       → userId=3
+    @RequestBody  SellerRegionDto dto) // ← JSON body-st            → regionId=5, salesPointCount=12
+{
+    sellerRegionService.addSellerRegion(userId, sellerId, dto);
+}
+
+// ─── SERVICE ───────────────────────────────────────────────
+@Transactional
+//      ↑
+//  Kõik või mitte midagi — vea korral kõik tühistatakse (nagu pangaülekanne)
+public void addSellerRegion(Integer userId, Integer sellerId, SellerRegionDto dto) {
+
+    validationService.validateUserIsAdmin(userId);
+    //                                      ↑
+    //                  userId=3 → DB: role="A"? jah → jätka, ei → 403
+    //                  ALATI ESIMENE — mõttetu teha DB päringuid kui õigust pole
+
+    Seller seller = getSellerById(sellerId);
+    //  ↑                              ↑
+    // Seller objekt               sellerId=1 → DB: Seller{id=1, name="Rimi"}
+
+    Region region = getRegionById(dto.getRegionId());
+    //  ↑                               ↑
+    // Region objekt           dto.regionId=5 → DB: Region{id=5, name="Tallinn"}
+
+    validateSellerRegionNotDuplicate(sellerId, region.getId());
+    //                                  ↑           ↑
+    //                              sellerId=1   regionId=5 — juba olemas? jah → 409
+
+    createAndSaveSellerRegion(seller, region, dto);
+}
+
+// ─── createAndSaveSellerRegion ─────────────────────────────
+private void createAndSaveSellerRegion(Seller seller, Region region, SellerRegionDto dto) {
+    //                                     ↑             ↑              ↑
+    //                                 Seller objekt  Region objekt   JSON body andmed
+    //                                 (DB-st laetud) (DB-st laetud)  (salesPointCount=12)
+
+    SellerRegion sellerRegion = sellerRegionMapper.toSellerRegion(dto);
+    //  ↑                   ↑                          ↑
+    // uus objekt      mapper teisendab           dto → SellerRegion
+    //                 (ainult salesPointCount=12) (seller ja region veel puuduvad)
+
+    sellerRegion.setSeller(seller);
+    //                ↑
+    //          Seller{id=1, name="Rimi"} — FK käsitsi
+    //          Miks? Mapper teisendab ainult lihtsat (Integer, String)
+    //          regionId=5 (Integer) → Region objekt nõuab DB päringut — see on Service töö
+
+    sellerRegion.setRegion(region);
+    //                ↑
+    //          Region{id=5, name="Tallinn"} — FK käsitsi, sama põhjus
+
+    sellerRegionRepository.save(sellerRegion);
+    //                      ↑
+    //          INSERT INTO seller_region (seller_id, region_id, sales_point_count)
+    //          VALUES (1, 5, 12)
+}
+
+// ─── VASTUS ────────────────────────────────────────────────
+// → 201 Created
 ```
 
 ---
 
 ### 9.3 PUT — muutmine
 
-```
-Controller → Service (valideeri) → Repository.findById() → Mapper.update(@MappingTarget) → Repository.save()
+**Kokkuvõte ühes pildis:**
+```java
+// PUT /api/seller/1/status?userId=3
+//                 ↑               ↑
+//            sellerId=1        userId=3
+// Body: { "status": "INACTIVE" }
+//              ↑
+//         mida muuta
+
+// Miks eraldi endpoint /status?
+// PUT /seller/1 muudab põhiandmeid (companyName, orgId...)
+// PUT /seller/1/status muudab AINULT staatust — selge vastutus, turvalisem
+
+// ─── CONTROLLER ────────────────────────────────────────────
+@PutMapping("/seller/{sellerId}/status")
+public void updateSellerStatus(
+    @PathVariable Integer sellerId,     // ← URL rajast /seller/1/   → sellerId=1
+    @RequestParam Integer userId,       // ← URL-ist ?userId=3       → userId=3
+    @RequestBody SellerStatusDto dto)   // ← JSON body-st            → status="INACTIVE"
+{
+    sellerService.updateSellerStatus(userId, sellerId, dto);
+}
+
+// ─── SERVICE ───────────────────────────────────────────────
+@Transactional
+public void updateSellerStatus(Integer userId, Integer sellerId, SellerStatusDto dto) {
+
+    validationService.validateUserIsAdmin(userId);
+    //                                      ↑
+    //                                  userId=3 → DB: role="A"? jah → jätka, ei → 403
+
+    Seller seller = sellerRepository.findById(sellerId).orElseThrow(...);
+    //  ↑                                          ↑
+    // Seller objekt                           sellerId=1 → DB: Seller{id=1, name="Rimi"}
+    //                                         ei leita → 404
+
+    String newStatus = Status.fromApiValue(dto.getStatus()).getCode();
+    //  ↑                         ↑               ↑              ↑
+    // "D"             API → enum teisendus    "INACTIVE"     enum → DB kood
+    //                 (Status.java-s)         (JSON body-st)
+
+    validateStatusChange(seller.getStatus(), newStatus);
+    //                         ↑                 ↑
+    //                   praegune kood        uus kood
+    //                       "A"                "D"
+    //                   kui mõlemad samad → 409
+    //                   Miks? Kasutaja eksib või keegi teine muutis juba — 409 annab teada
+
+    seller.setStatus(newStatus);
+    //           ↑
+    //         "D" — salvestame uue staatuse objekti
+
+    sellerRepository.save(seller);
+    //                ↑
+    //    UPDATE seller SET status="D" WHERE id=1
+}
+
+// ─── VASTUS ────────────────────────────────────────────────
+// → 200 OK
 ```
 
-**Mapper PUT jaoks:**
+**Mapper PUT jaoks (põhiandmete muutmisel):**
 ```java
 @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+//                                                       ↑
+//                                    kui DTO väli on null → jäta entity väärtus muutmata
 @Mapping(ignore = true, target = "id")
 @Mapping(ignore = true, target = "status")
 void updateSeller(SellerDto dto, @MappingTarget Seller seller);
-```
-
-`@MappingTarget` — ära loo uut objekti, muuda olemasolevat.
-`IGNORE` — kui DTO väli on `null`, jäta entity olemasolev väärtus.
-
-**Service loogika:**
-```java
-@Transactional
-public void updateSeller(Integer userId, Integer sellerId, SellerDto dto) {
-    validationService.validateUserIsAdmin(userId);
-    Seller seller = sellerRepository.findById(sellerId).orElseThrow(...);  // laeme muutmiseks
-    sellerMapper.updateSeller(dto, seller);  // muudame in-place
-    sellerRepository.save(seller);
-}
-```
-
-**Staatuse muutmine eraldi endpoint:**
-```java
-// PUT /seller/{sellerId}/status — ainult status muutub
-@Transactional
-public void updateSellerStatus(Integer userId, Integer sellerId, SellerStatusDto dto) {
-    validationService.validateUserIsAdmin(userId);
-    Seller seller = sellerRepository.findById(sellerId).orElseThrow(...);
-    String newStatus = Status.fromApiValue(dto.getStatus()).getCode(); // "INACTIVE" → "D"
-    validateStatusChange(seller.getStatus(), newStatus);               // juba sama? → 409
-    seller.setStatus(newStatus);
-    sellerRepository.save(seller);
-}
+//                               ↑
+//                    ära loo uut objekti — muuda olemasolevat
 ```
 
 ---
 
 ### 9.4 DELETE — kustutamine
+
+**Kokkuvõte ühes pildis:**
+```java
+// DELETE /api/import/user/3/2026-4
+//                        ↑    ↑
+//                    userId=3  period="2026-4"
+
+// ─── CONTROLLER ────────────────────────────────────────────
+@DeleteMapping("/import/user/{userId}/{period}")
+@ResponseStatus(HttpStatus.NO_CONTENT)
+//                              ↑
+//                    204 — õnnestus, pole midagi tagastada
+//                    200 tähendab "õnnestus + siin on vastus"
+//                    204 tähendab "õnnestus + pole midagi tagastada" → DELETE puhul õige
+public void deleteReport(
+    @PathVariable Integer userId,    // ← URL rajast → userId=3
+    @PathVariable String period)     // ← URL rajast → period="2026-4"
+{
+    reportService.deleteReport(userId, period);
+}
+
+// ─── SERVICE ───────────────────────────────────────────────
+@Transactional
+//      ↑
+//  Kõik või mitte midagi — vea korral kõik tühistatakse
+public void deleteReport(Integer userId, String period) {
+
+    validationService.validateUserIsAdmin(userId);
+    //                                      ↑
+    //                                  userId=3 → DB: role="A"? jah → jätka, ei → 403
+
+    SalesReport salesReport = salesReportRepository.findByPeriod(period).orElseThrow(...);
+    //    ↑                                                  ↑
+    // SalesReport objekt                           period="2026-4" → leitud? ei → 404
+
+    commissionCalculationRepository.deleteAllBy(salesReport.getId());
+    //                                                          ↑
+    //                      1. ESIMESENA — commission_calculation (laps)
+    //                      DELETE FROM commission_calculation WHERE sales_report_id=5
+
+    salesReportDetailRepository.deleteAllBy(salesReport.getId());
+    //                                              ↑
+    //                      2. TEISENA — sales_report_detail (laps)
+    //                      DELETE FROM sales_report_detail WHERE sales_report_id=5
+
+    salesReportRepository.delete(salesReport);
+    //                      ↑
+    //          3. VIIMASENA — sales_report (vanem)
+    //          DELETE FROM sales_report WHERE id=5
+}
+
+// Miks lapsed enne vanemaid?
+// sales_report tabel:        id = 5  ← PRIMARY KEY (PK) — unikaalne identifikaator
+// sales_report_detail tabel: sales_report_id = 5  ← FOREIGN KEY (FK) — viitab PK-le
+//
+// DB kaitseb seoseid — ei luba kustutada vanemat kuni lapsi on alles
+// Analoogia: ei saa maja lammutada kuni sees on mööbel
+//   1. Vii mööbel välja  → kustuta commission_calculation
+//   2. Vii mööbel välja  → kustuta sales_report_detail
+//   3. Lammuta maja      → kustuta sales_report
+
+// ─── REPOSITORY (kirjutuspäring) ───────────────────────────
+@Modifying
+//    ↑
+//  ütleb Spring Data-le: pole SELECT, on kirjutuspäring — kohustuslik
+@Transactional
+@Query("delete from SalesReportDetail s where s.salesReport.id = :salesReportId")
+//                       ↑                              ↑
+//                  JPQL — Java klass               Java väli, mitte SQL veerg
+void deleteAllBy(Integer salesReportId);
+//                          ↑
+//                      salesReportId=5
+
+// ─── VASTUS ────────────────────────────────────────────────
+// → 204 No Content
+```
 
 **Ühe tabeli kustutamine (lihtne — pole FK sõltuvusi):**
 ```java
@@ -527,46 +744,10 @@ public void deleteSellerRegion(Integer userId, Integer sellerId, Integer regionI
     validationService.validateUserIsAdmin(userId);
     validationService.validateSellerExists(sellerId);
     validateSellerRegionExists(regionId);
-    sellerRegionRepository.deleteById(regionId);  // JpaRepository valmismeetod
+    sellerRegionRepository.deleteById(regionId);
+    //                          ↑
+    //              JpaRepository valmismeetod — pole JPQL kirjutamist vaja
 }
-```
-
-`deleteById()` tuleb `JpaRepository`-st automaatselt — pole JPQL kirjutamist vaja.
-
-**Mitme tabeli kustutamine (FK piirangud):**
-
-Kui kustutataval tabelil on alamtabeleid, tuleb järjekorda järgida — **lapsest vanemani**:
-
-```
-sales_report (vanem)
-  ├── commission_calculation (laps)
-  └── sales_report_detail (laps)
-```
-
-```java
-@Transactional
-public void deleteReport(Integer userId, String period) {
-    validationService.validateUserIsAdmin(userId);
-    SalesReport salesReport = salesReportRepository.findByPeriod(period).orElseThrow(...);
-    commissionCalculationRepository.deleteAllBy(salesReport.getId());  // 1. laps
-    salesReportDetailRepository.deleteAllBy(salesReport.getId());      // 2. laps
-    salesReportRepository.delete(salesReport);                          // 3. vanem
-}
-```
-
-**Repositoorium kirjutuspäringuks:**
-```java
-@Modifying           // ütleb Spring Data-le: pole SELECT
-@Transactional       // jakarta.transaction — repositooriumis OK
-@Query("delete from SalesReportDetail s where s.salesReport.id = :salesReportId")
-void deleteAllBy(Integer salesReportId);
-```
-
-**Enne kustutamist on kontakti puhul vaja ka rollid kustutada:**
-```java
-// seller_contact_role viitab seller_contact-ile → esmalt rollid
-sellerContactRoleRepository.deleteAllBySellerContactId(contactId);
-sellerContactRepository.deleteById(contactId);
 ```
 
 ---

@@ -34,6 +34,7 @@
         <div class="card">
           <div class="card-header"><strong>Kustuta müügiandmete fail</strong></div>
           <div class="card-body">
+            <div v-if="deleteSuccessMessage" class="alert alert-success">{{ deleteSuccessMessage }}</div>
             <div v-if="deleteErrorMessage" class="alert alert-danger">{{ deleteErrorMessage }}</div>
             <div class="d-flex gap-2 align-items-center">
               <select class="form-select w-auto" v-model="deleteMonth">
@@ -77,6 +78,7 @@ export default {
       deleteYear: '',
       showDeleteSpinner: false,
       deleteErrorMessage: '',
+      deleteSuccessMessage: '',
 
       // Abiväärtused
       years: [],
@@ -108,9 +110,10 @@ export default {
       if (!window.confirm('Kas oled kindel, et soovid perioodi ' + this.deleteMonth + '.' + this.deleteYear + ' andmed kustutada?')) return
       this.showDeleteSpinner = true
       this.deleteErrorMessage = ''
+      this.deleteSuccessMessage = ''
       ReportService.sendDeleteImportReport(AuthService.getUserId(), this.deleteYear + '-' + this.deleteMonth)
         .then(() => {
-          this.deleteErrorMessage = ''
+          this.deleteSuccessMessage = 'Perioodi andmed kustutatud.'
         })
         .catch((error) => {
           this.deleteErrorMessage = error.response?.data?.message ?? 'Kustutamine ebaõnnestus'
