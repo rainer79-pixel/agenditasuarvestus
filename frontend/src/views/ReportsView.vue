@@ -16,6 +16,7 @@
                 type="file"
                 accept=".xlsx"
                 class="form-control w-auto"
+                :key="fileInputKey"
                 @change="handleFileChange"
               />
               <button
@@ -231,6 +232,7 @@ export default {
       // Abiväärtused
       years: [],
       activePreset: null,
+      fileInputKey: 0,
     }
   },
   computed: {
@@ -267,6 +269,7 @@ export default {
         .then(() => {
           this.importSuccessMessage = 'Aruanne edukalt imporditud!'
           this.selectedFile = null
+          this.fileInputKey++
           this.loadReports()
         })
         .catch((error) => {
@@ -284,6 +287,8 @@ export default {
       ReportService.sendDeleteImportReport(AuthService.getUserId(), this.deleteYear + '-' + this.deleteMonth)
         .then(() => {
           this.deleteSuccessMessage = 'Perioodi andmed kustutatud.'
+          this.deleteMonth = ''
+          this.deleteYear = ''
           this.loadReports()
         })
         .catch((error) => {

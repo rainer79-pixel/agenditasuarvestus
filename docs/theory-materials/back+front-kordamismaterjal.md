@@ -23,7 +23,8 @@
 10. [Veahaldus](#10-veahaldus)
 11. [Erisused ja täiendavad lahendused](#11-erisused-ja-täiendavad-lahendused)
 12. [ReportsView — frontend erimustrid](#12-reportsview--frontend-erimustrid)
-13. [Mis erineb bank40 projektist](#13-mis-erineb-bank40-projektist)
+13. [Frontend vaadete mustrid](#13-frontend-vaadete-mustrid)
+14. [Mis erineb bank40 projektist](#14-mis-erineb-bank40-projektist)
 
 ---
 
@@ -1168,7 +1169,223 @@ Vastuse käsitlemine — brauseri allalaadimise käivitamine programmiliselt:
 
 ---
 
-## 13. Mis erineb bank40 projektist
+## 13. Frontend vaadete mustrid
+
+### 13.1 Vue komponendi struktuur
+
+Iga `.vue` fail koosneb kahest osast — template (HTML) ja script (loogika):
+
+```javascript
+export default {
+  name: 'LoginView',
+
+  data() {                          // ← Vue reaktiivne mälu
+    return {
+      loginData: { email: '', password: '' },  // objekt → läheb JSON-ina backendile
+      errorMessage: '',             // tühi = peidetud, täis = nähtav (v-if)
+      showSpinner: false,           // false = ei keerle, true = keerleb
+      isAdmin: AuthService.getRole() === 'A',  // arvutatakse kohe laadimisel
+    }
+  },
+
+  computed: {                       // ← automaatsed arvutused (uueneb kui data muutub)
+    filteredSellers() {
+      return this.sellers.filter(s =>
+        s.companyName.toLowerCase().includes(this.searchQuery.toLowerCase())
+      )
+    }
+  },
+
+  methods: {                        // ← funktsioonid (@click jms)
+    login() { ... }
+  },
+
+  beforeMount() {                   // ← käivitub enne lehe kuvamist
+    this.loadSellers()              //   lae andmed siit, mitte mounted()-st
+  },
+}
+```
+
+**`computed` vs `methods`:**
+```
+computed → käivitub AUTOMAATSELT kui sõltuv muutuja muutub (cache-itud)
+method   → käivitub ainult kui käsitsi kutsutakse
+```
+
+### 13.2 Vue direktiivid template-s
+
+| Direktiiv | Näide | Tähendus |
+|---|---|---|
+| `v-model` | `v-model="loginData.email"` | Kahepoolne seos — input ↔ muutuja |
+| `v-if` | `v-if="errorMessage"` | Kuvab elementi ainult kui tingimus tõene |
+| `v-for` | `v-for="seller in sellers"` | Kordab iga listi elemendi jaoks |
+| `:class` | `:class="isAdmin ? 'btn-danger' : 'btn-success'"` | Dünaamiline CSS klass |
+| `@click` | `@click="login"` | Käivitab meetodi klikimisel |
+| `@change` | `@change="activePreset = null"` | Käivitab ainult kui väärtus muutus |
+
+**`v-if` ja tühi string:**
+```
+''        → false → element PEIDETUD
+'Viga!'   → true  → element NÄHTAV
+```
+
+### 13.3 AuthService — localStorage
+
+```javascript
+// Pärast sisselogimist backend vastab → salvestatakse localStorage-i
+saveUserInfo(data) {
+  localStorage.setItem('userId', data.userId)   // → '1'
+  localStorage.setItem('role',   data.role)     // → 'A'
+},
+getUserId() { return localStorage.getItem('userId') },
+getRole()   { return localStorage.getItem('role') },
+logOut()    { localStorage.clear() },
+```
+
+```
+Vue data()    → kaob F5-ga ❌
+localStorage  → püsib F5 järel, kuni logout ✓
+```
+
+### 13.4 NavigationService — router.push vs window.location.href
+
+```javascript
+// Enamik lehti — lehe uuesti laadimiseta
+navigateToSellerView(sellerId) {
+  router.push({ name: 'sellerRoute', params: { sellerId } })
+  // URL: /seller/3
+},
+
+// Login järel — KOHUSTUSLIK täisleht laadida
+navigateToDashboardView() {
+  window.location.href = '/dashboard'
+  // Miks? App.vue isLoggedIn arvutatakse ainult lehe laadimisel.
+  // router.push() ei laadi uuesti → navbar ei uuene → sisselogimist ei näe.
+},
+```
+
+### 13.5 SellersView — v-for + computed filter + isAdmin
+
+```javascript
+// computed — otsing käib automaatselt kui searchQuery muutub
+filteredSellers() {
+  return this.sellers.filter(seller =>
+    seller.companyName.toLowerCase().includes(this.searchQuery.toLowerCase())
+  )
+}
+
+// isAdmin — arvutatakse kord lehe laadimisel
+isAdmin: AuthService.getRole() === 'A'
+```
+
+```html
+<!-- Admin näeb "Lisa" nuppu, User ei näe -->
+<button v-if="isAdmin">+ Lisa uus edasimüüja</button>
+
+<!-- Tabelis iga rea kohta -->
+<tr v-for="seller in filteredSellers" :key="seller.sellerId">
+  <td>{{ seller.companyName }}</td>
+  <button v-if="isAdmin">Muuda</button>
+</tr>
+```
+
+### 13.6 SellerFormView — URL query params + POST vs PUT
+
+Sama vorm, sama nupp — kaks erinevat režiimi:
+
+```
+/seller/form              → sellerId=null → POST (lisa uus)
+/seller/form?sellerId=3   → sellerId='3'  → PUT  (muuda olemasolevat)
+```
+
+```javascript
+beforeMount() {
+  this.sellerId = this.$route.query.sellerId ?? null
+  //                    ↑              ↑           ↑
+  //              Vue Router       URL ?sellerId=3  kui puudub → null
+  if (!this.isAddMode) {
+    this.getSeller()   // laeb andmed vormi — muuda režiimis
+  }
+},
+
+computed: {
+  isAddMode()        { return this.sellerId === null },
+  pageTitle()        { return this.isAddMode ? 'Lisa uus edasimüüja' : 'Muuda' },
+  submitButtonLabel(){ return this.isAddMode ? 'Lisa' : 'Salvesta' },
+},
+
+saveSeller() {
+  if (this.isAddMode) {
+    SellerService.sendPostSeller(...)   // → POST → 201 Created
+  } else {
+    SellerService.sendPutSeller(this.sellerId, ...)  // → PUT → 200 OK
+  }
+}
+```
+
+### 13.7 SellerSettingsView + modaalid — props ja emits
+
+Modaal on eraldi komponent. Vanem ja laps suhtlevad läbi props (alla) ja emits (üles):
+
+```
+SellerSettingsView (VANEM)
+  ↓ :seller-id="sellerId"      → props — vanem annab andmeid lapsele
+  ↑ @event-contact-saved       ← emits — laps saadab signaali vanemale
+SellerSettingsContactModal (LAPS)
+```
+
+```html
+<!-- Vanem -->
+<SellerSettingsContactModal
+  v-if="isContactModalOpen"
+  :seller-id="sellerId"
+  @event-modal-closed="isContactModalOpen = false"
+  @event-contact-saved="handleContactSaved"
+/>
+```
+
+```javascript
+// Laps
+props: { sellerId: Number },
+emits: ['event-modal-closed', 'event-contact-saved'],
+
+// X nupp → sulge modaal
+@click="$emit('event-modal-closed')"
+
+// Salvestamine → teavita vanemat
+.then(() => this.$emit('event-contact-saved'))
+```
+
+```javascript
+// Vanem reageerib
+handleContactSaved() {
+  this.isContactModalOpen = false  // sulge modaal
+  this.loadContacts()              // lae kontaktid uuesti
+}
+```
+
+**Miks laps ei loe sellerId ise URL-ist?**
+Modaal ei tea mis lehel ta asub — see on eraldi komponent. Vanem teab konteksti ja annab kaasa.
+
+### 13.8 FormData — faili saatmine backendile
+
+```javascript
+sendPostImportReport(userId, file) {
+  const formData = new FormData()
+  formData.append('file', file)           // välja nimi + File objekt
+  return axios.post('/api/import/user/' + userId, formData, {
+    headers: { 'Content-Type': 'multipart/form-data' }
+    // ütleb backendile: "see pole JSON, see on fail"
+  })
+}
+
+// Tavaline JSON: axios.post('/api/login', { email: 'mari@...' })
+// Faili saatmine: axios.post('/api/import/...', formData, { headers: { multipart } })
+```
+
+---
+
+## 14. Mis erineb bank40 projektist
 
 Bank40 õpetas põhimustri: Controller → Service → Repository → Mapper → DTO. ETAS kordab sama mustrit, kuid lisab:
 
