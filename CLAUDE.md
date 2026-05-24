@@ -309,8 +309,8 @@ Backend otsib `product_type` tabelist rea, kus `name` kattub Exceli `tyyp` vää
 | task-05 | Edasimüüja piirkonnad (GET /api/region + seller_region CRUD + RegionModal) | ✅ Valmis |
 | task-06 | Teenustasud (GET /api/product-type + commission_rate CRUD + CommissionModal) | ✅ Valmis |
 | task-07 | Excel import (Apache POI + POST/DELETE /api/import + ReportsView upload) | ✅ Valmis |
-| task-08 | Teenustasu arvutus + aruanded (calculation + GET /api/report + ReportsView tabel) | 🔄 Backend valmis, frontend pooleli |
-| task-09 | Aruannete eksport (GET /api/report/user/{userId}/export + ekspordi nupp) | 🔄 Backend valmis, frontend pooleli |
+| task-08 | Teenustasu arvutus + aruanded (calculation + GET /api/report + ReportsView tabel) | ✅ Valmis |
+| task-09 | Aruannete eksport (GET /api/report/user/{userId}/export + ekspordi nupp) | ✅ Valmis |
 | task-10 | Arvete kontroll — **sõltumatu** (invoice CRUD + InvoiceControlView) | ⬜ |
 | task-11 | Seadistused (product_type POST/DELETE + vat_setting + user CRUD + SettingsView) | ⬜ |
 
@@ -322,7 +322,7 @@ Backend otsib `product_type` tabelist rea, kus `name` kattub Exceli `tyyp` vää
 Sisselogimine, edasimüüjate CRUD, kontaktide haldus, teenustasude määrad, piirkonnad, Excel import, teenustasu arvutus, KM, aruannete ülevaade, arvete kontroll, kasutajate haldus, kaks rolli.
 
 **Nice to have — tulevikus:**
-Unustasin parooli, rollide tooltip, is_primary kontakt, PDF eksport, email saatmine, perioodipõhine statistika, graafikud, automaatne teavitus, Region/ContactRole enum refaktoreerimine, Exceli vormi dünaamiline seadistamine, piirkondlik teenustasu erisus (commission_rate tabelisse nullable region veerg — lahendus on selge, aga algtaseme projekti ajaraami ei mahu), aastavalik ReportsView perioodifiltreis dünaamiliselt esimese aruande aasta põhjal (praegu fikseeritud currentYear-5 kuni currentYear).
+Unustasin parooli, rollide tooltip, is_primary kontakt, PDF eksport, email saatmine, perioodipõhine statistika, graafikud, automaatne teavitus, Region/ContactRole enum refaktoreerimine, Exceli vormi dünaamiline seadistamine, piirkondlik teenustasu erisus (commission_rate tabelisse nullable region veerg — lahendus on selge, aga algtaseme projekti ajaraami ei mahu), aastavalik ReportsView perioodifiltreis dünaamiliselt esimese aruande aasta põhjal (praegu fikseeritud currentYear-5 kuni currentYear), multi-select sellerid aruannete filtris (frontend filtreerimine, backi muudatust ei nõua).
 
 ---
 
@@ -360,11 +360,13 @@ Kodeerimistavad on eraldi alamfailides:
 - [x] task-07 frontend: `ReportsView.vue` — Excel import, periood kustutamine
 - [x] task-08 backend: arvutus + aruanded — `commission_calculation_view`, `GET /api/report/user/{userId}`, `GET /api/report/{sellerId}/{period}`
 - [x] task-09 backend: eksport — `GET /api/report/user/{userId}/export`, Excel genereerimine Apache POI-ga
+- [x] task-08 frontend: `ReportsView.vue` — filter, aruannete tabel, laiendatav detailrida, KOKKU rida
+- [x] task-09 frontend: `ReportsView.vue` — ekspordi nupp, blob allalaadimine
 - [x] `ValidationService` — jagatud valideerimisloogika (`validateUserIsAdmin`, `validateSellerExists`) eraldatud eraldi teenusesse
+- [x] `ReportControllerService` bugfix — Apache POI FORMULA lahter: `getCachedFormulaResultType()` lisatud `getIntCell`, `getStringCell`, `getBigDecimalCell` meetoditesse
+- [x] `ReportsView.vue` UI täiendused — `clearAllMessages` (event bubbling), `activePreset` (kiirvaliku märgistamine), `toFixed(2)` (KOKKU rida), `setLastThreeMonths` ("Viimased 3 kuud" nupp)
 
 ### Järgmine
-- [ ] task-08 frontend: `ReportsView.vue` — aruannete tabel, detailide laiendamine
-- [ ] task-09 frontend: `ReportsView.vue` — ekspordi nupp
 - [ ] task-10: arvete kontroll — invoice CRUD, `InvoiceControlView.vue` *(sõltumatu, paralleelne)*
 - [ ] task-11: seadistused — product_type POST/DELETE, vat_setting CRUD, user CRUD, `SettingsView.vue`
 

@@ -60,13 +60,14 @@ INSERT INTO vat_setting (vat_rate, updated_at, updated_by, valid_from_date, vali
 VALUES (24, now(), 1, '2024-01-01', NULL, 'A');
 
 -- ----------------------------------------------------------------
--- seller — 10 näidisedasimüüjat Exceli näidisfaili põhjal
--- org_id vastab Exceli seller_org_id veerul | created_by=1 (Mari Maasikas)
+-- seller — 10 näidisedasimüüjat
+-- Arvopunkt OÜ (id=3) org_id=10406134 vastab demo Exceli seller_org_id veerul — teistel on näidisandmed
+-- created_by=1 (Mari Maasikas)
 -- ----------------------------------------------------------------
 INSERT INTO seller (company_name, org_id, contract_start, contract_end, notes, status, created_at, created_by) VALUES
     ('Agent A OÜ',              1588, '2026-01-01', null, 'Eelistab suhtlust e-posti teel. Arved saata hiljemalt kuu 5. kuupäevaks.', 'A', now(), 1),  -- id=1
     ('Arvelduskeskus OÜ',       1222, '2026-01-01', null, null, 'A', now(), 1),  -- id=2
-    ('Arvopunkt OÜ',            6134, '2026-01-01', null, 'Leping lõpeb 31.12.2026. Uuendamisel kontrollida teenustasude määrasid.', 'A', now(), 1),  -- id=3
+    ('Arvopunkt OÜ',        10406134, '2026-01-01', null, 'Leping lõpeb 31.12.2026. Uuendamisel kontrollida teenustasude määrasid.', 'A', now(), 1),  -- id=3
     ('Tasuvara OÜ',             9733, '2026-01-01', null, null, 'A', now(), 1),  -- id=4
     ('Piletivõrk OÜ',           8799, '2026-01-01', null, 'Kliendil kaks erinevat arvelduskontot — kontrollida enne makse saatmist.', 'A', now(), 1),  -- id=5
     ('Müügiruut OÜ',            3574, '2026-01-01', null, null, 'A', now(), 1),  -- id=6

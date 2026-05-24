@@ -1064,16 +1064,68 @@ computed: {
   totals() {
     return {
       transactionCount: this.reports.reduce((sum, r) => sum + r.transactionCount, 0),
-      salesAmount:      this.reports.reduce((sum, r) => sum + r.salesAmount, 0),
-      feeAmount:        this.reports.reduce((sum, r) => sum + r.feeAmount, 0),
-      vatAmount:        this.reports.reduce((sum, r) => sum + r.vatAmount, 0),
-      totalFee:         this.reports.reduce((sum, r) => sum + r.totalFee, 0),
+      salesAmount:      this.reports.reduce((sum, r) => sum + r.salesAmount, 0).toFixed(2),
+      //                                                                        ↑
+      //                        JavaScript ujukomaviga: 1.1 + 2.2 = 3.3000000003
+      //                        toFixed(2) ümardab: "3.30"  (tagastab stringi)
+      feeAmount:        this.reports.reduce((sum, r) => sum + r.feeAmount,   0).toFixed(2),
+      vatAmount:        this.reports.reduce((sum, r) => sum + r.vatAmount,   0).toFixed(2),
+      totalFee:         this.reports.reduce((sum, r) => sum + r.totalFee,    0).toFixed(2),
     }
   }
 }
 ```
 
 `computed` — Vue arvutab väärtuse automaatselt ümber iga kord kui `this.reports` muutub. Erinevus `methods`-ist: `computed` tulemust hoitakse cache-is, `methods` käivitatakse iga kord uuesti.
+
+### 12.8 clearAllMessages — kõikide teadete puhastamine korraga
+
+Kui lehel on mitu kaarti, igaühel oma teade, kogunevad teated ekraanile. Lahendus: üks meetod + `@click` konteineril.
+
+```javascript
+clearAllMessages() {
+  this.importErrorMessage = ''
+  this.importSuccessMessage = ''
+  this.deleteErrorMessage = ''
+  this.deleteSuccessMessage = ''
+  this.reportsErrorMessage = ''
+  this.exportErrorMessage = ''
+  this.detailErrorMessage = ''
+},
+```
+
+```html
+<div class="container pt-4" @click="clearAllMessages">
+```
+
+**Miks API vastused ei kao?** Klikisündmus ja konteineri `@click` käivituvad sünkroonselt — enne kui API vastus `.then()`-iga tagasi tuleb. Järjekord: nupu `@click` → konteineri `@click` (`clearAllMessages`) → ... (async) → `.then()` seab uue teate.
+
+### 12.9 activePreset — aktiivse kiirvaliku märgistamine
+
+Kiirvalikute nupud ("Eelmine kuu", "Viimased 3 kuud") peavad näitama, milline on hetkel aktiivne.
+
+```javascript
+data() { return { activePreset: null } },  // null | 'lastMonth' | 'lastThreeMonths'
+
+setLastMonth() {
+  // ... kuupäevad ...
+  this.activePreset = 'lastMonth'
+},
+```
+
+```html
+<!-- nupu klass muutub sõltuvalt activePreset väärtusest -->
+<button class="btn"
+  :class="activePreset === 'lastMonth' ? 'btn-secondary' : 'btn-outline-secondary'"
+  @click="setLastMonth(); loadReports()">
+  Eelmine kuu
+</button>
+
+<!-- käsitsi filtri muutmisel preset eemaldatakse -->
+<select v-model="fromMonth" @change="activePreset = null">
+```
+
+`@change` vs `@click` selectil: `@change` käivitub ainult siis kui väärtus muutus — `@click` käivituks ka dropdown avamisel ilma muutuseta.
 
 ### 12.7 Faili allalaadimine — blob muster
 

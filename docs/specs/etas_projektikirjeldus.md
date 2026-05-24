@@ -393,7 +393,15 @@ Vaated: `commission_calculation_view`
 
 ### Nice to have — tulevikus:
 - Unustasin parooli
+- Rollide tooltip — kontaktide rollide selgitus UI-s
+- is_primary kontakt — põhikontakti märkimine
+- PDF eksport — aruannete eksport PDF formaadis
+- Email saatmine — automaatne teavitus arve mittevastavuse korral
 - Perioodipõhine statistika Dashboardil
 - Graafikud — müük ja teenustasud visuaalselt
 - Automaatne teavitus — arve ei klapi arvutusega
-- Piirkondlik teenustasu erisus
+- Piirkondlik teenustasu erisus — commission_rate tabelisse nullable region veerg
+- Region/ContactRole enum refaktoreerimine
+- Exceli vormi dünaamiline seadistamine
+- Aastavalik ReportsView perioodifiltreis dünaamiliselt esimese aruande aasta põhjal (praegu fikseeritud currentYear-5 kuni currentYear)
+- Multi-select sellerid aruannete filtris (frontend filtreerimine, backi muudatust ei nõua)

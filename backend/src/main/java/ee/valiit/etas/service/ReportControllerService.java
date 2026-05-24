@@ -252,6 +252,11 @@ public class ReportControllerService {
         return switch (cell.getCellType()) {
             case STRING -> cell.getStringCellValue();
             case NUMERIC -> String.valueOf((long) cell.getNumericCellValue());
+            case FORMULA -> switch (cell.getCachedFormulaResultType()) {
+                case STRING -> cell.getStringCellValue();
+                case NUMERIC -> String.valueOf((long) cell.getNumericCellValue());
+                default -> null;
+            };
             default -> null;
         };
     }
@@ -261,7 +266,7 @@ public class ReportControllerService {
         Cell cell = row.getCell(colIndex);
         if (cell == null) return null;
         return switch (cell.getCellType()) {
-            case NUMERIC -> (int) cell.getNumericCellValue();
+            case NUMERIC, FORMULA -> (int) cell.getNumericCellValue();
             case STRING -> Integer.parseInt(cell.getStringCellValue().trim());
             default -> null;
         };
@@ -272,7 +277,7 @@ public class ReportControllerService {
         Cell cell = row.getCell(colIndex);
         if (cell == null) return null;
         return switch (cell.getCellType()) {
-            case NUMERIC -> BigDecimal.valueOf(cell.getNumericCellValue());
+            case NUMERIC, FORMULA -> BigDecimal.valueOf(cell.getNumericCellValue());
             case STRING -> new BigDecimal(cell.getStringCellValue().trim());
             default -> null;
         };
