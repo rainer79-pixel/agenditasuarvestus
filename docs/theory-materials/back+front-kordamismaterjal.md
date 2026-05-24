@@ -1178,17 +1178,39 @@ Iga `.vue` fail koosneb kahest osast — template (HTML) ja script (loogika):
 ```javascript
 export default {
   name: 'LoginView',
+  //     ↑
+  //  komponendi nimi (Vue DevTools kuvab seda nime)
 
-  data() {                          // ← Vue reaktiivne mälu
+  data() {
+  //  ↑
+  //  Vue reaktiivne mälu — kui siinsed muutujad muutuvad, uueneb ekraan automaatselt
     return {
-      loginData: { email: '', password: '' },  // objekt → läheb JSON-ina backendile
-      errorMessage: '',             // tühi = peidetud, täis = nähtav (v-if)
-      showSpinner: false,           // false = ei keerle, true = keerleb
-      isAdmin: AuthService.getRole() === 'A',  // arvutatakse kohe laadimisel
+      loginData: { email: '', password: '' },
+      //   ↑              ↑         ↑
+      //  objekt       tühi väli   tühi väli
+      //  → v-model seob inputid siia (mõlemas suunas)
+      //  → läheb otse JSON-ina backendile (struct vastab Java DTO-le)
+
+      errorMessage: '',
+      //    ↑          ↑
+      //  string     tühi = v-if näeb false → element peidetud
+      //             'Viga!' = v-if näeb true → element nähtav
+
+      showSpinner: false,
+      //    ↑          ↑
+      //  boolean    false = spinner ei keerle
+      //             true  = spinner keerleb (näitab et ootame API vastust)
+
+      isAdmin: AuthService.getRole() === 'A',
+      //  ↑         ↑            ↑         ↑
+      //  boolean  loeb        'A' või   true kui admin
+      //           localStorage-st  'U'   false kui mitte
     }
   },
 
-  computed: {                       // ← automaatsed arvutused (uueneb kui data muutub)
+  computed: {
+  //   ↑
+  //  automaatsed arvutused — Vue arvutab ümber kui sõltuv data muutuja muutub
     filteredSellers() {
       return this.sellers.filter(s =>
         s.companyName.toLowerCase().includes(this.searchQuery.toLowerCase())
@@ -1196,13 +1218,60 @@ export default {
     }
   },
 
-  methods: {                        // ← funktsioonid (@click jms)
+  methods: {
+  //   ↑
+  //  funktsioonid — käivituvad @click, @change jms sündmustel
     login() { ... }
   },
 
-  beforeMount() {                   // ← käivitub enne lehe kuvamist
-    this.loadSellers()              //   lae andmed siit, mitte mounted()-st
+  beforeMount() {
+  //     ↑
+  //  lifecycle hook — käivitub enne lehe kuvamist
+  //  kasuta andmete laadimiseks (mitte mounted() — selleks ajaks on leht juba kuvatud)
+    this.loadSellers()
   },
+}
+```
+
+**API kutse täielik muster `.then().catch().finally()`:**
+
+```javascript
+login() {
+  this.showSpinner = true
+  //        ↑
+  //   spinner sisse kohe — kasutaja näeb et midagi toimub
+
+  LoginService.sendPostLogin(this.loginData)
+  //     ↑           ↑             ↑
+  //  API service  meetod        data() muutuja — axios teisendab JSON-iks automaatselt
+
+    .then((response) => {
+    //        ↑
+    //   backend vastas 200 OK
+    //   response.data = { userId: 1, firstName: "Mari", role: "A" }
+
+      AuthService.saveUserInfo(response.data)
+      //                           ↑
+      //                    salvestab localStorage-i
+
+      NavigationService.navigateToDashboardView()
+    })
+    .catch((error) => {
+    //        ↑
+    //   backend vastas veaga (nt 401 Vale parool)
+    //   error.response.data = { message: "Vale parool", errorCode: 113 }
+
+      this.errorMessage = error.response.data.message
+      //        ↑                               ↑
+      //   data() muutuja                   'Vale parool' — v-if kuvab selle
+    })
+    .finally(() => {
+    //   ↑
+    //   käivitub ALATI — nii õnnestumisel kui veal
+      this.showSpinner = false
+      //        ↑
+      //   spinner välja — kui oleks ainult .then()-s, jääks vea korral igavesti keerlema
+    })
 }
 ```
 
@@ -1223,10 +1292,39 @@ method   → käivitub ainult kui käsitsi kutsutakse
 | `@click` | `@click="login"` | Käivitab meetodi klikimisel |
 | `@change` | `@change="activePreset = null"` | Käivitab ainult kui väärtus muutus |
 
-**`v-if` ja tühi string:**
+**`v-model` — kahepoolne seos:**
+```html
+<input v-model="loginData.email" />
+<!--   ↑           ↑
+    direktiiv   data() muutuja
+    kasutaja kirjutab → loginData.email uueneb automaatselt
+    loginData.email muutub koodis → input uueneb automaatselt -->
 ```
-''        → false → element PEIDETUD
-'Viga!'   → true  → element NÄHTAV
+
+**`v-for` + `:key`:**
+```html
+<tr v-for="seller in sellers" :key="seller.sellerId">
+<!--  ↑        ↑         ↑          ↑
+   direktiiv  muutuja  data() list  unikaalne võti — Vue vajab seda
+              (üks     (kõik         muudatuste jälgimiseks
+              objekt)  müüjad)       (ALATI kohustuslik v-for-iga) -->
+  <td>{{ seller.companyName }}</td>
+</tr>
+```
+
+**`v-if` ja tühi string:**
+```html
+<p v-if="errorMessage">{{ errorMessage }}</p>
+<!-- errorMessage = ''       → lõik on PEIDETUD  (tühi string = false)  -->
+<!-- errorMessage = 'Viga!' → lõik on NÄHTAV    (tekst sees = true)    -->
+```
+
+**`:class` — dünaamiline CSS klass:**
+```html
+<button :class="isAdmin ? 'btn-danger' : 'btn-success'">
+<!--    ↑           ↑           ↑               ↑
+     seob        tingimus   admin klass      mitte-admin klass
+     (: = v-bind)  true/false  (punane)          (roheline) -->
 ```
 
 ### 13.3 AuthService — localStorage
@@ -1234,17 +1332,32 @@ method   → käivitub ainult kui käsitsi kutsutakse
 ```javascript
 // Pärast sisselogimist backend vastab → salvestatakse localStorage-i
 saveUserInfo(data) {
-  localStorage.setItem('userId', data.userId)   // → '1'
-  localStorage.setItem('role',   data.role)     // → 'A'
+  localStorage.setItem('userId', data.userId)
+  //               ↑       ↑         ↑
+  //           meetod   võtme nimi  väärtus — tuleb backend vastusest
+  //           (salvesta)           nt '1' (string, mitte number!)
+
+  localStorage.setItem('role', data.role)
+  //                    ↑         ↑
+  //               'role'      'A' või 'U'
 },
+
 getUserId() { return localStorage.getItem('userId') },
+//                           ↑       ↑
+//                        loe välja  võtme nimi → tagastab '1' (string)
+
 getRole()   { return localStorage.getItem('role') },
+//                                         ↑
+//                                    → 'A' või 'U'
+
 logOut()    { localStorage.clear() },
+//                             ↑
+//                    kustutab KÕIK localStorage kirjed → kasutaja välja logitud
 ```
 
 ```
-Vue data()    → kaob F5-ga ❌
-localStorage  → püsib F5 järel, kuni logout ✓
+Vue data()    → kaob F5-ga ❌  (mälu tühjendatakse lehe uuendamisel)
+localStorage  → püsib F5 järel, kuni logout ✓  (brauser hoiab isegi akna sulgemisel)
 ```
 
 ### 13.4 NavigationService — router.push vs window.location.href
@@ -1253,14 +1366,25 @@ localStorage  → püsib F5 järel, kuni logout ✓
 // Enamik lehti — lehe uuesti laadimiseta
 navigateToSellerView(sellerId) {
   router.push({ name: 'sellerRoute', params: { sellerId } })
-  // URL: /seller/3
+  //      ↑      ↑          ↑           ↑         ↑
+  //  navigeeri  objekt  route nimi   parameeter  väärtus (nt 3)
+  //             (ei ole   (määratud    (URL saab:  → URL: /seller/3)
+  //             string)  router/index.js-s)
+
+  // Leht EI laadita uuesti — ainult URL muutub (nagu SPA käitumine)
 },
 
 // Login järel — KOHUSTUSLIK täisleht laadida
 navigateToDashboardView() {
   window.location.href = '/dashboard'
-  // Miks? App.vue isLoggedIn arvutatakse ainult lehe laadimisel.
-  // router.push() ei laadi uuesti → navbar ei uuene → sisselogimist ei näe.
+  //        ↑               ↑
+  //  brauser muutuja    uus URL — brauser laadib kogu lehe uuesti (nagu F5)
+  //
+  // Miks mitte router.push()?
+  // App.vue-s: isLoggedIn = localStorage.getItem('userId') !== null
+  // See arvutatakse AINULT lehe laadimisel (data() käivitub kord)
+  // router.push() → leht ei laadu → isLoggedIn jääb vanaks → navbar ei uuene
+  // window.location.href → leht laadib uuesti → isLoggedIn arvutatakse uuesti → navbar näitab ✓
 },
 ```
 
@@ -1269,18 +1393,37 @@ navigateToDashboardView() {
 ```javascript
 // computed — otsing käib automaatselt kui searchQuery muutub
 filteredSellers() {
-  return this.sellers.filter(seller =>
-    seller.companyName.toLowerCase().includes(this.searchQuery.toLowerCase())
-  )
-}
+  return this.sellers.filter((seller) =>
+  //                    ↑       ↑
+  //               käib läbi  üks müüja korraga (nt { sellerId: 1, companyName: "Rimi OÜ" })
+  //               kõik müüjad
 
-// isAdmin — arvutatakse kord lehe laadimisel
+    seller.companyName  .toLowerCase()  .includes(  this.searchQuery.toLowerCase()  )
+    //        ↑              ↑               ↑              ↑              ↑
+    //    "Rimi OÜ"       "rimi oü"      kas sisaldab?  mida otsime    otsingutekst
+    //                  (väiketähtedeks)   true/false    väiketähtedeks  väiketähtedeks
+    //
+    // Miks toLowerCase mõlemal? "RIMI" ja "rimi" peavad vastama — case-insensitive otsing
+  )
+  // filter tagastab true  → müüja JÄÄB tulemusse
+  // filter tagastab false → müüja EI JÄÄI tulemusse
+}
+```
+
+```javascript
+// isAdmin — arvutatakse kord lehe laadimisel (data() käivitub kord)
 isAdmin: AuthService.getRole() === 'A'
+//  ↑         ↑           ↑        ↑
+// boolean   loeb         'A'   true kui admin
+//         localStorage-st       false kui mitte admin
 ```
 
 ```html
 <!-- Admin näeb "Lisa" nuppu, User ei näe -->
 <button v-if="isAdmin">+ Lisa uus edasimüüja</button>
+<!--          ↑
+     isAdmin = true  → nupp NÄHTAV
+     isAdmin = false → nupp PEIDETUD (DOM-is pole üldse olemas) -->
 
 <!-- Tabelis iga rea kohta -->
 <tr v-for="seller in filteredSellers" :key="seller.sellerId">
@@ -1301,24 +1444,40 @@ Sama vorm, sama nupp — kaks erinevat režiimi:
 ```javascript
 beforeMount() {
   this.sellerId = this.$route.query.sellerId ?? null
-  //                    ↑              ↑           ↑
-  //              Vue Router       URL ?sellerId=3  kui puudub → null
+  //                  ↑       ↑        ↑         ↑
+  //              Vue Router  URL-i    ?sellerId=3   nullish coalescing:
+  //              sisseehitatud query   → '3' (string)  kui URL-is pole → null
+  //              objekt      parameetrid
+
   if (!this.isAddMode) {
-    this.getSeller()   // laeb andmed vormi — muuda režiimis
+    this.getSeller()
+    //      ↑
+    //   laeb olemasolevad andmed API-st ja täidab vormi
+    //   lisa režiimis (sellerId=null) → vorm on tühi
   }
 },
 
 computed: {
-  isAddMode()        { return this.sellerId === null },
-  pageTitle()        { return this.isAddMode ? 'Lisa uus edasimüüja' : 'Muuda' },
-  submitButtonLabel(){ return this.isAddMode ? 'Lisa' : 'Salvesta' },
+  isAddMode() { return this.sellerId === null },
+  //   ↑                        ↑
+  //  true kui lisa              null = URL-is polnud ?sellerId
+  //  false kui muuda            '3'  = URL-is oli ?sellerId=3
+
+  pageTitle()         { return this.isAddMode ? 'Lisa uus edasimüüja' : 'Muuda' },
+  submitButtonLabel() { return this.isAddMode ? 'Lisa'                : 'Salvesta' },
+  //                             ↑                ↑                        ↑
+  //                         tingimus         lisa režiim              muuda režiim
 },
 
 saveSeller() {
   if (this.isAddMode) {
-    SellerService.sendPostSeller(...)   // → POST → 201 Created
+    SellerService.sendPostSeller(...)
+    //                  ↑
+    //             POST → 201 Created (uus kirje)
   } else {
-    SellerService.sendPutSeller(this.sellerId, ...)  // → PUT → 200 OK
+    SellerService.sendPutSeller(this.sellerId, ...)
+    //                  ↑           ↑
+    //             PUT → 200 OK   sellerId='3' → URL: /api/seller/3
   }
 }
 ```
@@ -1335,52 +1494,112 @@ SellerSettingsContactModal (LAPS)
 ```
 
 ```html
-<!-- Vanem -->
+<!-- Vanem avab modaali ja annab andmeid kaasa -->
 <SellerSettingsContactModal
   v-if="isContactModalOpen"
+<!--↑
+   modaal kuvatakse ainult kui isContactModalOpen = true -->
+
   :seller-id="sellerId"
+<!--↑             ↑
+   prop (: = v-bind,   data() muutuja väärtus (nt 3)
+   andmed alla lapsele)  laps saab selle kätte props.sellerId = 3 -->
+
   @event-modal-closed="isContactModalOpen = false"
+<!--↑                       ↑
+   kuulab lapse signaali   kui laps saadab → sulge modaal -->
+
   @event-contact-saved="handleContactSaved"
+<!--↑                        ↑
+   kuulab lapse signaali   käivitab selle meetodi -->
 />
 ```
 
 ```javascript
-// Laps
-props: { sellerId: Number },
+// ─── LAPS (SellerSettingsContactModal) ──────────────────────────
+props: {
+  sellerId: Number,
+  //  ↑       ↑
+  //  nimi   tüüp — Vue valideerib et vanem annab Number, mitte String
+  // väärtus tuleb vanemalt :seller-id="sellerId" → 3
+},
+
 emits: ['event-modal-closed', 'event-contact-saved'],
+//         ↑                       ↑
+//    sündmuse nimi            sündmuse nimi
+//    alati 'event-' eesliitega (projekti konventsioon)
 
-// X nupp → sulge modaal
+// X nupp klikimisel → sulge modaal
 @click="$emit('event-modal-closed')"
+//      ↑           ↑
+//   saada signal  sündmuse nimi — vanem kuulab @event-modal-closed
 
-// Salvestamine → teavita vanemat
+// API kutse õnnestub → teavita vanemat
 .then(() => this.$emit('event-contact-saved'))
+//                ↑           ↑
+//            saada signal  vanem kuulab @event-contact-saved
+//                          → käivitab handleContactSaved()
 ```
 
 ```javascript
-// Vanem reageerib
+// ─── VANEM reageerib lapse signaalile ───────────────────────────
 handleContactSaved() {
-  this.isContactModalOpen = false  // sulge modaal
-  this.loadContacts()              // lae kontaktid uuesti
+  this.isContactModalOpen = false
+  //          ↑
+  //   v-if muutub false → Vue eemaldab modaali DOM-ist
+
+  this.loadContacts()
+  //       ↑
+  //   uus API kutse → kontaktide list uueneb ekraanil
 }
 ```
 
 **Miks laps ei loe sellerId ise URL-ist?**
-Modaal ei tea mis lehel ta asub — see on eraldi komponent. Vanem teab konteksti ja annab kaasa.
+Modaal on eraldi komponent — ta ei tea mis lehel ta asub. Vanem teab konteksti ja annab kaasa.
 
 ### 13.8 FormData — faili saatmine backendile
 
 ```javascript
 sendPostImportReport(userId, file) {
+//                    ↑       ↑
+//               localStorage-st   File objekt brauserist
+//               getUserId()       (event.target.files[0] handleFileChange-st)
+
   const formData = new FormData()
-  formData.append('file', file)           // välja nimi + File objekt
+  //      ↑               ↑
+  //   konteiner      tühi FormData objekt (nagu tühi kott)
+
+  formData.append('file', file)
+  //          ↑      ↑      ↑
+  //       lisa    välja   File objekt — .xlsx fail
+  //              nimi    Backend loeb selle nime järgi:
+  //              'file'  @RequestParam("file") MultipartFile file
+
   return axios.post('/api/import/user/' + userId, formData, {
+  //                                              ↑
+  //                                 teine argument — mida saata
+  //                                 (tavaliselt on siin JSON objekt)
+  //                                 nüüd FormData (sisaldab faili)
+
     headers: { 'Content-Type': 'multipart/form-data' }
-    // ütleb backendile: "see pole JSON, see on fail"
+    //              ↑                  ↑
+    //         HTTP päis           formaadi nimi
+    //         (ütleb backendile   "see ei ole JSON — see on fail"
+    //          kuidas andmeid
+    //          tõlgendada)
   })
 }
+```
 
-// Tavaline JSON: axios.post('/api/login', { email: 'mari@...' })
-// Faili saatmine: axios.post('/api/import/...', formData, { headers: { multipart } })
+```javascript
+// Erinevus tavalisest JSON päringust:
+axios.post('/api/login', { email: 'mari@...' })
+//                        ↑
+//                     tavaline objekt → axios teisendab JSON-iks automaatselt
+
+axios.post('/api/import/...', formData, { headers: { 'Content-Type': 'multipart/form-data' } })
+//                            ↑                           ↑
+//                       FormData objekt          kohustuslik päis — muidu backend ei saa aru
 ```
 
 ---
