@@ -46,8 +46,9 @@ public class SellerCommissionRateController {
                     content = @Content(schema = @Schema(implementation = ApiError.class)))})
     public void updateCommissionRate(@PathVariable Integer sellerId,
                                      @PathVariable Integer commissionRateId,
+                                     @RequestParam Integer userId,
                                      @Valid @RequestBody CommissionRateDto commissionRateDto) {
-        sellerCommissionRateService.updateCommissionRate(sellerId, commissionRateId, commissionRateDto);
+        sellerCommissionRateService.updateCommissionRate(userId, sellerId, commissionRateId, commissionRateDto);
     }
 
     @DeleteMapping("/seller/{sellerId}/commission-rates/{commissionRateId}")

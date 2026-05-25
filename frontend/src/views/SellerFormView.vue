@@ -110,7 +110,7 @@ export default {
             this.showSpinner = false
           })
       } else {
-        SellerService.sendPutSeller(this.sellerId, dataToSend)
+        SellerService.sendPutSeller(this.sellerId, AuthService.getUserId(), dataToSend)
           .then(() => NavigationService.navigateToSellersView('Edasimüüja andmed uuendatud'))
           .catch((error) => {
             this.errorMessage = error.response.data.message

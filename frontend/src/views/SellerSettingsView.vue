@@ -266,7 +266,7 @@ export default {
     },
     toggleStatus() {
       const newStatus = this.seller.status === 'ACTIVE' ? 'INACTIVE' : 'ACTIVE'
-      SellerService.sendPutSellerStatus(this.sellerId, { status: newStatus })
+      SellerService.sendPutSellerStatus(this.sellerId, AuthService.getUserId(), { status: newStatus })
         .then(() => this.loadSeller())
         .catch((error) => { this.errorMessage = error.response.data.message })
     },

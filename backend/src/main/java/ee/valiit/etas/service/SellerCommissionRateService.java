@@ -37,7 +37,8 @@ public class SellerCommissionRateService {
     }
 
     @Transactional
-    public void updateCommissionRate(Integer sellerId, Integer commissionRateId, CommissionRateDto commissionRateDto) {
+    public void updateCommissionRate(Integer userId, Integer sellerId, Integer commissionRateId, CommissionRateDto commissionRateDto) {
+        validationService.validateUserIsAdmin(userId);
         validationService.validateSellerExists(sellerId);
         CommissionRate commissionRate = commissionRateRepository.findById(commissionRateId)
                 .orElseThrow(() -> new DataNotFoundException(COMMISSION_RATE_NOT_FOUND.getMessage(), COMMISSION_RATE_NOT_FOUND.getErrorCode()));

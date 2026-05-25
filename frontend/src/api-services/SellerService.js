@@ -19,11 +19,11 @@ export default {
   sendPostSeller(userId, sellerData) {
     return axios.post('/api/seller/user/' + userId, sellerData)
   },
-  sendPutSeller(sellerId, sellerData) {
-    return axios.put('/api/seller/' + sellerId, sellerData)
+  sendPutSeller(sellerId, userId, sellerData) {
+    return axios.put('/api/seller/' + sellerId + '?userId=' + userId, sellerData)
   },
-  sendPutSellerStatus(sellerId, statusData) {
-    return axios.put('/api/seller/' + sellerId + '/status', statusData)
+  sendPutSellerStatus(sellerId, userId, statusData) {
+    return axios.put('/api/seller/' + sellerId + '/status?userId=' + userId, statusData)
   },
   sendDeleteSellerContact(sellerId, contactId, userId) {
     return axios.delete('/api/seller/' + sellerId + '/contacts/' + contactId + '?userId=' + userId)

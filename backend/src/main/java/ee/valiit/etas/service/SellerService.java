@@ -44,14 +44,16 @@ public class SellerService {
     }
 
     @Transactional
-    public void updateSeller(Integer sellerId, SellerDto sellerDto) {
+    public void updateSeller(Integer userId, Integer sellerId, SellerDto sellerDto) {
+        validationService.validateUserIsAdmin(userId);
         Seller seller = getSeller(sellerId);
         sellerMapper.updateSeller(sellerDto, seller);
         sellerRepository.save(seller);
     }
 
     @Transactional
-    public void updateSellerStatus(Integer sellerId, SellerStatusDto sellerStatusDto) {
+    public void updateSellerStatus(Integer userId, Integer sellerId, SellerStatusDto sellerStatusDto) {
+        validationService.validateUserIsAdmin(userId);
         Seller seller = getSeller(sellerId);
         validateStatusChange(seller, sellerStatusDto.getStatus());
         seller.setStatus(Status.fromApiValue(sellerStatusDto.getStatus()).getCode());

@@ -26,7 +26,7 @@ public class SellerController {
             @ApiResponse(responseCode = "200", description = "OK"),
             @ApiResponse(responseCode = "500", description = "Serveri viga",
                     content = @Content(schema = @Schema(implementation = ApiError.class)))})
-    public List<SellerDetailResponseDto> getSellers(@PathVariable Integer userId) {
+    public List<SellerDetailResponseDto> getSellers() {
         return sellerService.findSellers();
     }
     @GetMapping("/seller/{sellerId}")
@@ -66,8 +66,8 @@ public class SellerController {
                     content = @Content(schema = @Schema(implementation = ApiError.class))),
             @ApiResponse(responseCode = "500", description = "Serveri viga",
                     content = @Content(schema = @Schema(implementation = ApiError.class)))})
-    public void updateSeller(@PathVariable Integer sellerId, @Valid @RequestBody SellerDto sellerDto) {
-        sellerService.updateSeller(sellerId, sellerDto);
+    public void updateSeller(@PathVariable Integer sellerId, @RequestParam Integer userId, @Valid @RequestBody SellerDto sellerDto) {
+        sellerService.updateSeller(userId, sellerId, sellerDto);
     }
     @PutMapping("/seller/{sellerId}/status")
     @Operation(summary = "Muuda edasimüüja staatus")
@@ -83,7 +83,7 @@ public class SellerController {
                     content = @Content(schema = @Schema(implementation = ApiError.class))),
             @ApiResponse(responseCode = "500", description = "Serveri viga",
                     content = @Content(schema = @Schema(implementation = ApiError.class)))})
-    public void updateSellerStatus(@PathVariable Integer sellerId, @Valid @RequestBody SellerStatusDto sellerStatusDto) {
-        sellerService.updateSellerStatus(sellerId, sellerStatusDto);
+    public void updateSellerStatus(@PathVariable Integer sellerId, @RequestParam Integer userId, @Valid @RequestBody SellerStatusDto sellerStatusDto) {
+        sellerService.updateSellerStatus(userId, sellerId, sellerStatusDto);
     }
 }
